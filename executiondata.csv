@@ -1,0 +1,1443 @@
+Date,Name,Age,Sex,Race,Crime,Victim Count,Victim Sex,Victim Race,County,State,Region,Method,Juvenile,Volunteer,Federal,Foreign National
+01/17/1977,Gary Gilmore,36,Male,White,Murder,1,Male,White,Utah,UT,West,Firing Squad,No,Yes,No,No
+05/25/1979,John Spenkelink,30,Male,White,Murder,1,Male,White,Leon,FL,South,Electrocution,No,No,No,No
+10/22/1979,Jesse Bishop,46,Male,White,Murder,1,Male,White,Clark,NV,West,Gas Chamber,No,Yes,No,No
+03/09/1981,Steven Judy,24,Male,White,Murder,4,"2 Male, 2 Female",White,Marion,IN,Midwest,Electrocution,No,Yes,No,No
+08/10/1982,Frank Coppola,38,Male,White,Murder,1,Male,White,Newport News City,VA,South,Electrocution,No,Yes,No,No
+12/07/1982,Charlie Brooks,40,Male,Black,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+04/22/1983,John Evans,33,Male,White,Murder,1,Male,White,Mobile,AL,South,Electrocution,No,No,No,No
+09/02/1983,Jimmy  Gray,34,Male,White,Murder,1,Female,White,Jackson,MS,South,Gas Chamber,No,No,No,No
+11/30/1983,Robert Sullivan,36,Male,White,Murder,1,Male,White,Miami-Dade,FL,South,Electrocution,No,No,No,No
+12/14/1983,Robert Williams,31,Male,Black,Murder,1,Male,Black,East Baton Rouge Parish,LA,South,Electrocution,No,No,No,No
+12/15/1983,John Smith,53,Male,White,Murder,2,"1 Male, 1 Female",White,Bibb,GA,South,Electrocution,No,No,No,No
+01/26/1984,Anthony Antone,66,Male,White,Murder,1,Male,White,Hillsborough,FL,South,Electrocution,No,No,No,No
+02/29/1984,John Taylor,30,Male,Black,Murder,1,Male,White,Jefferson Parish,LA,South,Electrocution,No,No,No,No
+03/14/1984,James Autry,29,Male,White,Murder,1,Female,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+03/16/1984,James Hutchins,54,Male,White,Murder,2,Male,White,McDowell,NC,South,Lethal Injection,No,No,No,No
+03/31/1984,Ronald O'Bryan,39,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+04/05/1984,Arthur Goode,30,Male,White,Murder,1,Male,White,Lee,FL,South,Electrocution,No,No,No,No
+04/05/1984,Elmo Sonnier,35,Male,White,Murder,2,"1 Male, 1 Female",White,Iberia Parish,LA,South,Electrocution,No,No,No,No
+05/10/1984,James Adams,47,Male,Black,Murder,1,Male,White,St. Lucie,FL,South,Electrocution,No,No,No,No
+06/20/1984,Carl Shriner,30,Male,White,Murder,1,Female,White,Alachua,FL,South,Electrocution,No,No,No,No
+07/12/1984,Ivon Stanley,28,Male,Black,Murder,1,Male,White,Decatur,GA,South,Electrocution,No,No,No,No
+07/13/1984,David Washington,34,Male,Black,Murder,3,"2 Male, 1 Female","2 White, 1 Black",Miami-Dade,FL,South,Electrocution,No,No,No,No
+09/07/1984,Ernest Dobbert,46,Male,White,Murder,1,Male,White,Duval,FL,South,Electrocution,No,No,No,No
+09/10/1984,Timothy Baldwin,46,Male,White,Murder,1,Female,White,Ouachita Parish,LA,South,Electrocution,No,No,No,No
+09/20/1984,James Henry,34,Male,Black,Murder,1,Male,Black,Orange,FL,South,Electrocution,No,No,No,No
+10/12/1984,Linwood Briley,30,Male,Black,Murder,1,Male,White,Richmond City,VA,South,Electrocution,No,No,No,No
+10/30/1984,Ernest Knighton,38,Male,Black,Murder,1,Male,White,Bossier Parish,LA,South,Electrocution,No,No,No,No
+10/30/1984,Thomas Barefoot,39,Male,White,Murder,1,Male,White,Bell,TX,South,Lethal Injection,No,No,No,No
+11/02/1984,Velma Barfield,52,Female,White,Murder,1,Male,White,Robeson,NC,South,Lethal Injection,No,No,No,No
+11/08/1984,Timothy Palmes,37,Male,White,Murder,1,Male,White,Duval,FL,South,Electrocution,No,No,No,No
+12/12/1984,Alpha Stephens,39,Male,Black,Murder,1,Male,White,Bleckley,GA,South,Electrocution,No,No,No,No
+12/28/1984,Robert Willie,26,Male,White,Murder,1,Female,White,Washington Parish,LA,South,Electrocution,No,No,No,No
+01/04/1985,David Martin,32,Male,White,Murder,4,"2 Male, 2 Female",White,Lafourche Parish,LA,South,Electrocution,No,No,No,No
+01/09/1985,Roosevelt Green,28,Male,Black,Murder,1,Female,White,Brooks,GA,South,Electrocution,No,No,No,No
+01/11/1985,Joseph Shaw,29,Male,White,Murder,2,"1 Male, 1 Female",White,Richland,SC,South,Electrocution,No,No,No,No
+01/16/1985,Doyle Skillern,48,Male,White,Murder,1,Male,White,Live Oak,TX,South,Lethal Injection,No,No,No,No
+01/30/1985,James Raulerson,33,Male,White,Murder,1,Male,White,Duval,FL,South,Electrocution,No,No,No,No
+02/20/1985,Van Solomon,41,Male,Black,Murder,1,Male,White,Cobb,GA,South,Electrocution,No,No,No,No
+03/06/1985,Johnny Witt,41,Male,White,Murder,1,Male,White,Volusia,FL,South,Electrocution,No,No,No,No
+03/13/1985,Stephen Morin,37,Male,White,Murder,1,Female,White,Jefferson,TX,South,Lethal Injection,No,Yes,No,No
+03/20/1985,John Young,28,Male,Black,Murder,3,"1 Male, 2 Female",White,Bibb,GA,South,Electrocution,No,No,No,No
+04/18/1985,James Briley,28,Male,Black,Murder,2,"1 Male, 1 Female",Black,Richmond City,VA,South,Electrocution,No,No,No,No
+05/15/1985,Jesse de la Rosa,24,Male,Latino,Murder,1,Male,Asian,Bexar,TX,South,Lethal Injection,No,No,No,No
+05/29/1985,Marvin Francois,39,Male,Black,Murder,6,Male,Black,Miami-Dade,FL,South,Electrocution,No,No,No,No
+06/25/1985,Charles Milton,34,Male,Black,Murder,1,Female,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+06/25/1985,Morris Mason,32,Male,Black,Murder,1,Female,White,Northampton,VA,South,Electrocution,No,No,No,No
+07/09/1985,Henry Porter,43,Male,Latino,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+09/11/1985,Charles Rumbaugh,28,Male,White,Murder,1,Male,White,Potter,TX,South,Lethal Injection,Yes,Yes,No,No
+10/16/1985,William Vandiver,37,Male,White,Murder,1,Male,White,Lake,IN,Midwest,Electrocution,No,Yes,No,No
+12/06/1985,Carroll Cole,47,Male,White,Murder,1,Female,White,Clark,NV,West,Lethal Injection,No,Yes,No,No
+01/10/1986,James Roach,25,Male,White,Murder,2,"1 Male, 1 Female",White,Richland,SC,South,Electrocution,Yes,No,No,No
+03/12/1986,Charles Bass,29,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/21/1986,Arthur Jones,47,Male,Black,Murder,1,Male,White,Mobile,AL,South,Electrocution,No,No,No,No
+04/15/1986,Daniel Thomas,37,Male,Black,Murder,1,Female,White,Polk,FL,South,Electrocution,No,No,No,No
+04/16/1986,Jeffrey Barney,28,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+04/22/1986,David Funchess,39,Male,Black,Murder,2,"1 Male, 1 Female",White,Duval,FL,South,Electrocution,No,No,No,No
+05/15/1986,Jay Pinkerton,24,Male,White,Murder,2,Female,White,Potter,TX,South,Lethal Injection,Yes,No,No,No
+05/20/1986,Ronald Straight,42,Male,White,Murder,1,Male,White,Duval,FL,South,Electrocution,No,No,No,No
+06/09/1986,Rudy Esquivel,50,Male,Latino,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/19/1986,Kenneth Brock,37,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/24/1986,Jerome Bowden,34,Male,Black,Murder,1,Female,White,Muscogee,GA,South,Electrocution,No,No,No,No
+07/31/1986,Michael Smith,40,Male,Black,Murder,1,Female,White,James City County,VA,South,Electrocution,No,No,No,No
+08/20/1986,Randy Woolls,36,Male,White,Murder,1,Female,White,Tom Green,TX,South,Lethal Injection,No,No,No,No
+08/22/1986,Larry Smith,30,Male,Black,Murder,1,Male,White,El Paso,TX,South,Lethal Injection,No,No,No,No
+08/26/1986,Chester Wicker,37,Male,White,Murder,1,Female,White,Galveston,TX,South,Lethal Injection,No,No,No,No
+09/19/1986,John Rook,27,Male,White,Murder,1,Female,White,Wake,NC,South,Lethal Injection,No,No,No,No
+12/04/1986,Michael Evans,30,Male,Black,Murder,1,Female,Latino,Dallas,TX,South,Lethal Injection,No,No,No,No
+12/18/1986,Richard Andrade,25,Male,Latino,Murder,1,Female,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+01/30/1987,Ramon Hernandez,44,Male,Latino,Murder,1,Male,Latino,El Paso,TX,South,Lethal Injection,No,Yes,No,No
+03/04/1987,Elisio Moreno,27,Male,Latino,Murder,1,,White,El Paso,TX,South,Lethal Injection,No,Yes,No,No
+05/15/1987,Joseph Mulligan,35,Male,Black,Murder,1,Female,Black,Muscogee,GA,South,Electrocution,No,No,No,No
+05/20/1987,Edward Johnson,26,Male,Black,Murder,1,Male,White,Leake,MS,South,Gas Chamber,No,No,No,No
+05/22/1987,Richard Tucker,44,Male,Black,Murder,1,Female,White,Bibb,GA,South,Electrocution,No,No,No,No
+05/28/1987,Anthony Williams,27,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/29/1987,William Tucker,31,Male,White,Murder,1,Female,White,Muscogee,GA,South,Electrocution,No,No,No,No
+06/07/1987,Benjamin Berry,31,Male,White,Murder,1,Male,White,Jefferson Parish,LA,South,Electrocution,No,No,No,No
+06/09/1987,Alvin Moore,27,Male,Black,Murder,1,Female,White,Bossier Parish,LA,South,Electrocution,No,No,No,No
+06/12/1987,Jimmy Glass,25,Male,White,Murder,2,"1 Male, 1 Female",White,Lafayette Parish,LA,South,Electrocution,No,No,No,No
+06/16/1987,Jimmy Wingo,35,Male,White,Murder,2,"1 Male, 1 Female",White,Lafayette Parish,LA,South,Electrocution,No,No,No,No
+06/24/1987,Elliot Johnson,28,Male,Black,Murder,1,Male,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+07/06/1987,Richard Whitley,41,Male,White,Murder,1,Female,White,Fairfax City,VA,South,Electrocution,No,No,No,No
+07/08/1987,Connie Evans,27,Male,Black,Murder,1,Male,Asian,Hinds,MS,South,Gas Chamber,No,No,No,No
+07/08/1987,John Thompson,32,Male,White,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+07/20/1987,Willie Celestine,30,Male,Black,Murder,1,Female,White,Lafayette Parish,LA,South,Electrocution,No,No,No,No
+07/24/1987,Willie Watson,31,Male,Black,Murder,1,Female,White,St. Charles Parish,LA,South,Electrocution,No,No,No,No
+07/30/1987,John Brogdon,25,Male,White,Murder,1,Female,White,St. Charles Parish,LA,South,Electrocution,No,No,No,No
+08/24/1987,Sterling Rault,36,Male,White,Murder,1,Female,White,Orleans Parish,LA,South,Electrocution,No,No,No,No
+08/28/1987,Wayne Ritter,33,Male,White,Murder,1,Male,White,Mobile,AL,South,Electrocution,No,No,No,No
+08/28/1987,Dale Selby,34,Male,Black,Murder,3,"1 Male, 2 Female",White,Weber,UT,West,Lethal Injection,No,No,No,No
+08/28/1987,Beauford White,41,Male,Black,Murder,6,Male,Black,Miami-Dade,FL,South,Electrocution,No,No,No,No
+09/01/1987,Billy Mitchell,35,Male,Black,Murder,1,Male,White,Worth,GA,South,Electrocution,No,No,No,No
+09/10/1987,Joseph Starvaggi,34,Male,White,Murder,1,Male,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+09/21/1987,Timothy McCorquodale,35,Male,White,Murder,1,Female,White,Fulton,GA,South,Electrocution,No,No,No,No
+01/07/1988,Robert Streetman,27,Male,White,Murder,1,Female,White,Hardin,TX,South,Lethal Injection,No,No,No,No
+03/15/1988,Willie Darden,54,Male,Black,Murder,1,Male,White,Polk,FL,South,Electrocution,No,No,No,No
+03/15/1988,Wayne Felde,38,Male,White,Murder,1,Male,White,Caddo Parish,LA,South,Electrocution,No,No,No,No
+04/13/1988,Leslie Lowenfield,34,Male,Black,Murder,5,"1 Male, 4 Female",Black,Jefferson Parish,LA,South,Electrocution,No,No,No,Yes
+04/14/1988,Earl Clanton,33,Male,Black,Murder,1,Female,Black,Petersburg City,VA,South,Electrocution,No,No,No,No
+06/10/1988,Arthur Bishop,37,Male,White,Murder,5,Male,White,Salt Lake,UT,West,Lethal Injection,No,Yes,No,No
+06/14/1988,Edward Byrne,28,Male,White,Murder,1,Female,White,Bossier Parish,LA,South,Electrocution,No,No,No,No
+07/28/1988,James Messer,34,Male,White,Murder,1,Female,White,Polk,GA,South,Electrocution,No,No,No,No
+11/03/1988,Donald Franklin,37,Male,Black,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+11/07/1988,Jeffrey Daugherty,33,Male,White,Murder,1,Female,White,Brevard,FL,South,Electrocution,No,No,No,No
+12/13/1988,Raymond Landry,39,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+01/06/1989,George Mercer,44,Male,White,Murder,1,Female,White,Cass,MO,Midwest,Lethal Injection,No,No,No,No
+01/24/1989,Theodore Bundy,42,Male,White,Murder,1,Female,White,Columbia,FL,South,Electrocution,No,No,No,No
+03/22/1989,Leon King,44,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/04/1989,Aubrey Adams,31,Male,White,Murder,1,Female,White,Marion,FL,South,Electrocution,No,No,No,No
+05/18/1989,Henry Willis,36,Male,Black,Murder,1,Male,White,Berrien,GA,South,Electrocution,No,No,No,No
+05/24/1989,Stephen McCoy,41,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/26/1989,Michael Lindsey,28,Male,Black,Murder,1,Female,White,Mobile,AL,South,Electrocution,No,No,No,No
+06/19/1989,William Thompson,51,Male,White,Murder,1,Male,White,Washoe,NV,West,Lethal Injection,No,Yes,No,No
+06/21/1989,Leo Edwards,36,Male,Black,Murder,1,Male,Black,Hinds,MS,South,Gas Chamber,No,No,No,No
+06/23/1989,Sean Flannagan,28,Male,White,Murder,1,Male,White,Clark,NV,West,Lethal Injection,No,Yes,No,No
+07/14/1989,Horace Dunkins,28,Male,Black,Murder,1,Female,White,Jefferson,AL,South,Electrocution,No,No,No,No
+08/18/1989,Herbert Richardson,43,Male,Black,Murder,1,Female,Black,Houston,AL,South,Electrocution,No,No,No,No
+08/30/1989,Alton Waye,34,Male,Black,Murder,1,Male,White,Brunswick,VA,South,Electrocution,No,No,No,No
+09/20/1989,James Paster,44,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+11/17/1989,Arthur Julius,43,Male,Black,Murder,1,Female,Black,Montgomery,AL,South,Electrocution,No,No,No,No
+12/07/1989,Carlos De Luna,27,Male,Latino,Murder,1,Female,Latino,Mitchell,TX,South,Lethal Injection,No,No,No,No
+01/18/1990,Gerald Smith,31,Male,White,Murder,1,Female,White,Washington,MO,Midwest,Lethal Injection,No,Yes,No,No
+04/21/1990,Jerome Butler,54,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,Yes,No,No
+04/27/1990,Ronald Woomer,35,Male,White,Murder,1,Female,White,Richland,SC,South,Electrocution,No,No,No,No
+05/04/1990,Jesse Tafero,43,Male,White,Murder,2,Male,White,Bradford,FL,South,Electrocution,No,No,No,No
+05/11/1990,Winford Stokes,39,Male,Black,Murder,1,Female,White,Washington,MO,Midwest,Lethal Injection,No,No,No,No
+05/17/1990,Johnny Anderson,30,Male,White,Murder,1,Male,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+05/17/1990,Leonard Laws,40,Male,White,Murder,2,"1 Male, 1 Female",White,Schuyler,MO,Midwest,Lethal Injection,No,Yes,No,No
+05/18/1990,Dalton Prejean,30,Male,Black,Murder,1,Male,White,Lafayette Parish,LA,South,Electrocution,Yes,No,No,No
+06/03/1990,Thomas Baal,26,Male,White,Murder,1,Female,White,Clark,NV,West,Lethal Injection,No,Yes,No,No
+06/18/1990,John Swindler,46,Male,White,Murder,1,Male,White,Sebastian,AR,South,Electrocution,No,No,No,No
+06/25/1990,Ronald Simmons,49,Male,White,Murder,16,"6 Male, 10 Female",White,Pope,AR,South,Lethal Injection,No,Yes,No,No
+06/26/1990,James Smith,37,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+07/13/1990,Wallace Thomas,35,Male,Black,Murder,1,Female,White,Jefferson,AL,South,Electrocution,No,No,No,No
+07/18/1990,Mikel Derrick,33,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+07/19/1990,Richard Boggs,27,Male,White,Murder,1,Female,White,Portsmouth City,VA,South,Electrocution,No,No,No,No
+07/27/1990,Anthony Bertolotti,38,Male,Black,Murder,1,Female,White,Osceola,FL,South,Electrocution,No,No,No,No
+08/31/1990,George Gilmore,44,Male,White,Murder,2,"1 Male, 1 Female",White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+09/10/1990,Charles Coleman,43,Male,White,Murder,1,,White,Muskogee,OK,South,Lethal Injection,No,No,No,No
+09/12/1990,Charles Walker,50,Male,White,Murder,2,"1 Male, 1 Female",White,St. Clair,IL,Midwest,Lethal Injection,No,Yes,No,No
+09/21/1990,James Hamblen,61,Male,White,Murder,1,Female,White,Duval,FL,South,Electrocution,No,No,No,No
+10/17/1990,Wilbert Evans,44,Male,Black,Murder,1,Male,Black,Fairfax,VA,South,Electrocution,No,No,No,No
+11/19/1990,Raymond Clark,49,Male,White,Murder,1,Male,White,Pinellas,FL,South,Electrocution,No,No,No,No
+12/13/1990,Buddy Justus,38,Male,White,Murder,1,Female,White,Montgomery,VA,South,Electrocution,No,No,No,No
+02/26/1991,Lawrence Buxton,38,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+04/24/1991,Roy Harich,32,Male,White,Murder,1,Female,White,Volusia,FL,South,Electrocution,No,No,No,No
+05/23/1991,Ignacio Cuevas,59,Male,Latino,Murder,2,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/17/1991,Jerry Bird,54,Male,White,Murder,1,Male,White,Cameron,TX,South,Lethal Injection,No,No,No,No
+06/25/1991,Bobby Francis,46,Male,Black,Murder,1,Male,Black,Monroe,FL,South,Electrocution,No,No,No,No
+07/22/1991,Andrew Jones,35,Male,Black,Murder,1,Female,Black,East Baton Rouge Parish,LA,South,Electrocution,No,No,No,No
+07/24/1991,Albert Clozza,31,Male,White,Murder,1,Female,White,Virginia Beach City,VA,South,Electrocution,No,No,No,No
+08/22/1991,Derick Peterson,30,Male,Black,Murder,1,Male,White,Hampton City,VA,South,Electrocution,No,No,No,No
+08/23/1991,Maurice Byrd,36,Male,Black,Murder,4,"1 Male, 3 Female",White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+09/06/1991,Donald Gaskins,58,Male,White,Murder,1,Male,Black,Williamsburg,SC,South,Electrocution,No,No,No,No
+09/19/1991,James Russell,42,Male,Black,Murder,1,Male,White,Fort Bend,TX,South,Lethal Injection,No,No,No,No
+09/25/1991,Warren McCleskey,44,Male,Black,Murder,1,Male,White,Fulton,GA,South,Electrocution,No,No,No,No
+10/18/1991,Michael McDougall,36,Male,White,Murder,1,Female,White,Mecklenburg,NC,South,Lethal Injection,No,No,No,No
+11/12/1991,G.W. Green,54,Male,White,Murder,1,Male,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+01/22/1992,Mark Hopkinson,42,Male,White,Murder,1,Male,White,Uinta,WY,West,Lethal Injection,No,No,No,No
+01/22/1992,Joe Cordova,39,Male,Latino,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+01/24/1992,Ricky Rector,40,Male,Black,Murder,1,Male,White,Conway,AR,South,Lethal Injection,No,No,No,No
+02/11/1992,Johnny Garrett,28,Male,White,Murder,1,Female,White,Potter,TX,South,Lethal Injection,Yes,No,No,No
+02/28/1992,David Clark,32,Male,White,Murder,2,"1 Male, 1 Female",White,Brazos,TX,South,Lethal Injection,No,No,No,No
+03/03/1992,Edward Ellis,38,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/10/1992,Robyn Parks,37,Male,Black,Murder,1,Male,Asian,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+03/13/1992,Olan Robison,46,Male,White,Murder,3,Female,White,Stephens,OK,South,Lethal Injection,No,No,No,No
+03/14/1992,Steven Pennell,34,Male,White,Murder,2,Female,White,New Castle,DE,South,Lethal Injection,No,Yes,No,No
+03/20/1992,Larry Heath,40,Male,White,Murder,1,Female,White,Russell,AL,South,Electrocution,No,No,No,No
+04/06/1992,Donald Harding,43,Male,White,Murder,2,Male,White,Pima,AZ,West,Gas Chamber,No,No,No,No
+04/21/1992,Robert Harris,39,Male,White,Murder,2,Male,White,San Diego,CA,West,Gas Chamber,No,No,No,No
+04/23/1992,William White,34,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/07/1992,Justin May,46,Male,White,Murder,1,Female,White,Brazoria,TX,South,Lethal Injection,No,No,No,No
+05/07/1992,Stephen Hill,25,Male,White,Murder,1,Male,White,Saline,AR,South,Lethal Injection,No,No,No,No
+05/12/1992,Nollie Martin,43,Male,White,Murder,1,Female,White,Palm Beach,FL,South,Electrocution,No,No,No,No
+05/20/1992,Jesus Romero,27,Male,Latino,Murder,1,Female,Latino,Cameron,TX,South,Lethal Injection,No,No,No,No
+05/20/1992,Roger Coleman,33,Male,White,Murder,1,Female,White,Buchanan,VA,South,Electrocution,No,No,No,No
+05/22/1992,Robert Black,45,Male,White,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+07/21/1992,Edward Kennedy,47,Male,Black,Murder,2,Male,White,Duval,FL,South,Electrocution,No,No,No,No
+07/23/1992,Edward Fitzgerald,34,Male,White,Murder,1,Female,White,Chesterfield,VA,South,Electrocution,No,No,No,No
+07/30/1992,William Andrews,37,Male,Black,Murder,3,"1 Male, 2 Female",White,Weber,UT,West,Lethal Injection,No,No,No,No
+08/11/1992,Curtis Johnson,38,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+09/15/1992,Willie Jones,34,Male,Black,Murder,2,"1 Male, 1 Female",Black,Charles City,VA,South,Electrocution,No,No,No,No
+09/22/1992,James Demouchette,37,Male,Black,Murder,2,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+10/21/1992,Ricky Lee Grubbs,33,Male,White,Murder,1,Male,White,St. Francois,MO,Midwest,Lethal Injection,No,No,No,No
+10/23/1992,John Gardner,34,Male,White,Murder,2,"1 Male, 1 Female",White,Forsyth,NC,South,Lethal Injection,No,No,No,No
+11/19/1992,Jeffery Griffin,37,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+11/20/1992,Cornelius Singleton,36,Male,Black,Murder,1,Female,White,Mobile,AL,South,Electrocution,No,No,No,No
+12/10/1992,Timothy Bunch,33,Male,White,Murder,1,Female,Asian,Prince William,VA,South,Electrocution,No,No,No,No
+12/10/1992,Kavin Lincecum,29,Male,Black,Murder,1,Female,White,Brazoria,TX,South,Lethal Injection,No,No,No,No
+01/05/1993,Westley Dodd,31,Male,White,Murder,3,Male,White,Clark,WA,West,Hanging,No,Yes,No,No
+01/19/1993,Charles Stamper,39,Male,Black,Murder,3,Male,White,Chesterfield,VA,South,Electrocution,No,No,No,No
+01/27/1993,Martsay Bolder,35,Male,Black,Murder,1,Male,Black,Randolph,MO,Midwest,Lethal Injection,No,No,No,No
+03/03/1993,John Brewer,27,Male,White,Murder,1,Female,White,Coconino,AZ,West,Lethal Injection,No,Yes,No,No
+03/03/1993,James Red Dog,39,Male,Native American,Murder,1,Male,White,New Castle,DE,South,Lethal Injection,No,Yes,No,No
+03/05/1993,Robert Sawyer,41,Male,White,Murder,1,Female,White,Jefferson Parish,LA,South,Lethal Injection,No,No,No,No
+03/18/1993,Syvasky Poyner,36,Male,Black,Murder,5,Female,"4 White, 1 Black",York,VA,South,Electrocution,No,No,No,No
+03/23/1993,Carlos Santana,40,Male,Latino,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,Yes
+03/25/1993,Ramon Montoya,38,Male,Latino,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,Yes
+04/14/1993,James Clark,35,Male,White,Murder,4,"3 Male, 1 Female",White,Cochise,AZ,West,Lethal Injection,No,No,No,No
+04/21/1993,Robert Henderson,48,Male,White,Murder,3,Male,White,Hernando,FL,South,Electrocution,No,No,No,No
+05/04/1993,Darryl Stewart,38,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/05/1993,Larry Johnson,49,Male,White,Murder,1,Male,White,Madison,FL,South,Electrocution,No,No,No,No
+05/12/1993,Leonel Herrera,44,Male,Latino,Murder,1,Male,Latino,Cameron,TX,South,Lethal Injection,No,No,No,No
+05/18/1993,John Sawyers,37,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/17/1993,Andrew Chabrol,36,Male,White,Murder,1,Female,White,Virginia Beach City,VA,South,Electrocution,No,Yes,No,No
+06/28/1993,Thomas Stevens,36,Male,White,Murder,1,Male,White,Liberty,GA,South,Electrocution,No,No,No,No
+06/29/1993,Markham Duff-Smith,46,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+07/01/1993,Curtis Harris,31,Male,Black,Murder,1,Male,White,Brazos,TX,South,Lethal Injection,Yes,No,No,No
+07/21/1993,Walter Blair,32,Male,Black,Murder,1,Female,White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+07/28/1993,Frederick Lashley,29,Male,Black,Murder,1,Female,Black,St. Louis City,MO,Midwest,Lethal Injection,Yes,No,No,No
+07/30/1993,Danny Harris,32,Male,Black,Murder,1,Male,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+08/05/1993,Joseph Jernigan,39,Male,White,Murder,1,Male,White,Navarro,TX,South,Lethal Injection,No,No,No,No
+08/12/1993,David Holland,58,Male,White,Murder,1,Female,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+08/20/1993,Carl Kelly,34,Male,Black,Murder,2,Male,White,McLennan,TX,South,Lethal Injection,No,No,No,No
+08/24/1993,Ruben Cantu,26,Male,Latino,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,Yes,No,No,No
+08/24/1993,David Mason,36,Male,White,Murder,5,"2 Male, 3 Female",White,Alameda,CA,West,Gas Chamber,No,Yes,No,No
+08/25/1993,Michael Durocher,33,Male,White,Murder,1,Female,White,Clay,FL,South,Electrocution,No,Yes,No,No
+08/31/1993,Kenneth DeShields,33,Male,Black,Murder,1,Female,White,Sussex,DE,South,Lethal Injection,No,No,No,No
+08/31/1993,Richard Wilkerson,29,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+09/03/1993,Johnny James,39,Male,White,Murder,1,Female,White,Chambers,TX,South,Lethal Injection,No,No,No,No
+09/14/1993,Joseph Wise,31,Male,Black,Murder,1,Male,White,Mecklenburg,VA,South,Electrocution,No,No,No,No
+09/28/1993,Antonio Bonham,33,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+10/06/1993,Frank Guinan,47,Male,White,Murder,1,Male,White,Franklin,MO,Midwest,Lethal Injection,No,No,No,No
+11/10/1993,Anthony Cook,32,Male,White,Murder,1,Male,White,Matagorda,TX,South,Lethal Injection,No,Yes,No,No
+12/07/1993,Christopher Burger,33,Male,White,Murder,1,Male,White,Liberty,GA,South,Electrocution,Yes,No,No,No
+12/15/1993,Clifford Phillips,59,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+12/16/1993,David Pruett,44,Male,White,Murder,1,Female,White,Virginia Beach City,VA,South,Electrocution,No,No,No,No
+01/06/1994,Keith Wells,31,Male,White,Murder,2,"1 Male, 1 Female",White,Ada,ID,West,Lethal Injection,No,Yes,No,No
+02/02/1994,Harold Barnard,51,Male,White,Murder,1,Male,Asian,Galveston,TX,South,Lethal Injection,No,No,No,No
+03/03/1994,Johnny Watkins,32,Male,Black,Murder,1,Female,White,Danville City,VA,South,Electrocution,No,No,No,No
+03/31/1994,William Hance,45,Male,Black,Murder,1,Female,Black,Muscogee,GA,South,Electrocution,No,No,No,No
+03/31/1994,Freddie Webb,33,Male,Black,Murder,1,Male,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+04/04/1994,Richard Beavers,38,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+04/22/1994,Roy Allen Stewart,38,Male,White,Murder,1,Female,White,Miami-Dade,FL,South,Electrocution,No,No,No,No
+04/26/1994,Larry Anderson,41,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+04/27/1994,Timothy Spencer,32,Male,Black,Murder,1,Female,White,Richmond,VA,South,Electrocution,No,No,No,No
+05/03/1994,Paul Rougeau,46,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+05/10/1994,John Gacy,52,Male,White,Murder,12,Male,White,Cook,IL,Midwest,Lethal Injection,No,No,No,No
+05/11/1994,Edward Pickens,39,Male,Black,Murder,1,Male,Black,Montgomery,AR,South,Lethal Injection,No,No,No,No
+05/11/1994,Jonas Whitmore,50,Male,White,Murder,1,Female,White,Arkansas,AR,South,Lethal Injection,No,No,No,No
+05/17/1994,John Thanos,44,Male,White,Murder,1,Male,White,Baltimore,MD,South,Lethal Injection,No,Yes,No,No
+05/27/1994,Stephen Nethery,33,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+05/27/1994,Charles Campbell,39,Male,White,Murder,3,Female,White,Snohomish,WA,West,Hanging,No,No,No,No
+06/14/1994,Denton Crank,38,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/15/1994,David Lawson,38,Male,White,Murder,1,Male,White,Cabarrus,NC,South,Gas Chamber,No,No,No,No
+06/23/1994,Andre Deputy,45,Male,Black,Murder,2,"1 Male, 1 Female",Black,Kent,DE,South,Lethal Injection,No,No,No,No
+08/02/1994,Robert Drew,35,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+08/03/1994,James Holmes,37,Male,White,Murder,1,Male,White,Benton,AR,South,Lethal Injection,No,No,No,No
+08/03/1994,Darryl Richley,43,Male,White,Murder,1,Male,White,Benton,AR,South,Lethal Injection,No,No,No,No
+08/03/1994,Hoyt Clines,37,Male,White,Murder,1,Male,White,Benton,AR,South,Lethal Injection,No,No,No,No
+09/02/1994,Harold Otey,43,Male,Black,Murder,1,Female,White,Douglas,NE,Midwest,Electrocution,No,No,No,No
+09/16/1994,Jessie Gutierrez,29,Male,Latino,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+09/20/1994,George Lott,47,Male,White,Murder,2,Male,White,Potter,TX,South,Lethal Injection,No,Yes,No,No
+10/05/1994,Walter Williams,32,Male,Black,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+11/22/1994,Warren Bridge,34,Male,White,Murder,1,Male,White,Galveston,TX,South,Lethal Injection,No,No,No,No
+12/06/1994,Herman Clark,48,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+12/08/1994,Gregory Resnover,43,Male,Black,Murder,1,Male,White,Marion,IN,Midwest,Electrocution,No,No,No,No
+12/11/1994,Raymond Kinnamon,53,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+01/04/1995,Jesse Jacobs,44,Male,White,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+01/17/1995,Mario Marquez,36,Male,Latino,Murder,1,Female,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+01/24/1995,Kermit Smith,37,Male,White,Murder,1,Female,Black,Halifax,NC,South,Lethal Injection,No,No,No,No
+01/24/1995,Dana Edmonds,32,Male,Black,Murder,1,Male,White,Danville City,VA,South,Lethal Injection,No,No,No,No
+01/31/1995,Clifton Russell,33,Male,White,Murder,1,Male,White,Taylor,TX,South,Lethal Injection,No,No,No,No
+01/31/1995,Willie Williams,38,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+02/07/1995,Jeffrey Motley,29,Male,White,Murder,1,Female,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+02/16/1995,Billy Gardner,51,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+02/21/1995,Samuel Hawkins,51,Male,Black,Murder,1,Female,White,Lubbock,TX,South,Lethal Injection,No,No,No,No
+03/17/1995,Nelson Shelton,27,Male,White,Murder,1,Male,White,New Castle,DE,South,Lethal Injection,No,Yes,No,No
+03/20/1995,Thomas Grasso,32,Male,White,Murder,1,Female,Black,Tulsa,OK,South,Lethal Injection,No,Yes,No,No
+03/22/1995,Hernando Williams,40,Male,Black,Murder,1,Female,White,Cook,IL,Midwest,Lethal Injection,No,No,No,No
+03/22/1995,James Free,41,Male,White,Murder,1,Female,White,DuPage,IL,Midwest,Lethal Injection,No,No,No,No
+04/06/1995,Noble Mays,41,Male,White,Murder,1,Male,White,Wilbarger,TX,South,Lethal Injection,No,No,No,No
+04/07/1995,Nicholas Ingram,31,Male,White,Murder,1,Male,White,Cobb,GA,South,Electrocution,No,No,No,Yes
+04/19/1995,Richard Snell,64,Male,White,Murder,1,Male,White,Miller,AR,South,Lethal Injection,No,No,No,No
+04/28/1995,Willie Clisby,47,Male,Black,Murder,1,Male,Black,Jefferson,AL,South,Electrocution,No,No,No,No
+05/02/1995,Keith Zettlemoyer,39,Male,White,Murder,1,Male,White,Dauphin,PA,Northeast,Lethal Injection,No,Yes,No,No
+05/03/1995,Emmitt Foster,42,Male,Black,Murder,1,Male,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+05/10/1995,Duncan McKenzie,43,Male,White,Murder,1,Female,White,Pondera,MT,West,Lethal Injection,No,No,No,No
+05/12/1995,Varnell Weeks,43,Male,Black,Murder,1,Male,Black,Macon County,AL,South,Electrocution,No,No,No,No
+05/16/1995,Thomas Ward,59,Male,Black,Murder,1,Male,Black,Orleans Parish,LA,South,Lethal Injection,No,No,No,No
+05/17/1995,Darrell Devier,39,Male,White,Murder,1,Female,White,Bartow,GA,South,Electrocution,No,No,No,No
+05/17/1995,Girvies Davis,37,Male,Black,Murder,1,Male,White,St. Clair,IL,Midwest,Lethal Injection,No,No,No,No
+05/25/1995,Willie Turner,49,Male,Black,Murder,1,Male,White,Southampton,VA,South,Lethal Injection,No,No,No,No
+06/01/1995,Fletcher Mann,34,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+06/08/1995,Ronald Allridge,34,Male,Black,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+06/20/1995,John Fearance,40,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+06/21/1995,Larry Griffin,40,Male,Black,Murder,1,Male,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+06/21/1995,Karl Hammond,30,Male,Black,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+07/01/1995,Roger Stafford,43,Male,White,Murder,6,"5 Male, 1 Female","4 White, 1 Black, 1 Latino",McClain,OK,South,Lethal Injection,No,No,No,No
+07/18/1995,Bernard Bolender,42,Male,White,Murder,4,Male,"1 White, 3 Latino",Miami-Dade,FL,South,Electrocution,No,No,No,No
+07/26/1995,Robert Murray,32,Male,Black,Murder,2,Male,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+08/11/1995,Robert Brecheen,40,Male,White,Murder,1,Female,White,Carter,OK,South,Lethal Injection,No,No,No,No
+08/15/1995,Vernon Sattiewhite,39,Male,Black,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+08/15/1995,Leon Moser,52,Male,White,Murder,3,Female,White,Montgomery,PA,Northeast,Lethal Injection,No,Yes,No,No
+08/18/1995,Sylvester Adams,39,Male,Black,Murder,1,Male,Black,York,SC,South,Lethal Injection,No,No,No,No
+08/31/1995,Barry Fairchild,41,Male,Black,Murder,1,Female,White,Pulaski,AR,South,Lethal Injection,No,No,No,No
+09/13/1995,Jimmie Jeffers,49,Male,White,Murder,1,Female,White,Pima,AZ,West,Lethal Injection,No,No,No,No
+09/19/1995,Carl Johnson,40,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+09/20/1995,Charles Albanese,58,Male,White,Murder,1,Female,White,McHenry,IL,Midwest,Lethal Injection,No,No,No,No
+09/22/1995,Phillip Ingle,34,Male,White,Murder,2,"1 Male, 1 Female",White,Rutherford,NC,South,Lethal Injection,No,Yes,No,No
+09/27/1995,Dennis Stockton,54,Male,White,Murder,1,Male,White,Patrick,VA,South,Lethal Injection,No,No,No,No
+10/04/1995,Harold Lane,50,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+10/19/1995,Mickey Davidson,38,Male,White,Murder,3,Female,White,Smyth,VA,South,Lethal Injection,No,Yes,No,No
+11/13/1995,Herman Barnes,31,Male,Black,Murder,1,Male,White,Hampton City,VA,South,Lethal Injection,No,No,No,No
+11/15/1995,Robert Sidebottom,33,Male,White,Murder,1,Female,White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+11/22/1995,George del Vecchio,47,Male,White,Murder,1,Male,White,Cook,IL,Midwest,Lethal Injection,No,No,No,No
+11/29/1995,Anthony LaRette,44,Male,White,Murder,1,Female,White,Warren,MO,Midwest,Lethal Injection,No,No,No,No
+12/04/1995,Jerry White,47,Male,Black,Murder,1,Male,White,Orange,FL,South,Electrocution,No,No,No,No
+12/05/1995,Philip Atkins,40,Male,White,Murder,1,Male,Latino,Polk,FL,South,Electrocution,No,No,No,No
+12/06/1995,Robert O'Neal,44,Male,White,Murder,1,Male,Black,Butler,MO,Midwest,Lethal Injection,No,No,No,No
+12/06/1995,Bernard Amos,33,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+12/07/1995,Hai Hai Vuong,40,Male,Asian,Murder,2,Male,Asian,Jefferson,TX,South,Lethal Injection,No,No,No,No
+12/11/1995,Esequel Banda,31,Male,Latino,Murder,1,Female,White,Hamilton,TX,South,Lethal Injection,No,Yes,No,No
+12/12/1995,James Briddle,40,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+01/04/1996,Walter Correll,34,Male,White,Murder,1,Male,White,Franklin,VA,South,Lethal Injection,No,No,No,No
+01/23/1996,Richard Townes,45,Male,Black,Murder,1,Female,White,Virginia Beach City,VA,South,Lethal Injection,No,No,No,No
+01/25/1996,Billy Bailey,49,Male,White,Murder,2,"1 Male, 1 Female",White,Kent,DE,South,Hanging,No,No,No,No
+01/27/1996,John Taylor,36,Male,White,Murder,1,Female,White,Weber,UT,West,Firing Squad,No,Yes,No,No
+01/30/1996,William Flamer,41,Male,Black,Murder,2,"1 Male, 1 Female",Black,Kent,DE,South,Lethal Injection,No,No,No,No
+02/09/1996,Leo Jenkins,38,Male,White,Murder,2,"1 Male, 1 Female",White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+02/16/1996,Edward Horsley,38,Male,Black,Murder,1,Female,White,Monroe,AL,South,Electrocution,No,No,No,No
+02/21/1996,Jeffery Sloan,29,Male,White,Murder,1,Male,White,Clay,MO,Midwest,Lethal Injection,No,No,No,No
+02/23/1996,William Bonin,49,Male,White,Murder,4,Male,White,Los Angeles,CA,West,Lethal Injection,No,No,No,No
+02/27/1996,Kenneth Granviel,45,Male,Black,Murder,1,Female,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+03/01/1996,Antonio James,42,Male,Black,Murder,1,Male,White,Orleans Parish,LA,South,Lethal Injection,No,No,No,No
+03/30/1996,Richard Moran,42,Male,White,Murder,2,"1 Male, 1 Female",White,Clark,NV,West,Lethal Injection,No,No,No,No
+04/10/1996,Doyle Williams,48,Male,White,Murder,1,Male,White,Clay,MO,Midwest,Lethal Injection,No,No,No,No
+04/19/1996,James Clark,39,Male,White,Murder,2,"1 Male, 1 Female",White,New Castle,DE,South,Lethal Injection,No,Yes,No,No
+04/26/1996,Benjamin Brewer,38,Male,White,Murder,1,Female,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+05/03/1996,Keith Williams,48,Male,White,Murder,3,"2 Male, 1 Female",Latino,Merced,CA,West,Lethal Injection,No,No,No,No
+05/31/1996,Robert South,51,Male,White,Murder,1,Male,White,Lexington,SC,South,Lethal Injection,No,Yes,No,No
+06/19/1996,Daren Bolton,29,Male,White,Murder,1,Female,White,Pima,AZ,West,Lethal Injection,No,Yes,No,No
+07/17/1996,Joseph Savino,37,Male,White,Murder,1,Male,White,Bedford,VA,South,Lethal Injection,No,No,No,No
+07/17/1996,John Joubert,33,Male,White,Murder,2,Male,White,Lancaster,NE,Midwest,Electrocution,No,No,No,No
+07/18/1996,Tommie Smith,42,Male,Black,Murder,1,Male,White,Marion,IN,Midwest,Lethal Injection,No,No,No,No
+07/19/1996,Fred Kornahrens,47,Male,White,Murder,3,"2 Male, 1 Female",White,Charleston,SC,South,Lethal Injection,No,No,No,No
+07/31/1996,Emmet Nave,55,Male,Native American,Murder,1,Female,White,St. Charles,MO,Midwest,Lethal Injection,No,No,No,No
+08/07/1996,Thomas Battle,34,Male,Black,Murder,1,Female,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+08/08/1996,William Parker,41,Male,White,Murder,2,"1 Male, 1 Female",White,Lincoln,AR,South,Lethal Injection,No,No,No,No
+08/09/1996,Stephen Hatch,42,Male,White,Murder,2,"1 Male, 1 Female",White,Canadian,OK,South,Lethal Injection,No,No,No,No
+08/21/1996,Richard Oxford,39,Male,White,Murder,2,"1 Male, 1 Female",White,Platte,MO,Midwest,Lethal Injection,No,No,No,No
+08/22/1996,Luis Mata,45,Male,Latino,Murder,1,Female,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+09/06/1996,Michael Torrence,35,Male,White,Murder,3,"2 Male, 1 Female",White,Charleston,SC,South,Lethal Injection,No,Yes,No,No
+09/06/1996,Douglas Wright,56,Male,White,Murder,3,Male,White,Wasco,OR,West,Lethal Injection,No,Yes,No,No
+09/18/1996,Joe Gonzales,36,Male,Latino,Murder,1,Male,White,Potter,TX,South,Lethal Injection,No,Yes,No,No
+09/18/1996,Raymond Stewart,44,Male,Black,Murder,3,Male,"1 White, 2 Black",Winnebago,IL,Midwest,Lethal Injection,No,No,No,No
+10/04/1996,Larry Bell,47,Male,White,Murder,2,Female,White,Lexington,SC,South,Electrocution,No,No,No,No
+10/21/1996,John Bush,38,Male,Black,Murder,1,Female,White,Martin,FL,South,Electrocution,No,No,No,No
+11/14/1996,Larry Lonchar,45,Male,White,Murder,3,"2 Male, 1 Female",White,DeKalb,GA,South,Electrocution,No,No,No,No
+11/15/1996,Ellis Felker,48,Male,White,Murder,1,Female,White,Houston,GA,South,Electrocution,No,No,No,No
+11/15/1996,Doyle Lucas,41,Male,White,Murder,2,"1 Male, 1 Female",White,York,SC,South,Lethal Injection,No,Yes,No,No
+11/21/1996,Ronald Bennett,42,Male,Black,Murder,1,Female,White,Richmond,VA,South,Lethal Injection,No,No,No,No
+11/22/1996,Frank Middleton,33,Male,Black,Murder,1,Female,Black,Charleston,SC,South,Lethal Injection,No,No,No,No
+12/03/1996,Gregory Beaver,30,Male,White,Murder,1,Male,White,Prince George,VA,South,Lethal Injection,No,No,No,No
+12/06/1996,John Mills,41,Male,Black,Murder,1,Male,White,Wakulla,FL,South,Electrocution,No,No,No,No
+12/10/1996,Larry Stout,33,Male,Black,Murder,1,Female,White,Staunton City,VA,South,Lethal Injection,No,No,No,No
+12/11/1996,Richard Zeitvogel,40,Male,White,Murder,1,Male,White,Cole,MO,Midwest,Lethal Injection,No,No,No,No
+12/12/1996,Lem Tuggle,44,Male,White,Murder,1,Female,White,Smyth,VA,South,Lethal Injection,No,No,No,No
+12/16/1996,Ronald Hoke,39,Male,White,Murder,1,Female,White,Petersburg City,VA,South,Lethal Injection,No,No,No,No
+01/08/1997,Kirt Wainwright,30,Male,Black,Murder,1,Female,White,Logan,AR,South,Lethal Injection,No,No,No,No
+01/08/1997,Paul Ruiz,49,Male,Latino,Murder,2,Male,White,Logan,AR,South,Lethal Injection,No,No,No,No
+01/08/1997,Earl Van Denton,47,Male,White,Murder,2,Male,White,Nevada,AR,South,Lethal Injection,No,No,No,No
+01/10/1997,Billy Waldrop,44,Male,White,Murder,1,Male,White,Talladega,AL,South,Electrocution,No,No,No,No
+01/23/1997,Randy Greenawalt,47,Male,White,Murder,4,"2 Male, 2 Female",White,Yuma,AZ,West,Lethal Injection,No,No,No,No
+01/29/1997,Eric Schneider,35,Male,White,Murder,2,Male,White,Jefferson,MO,Midwest,Lethal Injection,No,No,No,No
+02/06/1997,Michael George,39,Male,White,Murder,1,Male,White,Prince William,VA,South,Lethal Injection,No,No,No,No
+02/10/1997,Richard Brimage,41,Male,White,Murder,1,Female,White,Kleberg,TX,South,Lethal Injection,No,Yes,No,No
+02/26/1997,Coleman Gray,39,Male,Black,Murder,1,Male,White,Portsmouth City,VA,South,Lethal Injection,No,No,No,No
+03/12/1997,John Barefield,32,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/25/1997,Pedro Medina,39,Male,Latino,Murder,1,Female,Black,Orange,FL,South,Electrocution,No,No,No,Yes
+04/02/1997,David Herman,39,Male,White,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+04/03/1997,David Spence,40,Male,White,Murder,3,"1 Male, 2 Female",White,McLennan,TX,South,Lethal Injection,No,No,No,No
+04/14/1997,Billy Woods,50,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+04/16/1997,Kenneth Gentry,36,Male,White,Murder,1,Male,White,Denton,TX,South,Lethal Injection,No,No,No,No
+04/21/1997,Benjamin Boyle,53,Male,White,Murder,1,Female,White,Potter,TX,South,Lethal Injection,No,No,No,No
+04/24/1997,John Brown,35,Male,White,Murder,1,Male,White,Orleans Parish,LA,South,Lethal Injection,No,No,No,No
+04/29/1997,Ernest Baldree,55,Male,White,Murder,2,"1 Male, 1 Female",White,Navarro,TX,South,Lethal Injection,No,No,No,No
+05/02/1997,Walter Hill,62,Male,Black,Murder,3,"2 Male, 1 Female",Black,Jefferson,AL,South,Electrocution,No,No,No,No
+05/06/1997,Terry Washington,33,Male,Black,Murder,1,Female,White,Walker,TX,South,Lethal Injection,No,No,No,No
+05/08/1997,Scott Carpenter,22,Male,Native American,Murder,1,Male,White,McIntosh,OK,South,Lethal Injection,No,Yes,No,No
+05/13/1997,Anthony Westley,36,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/16/1997,Clifton Belyeu,38,Male,White,Murder,1,Female,White,McLennan,TX,South,Lethal Injection,No,No,No,No
+05/16/1997,Harry Moore,56,Male,White,Murder,2,"1 Male, 1 Female",White,Marion,OR,West,Lethal Injection,No,Yes,No,No
+05/19/1997,Richard Drinkard,39,Male,White,Murder,3,"1 Male, 2 Female",White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/20/1997,Clarence Lackey,42,Male,White,Murder,1,Female,White,Tom Green,TX,South,Lethal Injection,No,No,No,No
+05/21/1997,Bruce Callins,37,Male,Black,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+05/22/1997,Larry White,47,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/28/1997,Robert Madden,34,Male,White,Murder,2,Male,White,Leon,TX,South,Lethal Injection,No,No,No,No
+06/02/1997,Patrick Rogers,33,Male,Black,Murder,1,Male,White,Collin,TX,South,Lethal Injection,No,No,No,No
+06/03/1997,Kenneth Harris,34,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/04/1997,Davis Losada,32,Male,Latino,Murder,1,Female,Latino,Cameron,TX,South,Lethal Injection,No,No,No,No
+06/04/1997,Dorsie Johnson,30,Male,Black,Murder,1,Male,White,Scurry,TX,South,Lethal Injection,No,No,No,No
+06/06/1997,Henry Hays,42,Male,White,Murder,1,Male,Black,Mobile,AL,South,Electrocution,No,No,No,No
+06/11/1997,Earl Behringer,33,Male,White,Murder,2,"1 Male, 1 Female",White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+06/13/1997,Michael Elkins,41,Male,White,Murder,1,Female,White,Jasper,SC,South,Lethal Injection,No,Yes,No,No
+06/16/1997,David Stoker,38,Male,White,Murder,1,Male,White,Hale,TX,South,Lethal Injection,No,No,No,No
+06/17/1997,Eddie Johnson,44,Male,Black,Murder,3,"1 Male, 2 Female",White,Aransas,TX,South,Lethal Injection,No,No,No,No
+06/18/1997,Irineo Montoya,30,Male,Latino,Murder,1,Male,White,Cameron,TX,South,Lethal Injection,No,No,No,Yes
+06/25/1997,William Woratzeck,51,Male,White,Murder,1,Female,White,Pinal,AZ,West,Lethal Injection,No,No,No,No
+07/01/1997,Harold McQueen,44,Male,White,Murder,1,Female,White,Madison,KY,South,Electrocution,No,No,No,No
+07/02/1997,Flint Hunt,38,Male,Black,Murder,1,Male,White,Baltimore City,MD,South,Lethal Injection,No,No,No,No
+07/17/1997,Roy Smith,50,Male,White,Murder,1,Male,White,Pittsylvania,VA,South,Lethal Injection,No,No,No,No
+07/23/1997,Joseph O'Dell,55,Male,White,Murder,1,Female,White,Virginia Beach City,VA,South,Lethal Injection,No,No,No,No
+07/29/1997,Robert West,35,Male,Native American,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+08/06/1997,Ralph Feltrop,42,Male,White,Murder,1,Female,White,Jefferson,MO,Midwest,Lethal Injection,No,No,No,No
+08/06/1997,Eugene Perry,53,Male,White,Murder,2,"1 Male, 1 Female",White,Van Buren,AR,South,Lethal Injection,No,No,No,No
+08/13/1997,Donald Reese,54,Male,White,Murder,1,Male,White,Jefferson,MO,Midwest,Lethal Injection,No,No,No,No
+08/19/1997,Carlton Pope,35,Male,Black,Murder,1,Female,White,Portsmouth City,VA,South,Lethal Injection,No,No,No,No
+08/20/1997,Andrew Six,32,Male,White,Murder,1,Female,White,Schuyler,MO,Midwest,Lethal Injection,No,No,No,No
+09/09/1997,James Davis,34,Male,Black,Murder,3,"2 Male, 1 Female",Black,Travis,TX,South,Lethal Injection,No,No,No,No
+09/17/1997,Mario Murphy,25,Male,Latino,Murder,1,Male,White,Virginia Beach City,VA,South,Lethal Injection,No,No,No,Yes
+09/22/1997,Jessel Turner,37,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+09/24/1997,Samuel McDonald,48,Male,Black,Murder,1,Male,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+09/25/1997,Benjamin Stone,45,Male,White,Murder,2,Female,White,Nueces,TX,South,Lethal Injection,No,Yes,No,No
+09/30/1997,Johnny Cockrum,38,Male,White,Murder,1,Female,White,Bowie,TX,South,Lethal Injection,No,No,No,No
+10/01/1997,Dwight Adanandus,41,Male,Black,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+10/08/1997,Ricky Green,36,Male,White,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+10/13/1997,Gary Davis,53,Male,White,Murder,1,Female,White,Adams,CO,West,Lethal Injection,No,No,No,No
+10/22/1997,Alan Bannister,39,Male,White,Murder,1,Male,White,McDonald,MO,Midwest,Lethal Injection,No,No,No,No
+10/28/1997,Kenneth Ransom,34,Male,Black,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+11/04/1997,Aua Lauti,43,Male,Asian,Murder,1,Female,Asian,Harris,TX,South,Lethal Injection,No,No,No,No
+11/06/1997,Aaron Fuller,30,Male,White,Murder,1,Female,White,Dawson,TX,South,Lethal Injection,No,No,No,No
+11/07/1997,Earl Matthews,32,Male,Black,Murder,1,Female,White,Charleston,SC,South,Lethal Injection,No,No,No,No
+11/13/1997,Dawud Majid Mu'Min,44,Male,Black,Murder,1,Female,White,Prince William,VA,South,Lethal Injection,No,No,No,No
+11/19/1997,Durlyn Eddmonds,42,Male,Black,Murder,1,Male,Black,Cook,IL,Midwest,Lethal Injection,No,No,No,No
+11/19/1997,Michael Sharp,43,Male,White,Murder,2,Female,White,Ector,TX,South,Lethal Injection,No,No,No,No
+11/19/1997,Walter Stewart,42,Male,Black,Murder,2,Male,White,Cook,IL,Midwest,Lethal Injection,No,No,No,No
+11/20/1997,Gary Burris,40,Male,Black,Murder,1,Male,Black,Marion,IN,Midwest,Lethal Injection,No,No,No,No
+11/21/1997,Charlie Livingston,35,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+12/02/1997,Robert Williams,61,Male,Black,Murder,1,Female,White,Sarpy,NE,Midwest,Electrocution,No,No,No,No
+12/09/1997,Michael Satcher,29,Male,Black,Murder,1,Female,White,Arlington,VA,South,Lethal Injection,No,No,No,No
+12/09/1997,Michael Lockhart,37,Male,White,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+12/11/1997,Thomas Beavers,26,Male,White,Murder,1,Female,Black,Hampton City,VA,South,Lethal Injection,No,No,No,No
+01/21/1998,Lloyd Hampton,44,Male,White,Murder,1,Male,White,Madison,IL,Midwest,Lethal Injection,No,Yes,No,No
+01/21/1998,Jose Jesus Ceja,42,Male,Latino,Murder,2,"1 Male, 1 Female","1 White, 1 Latino",Maricopa,AZ,West,Lethal Injection,No,No,No,No
+01/29/1998,Robert Smith,47,Male,White,Murder,1,Male,White,Sullivan,IN,Midwest,Lethal Injection,No,Yes,No,No
+01/30/1998,Ricky Sanderson,38,Male,White,Murder,1,Female,White,Iredell,NC,South,Gas Chamber,No,Yes,No,No
+02/03/1998,Karla Tucker,38,Female,White,Murder,2,"1 Male, 1 Female",White,Harris,TX,South,Lethal Injection,No,No,No,No
+02/09/1998,Steven Renfro,40,Male,White,Murder,3,"1 Male, 2 Female",White,Harrison,TX,South,Lethal Injection,No,Yes,No,No
+02/10/1998,Tony Mackall,33,Male,Black,Murder,1,Female,White,Prince William,VA,South,Lethal Injection,No,No,No,No
+02/20/1998,Michael Long,35,Male,White,Murder,2,"1 Male, 1 Female",White,Muskogee,OK,South,Lethal Injection,No,Yes,No,No
+02/24/1998,Terry Langford,31,Male,White,Murder,2,"1 Male, 1 Female",White,Powell,MT,West,Lethal Injection,No,No,No,No
+02/25/1998,Reginald Powell,29,Male,Black,Murder,2,Male,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+03/06/1998,John Arnold,43,Male,White,Murder,1,Female,Black,Beaufort,SC,South,Lethal Injection,No,No,No,No
+03/11/1998,Jerry Hogue,47,Male,White,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+03/18/1998,Douglas Buchanan,29,Male,White,Murder,4,"3 Male, 1 Female",White,Amherst,VA,South,Lethal Injection,No,No,No,No
+03/23/1998,Gerald Stano,46,Male,White,Murder,1,Female,White,Volusia,FL,South,Electrocution,No,No,No,No
+03/24/1998,Leo Jones,47,Male,Black,Murder,1,Male,White,St. Johns,FL,South,Electrocution,No,No,No,No
+03/25/1998,Milton Griffin-El,37,Male,Black,Murder,1,Male,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+03/25/1998,Ronald Watkins,35,Male,Black,Murder,1,Male,White,Pittsylvania,VA,South,Lethal Injection,No,No,No,No
+03/30/1998,Judy Buenoano,54,Female,White,Murder,1,Male,White,Orange,FL,South,Electrocution,No,No,No,No
+03/31/1998,Daniel Remeta,40,Male,Native American,Murder,1,Female,White,Marion,FL,South,Electrocution,No,No,No,No
+04/14/1998,Angel Breard,32,Male,Latino,Murder,1,Female,White,Arlington,VA,South,Lethal Injection,No,No,No,Yes
+04/22/1998,Jose Villafuerte,45,Male,Latino,Murder,1,Female,Latino,Maricopa,AZ,West,Lethal Injection,No,No,No,Yes
+04/22/1998,Joseph Cannon,38,Male,White,Murder,1,Female,White,Hays,TX,South,Lethal Injection,Yes,No,No,No
+04/22/1998,Glennon Sweet,42,Male,White,Murder,1,Male,White,Clay,MO,Midwest,Lethal Injection,No,No,No,No
+04/24/1998,Lesley Gosch,42,Male,White,Murder,1,Female,White,Victoria,TX,South,Lethal Injection,No,No,No,No
+04/29/1998,Frank McFarland,34,Male,White,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+04/29/1998,Arthur Ross,43,Male,White,Murder,1,Male,White,Pima,AZ,West,Lethal Injection,No,Yes,No,No
+05/08/1998,Steven Thompson,34,Male,White,Murder,1,Female,White,Madison,AL,South,Electrocution,No,No,No,No
+05/18/1998,Robert Carter,34,Male,Black,Murder,1,Female,Latino,Harris,TX,South,Lethal Injection,Yes,No,No,No
+05/19/1998,Pedro Muniz,41,Male,Latino,Murder,1,Female,White,Williamson,TX,South,Lethal Injection,No,No,No,No
+06/03/1998,Douglas Gretzler,47,Male,White,Murder,2,"1 Male, 1 Female",White,Pima,AZ,West,Lethal Injection,No,No,No,No
+06/09/1998,David Cargill,39,Male,White,Murder,2,"1 Male, 1 Female",White,Bibb,GA,South,Electrocution,No,No,No,No
+06/11/1998,Clifford Boggess,33,Male,White,Murder,1,Male,White,Clay,TX,South,Lethal Injection,No,No,No,No
+06/15/1998,Johnny Pyles,40,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+06/18/1998,Dennis Eaton,41,Male,White,Murder,1,Male,White,Fairfax,VA,South,Lethal Injection,No,No,No,No
+06/26/1998,Leopoldo Narvaiz,30,Male,Latino,Murder,4,"1 Male, 3 Female",White,Hays,TX,South,Lethal Injection,No,No,No,No
+07/08/1998,Wilburn Henderson,56,Male,White,Murder,1,Female,White,Sebastian,AR,South,Lethal Injection,No,No,No,No
+07/10/1998,John Plath,43,Male,White,Murder,1,Female,Black,Beaufort,SC,South,Lethal Injection,No,No,No,No
+07/14/1998,Thomas Thompson,43,Male,White,Murder,1,Female,White,Orange,CA,West,Lethal Injection,No,No,No,No
+07/23/1998,Danny King,47,Male,White,Murder,1,Female,White,Roanoke,VA,South,Lethal Injection,No,No,No,No
+08/05/1998,Stephen Wood,38,Male,White,Murder,1,Male,White,Greer,OK,South,Lethal Injection,No,Yes,No,No
+08/14/1998,Zane Hill,62,Male,White,Murder,1,Male,White,Buncombe,NC,South,Lethal Injection,No,No,No,No
+08/20/1998,Lance Chandler,25,Male,Black,Murder,1,Male,White,Halifax,VA,South,Lethal Injection,No,No,No,No
+08/26/1998,Genaro Ruiz Camacho,43,Male,Latino,Murder,1,Male,Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+08/31/1998,Johnile DuBois,31,Male,Black,Murder,1,Male,White,Fairfax,VA,South,Lethal Injection,No,No,No,No
+09/09/1998,Delbert Teague,37,Male,White,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+09/23/1998,David Castillo,34,Male,Latino,Murder,1,Male,Latino,Hidalgo,TX,South,Lethal Injection,No,No,No,No
+09/23/1998,Kenneth Stewart,44,Male,White,Murder,2,"1 Male, 1 Female",White,Bedford,VA,South,Electrocution,No,No,No,No
+09/25/1998,Sammy Roberts,40,Male,White,Murder,3,"2 Male, 1 Female","2 White, 1 Black",Berkeley,SC,South,Lethal Injection,No,No,No,No
+10/01/1998,Javier Cruz,41,Male,Latino,Murder,2,"1 Male, 1 Female",Black,Bexar,TX,South,Lethal Injection,No,No,No,No
+10/05/1998,Roderick Abeyta,44,Male,Latino,Murder,1,Female,White,Clark,NV,West,Lethal Injection,No,Yes,No,No
+10/07/1998,Jonathan Nobles,37,Male,White,Murder,2,Female,White,Travis,TX,South,Lethal Injection,No,No,No,No
+10/13/1998,Jeremy Sagastegui,27,Male,White,Murder,3,"1 Male, 2 Female","2 White, 1 Latino",Benton,WA,West,Lethal Injection,No,Yes,No,No
+10/14/1998,Dwayne Wright,24,Male,Black,Murder,1,Female,Black,Fairfax City,VA,South,Lethal Injection,Yes,No,No,No
+10/21/1998,Ronald Fitzgerald,29,Male,Black,Murder,2,Male,Black,Pittsylvania,VA,South,Lethal Injection,No,No,No,No
+11/16/1998,Tyrone Gilliam,32,Male,Black,Murder,1,Female,White,Baltimore,MD,South,Lethal Injection,No,No,No,No
+11/17/1998,Kenneth Wilson,34,Male,Black,Murder,1,Female,Black,Newport News City,VA,South,Lethal Injection,No,No,No,No
+11/17/1998,Kenneth McDuff,52,Male,White,Murder,1,Female,White,McLennan,TX,South,Lethal Injection,No,No,No,No
+11/20/1998,John Noland,50,Male,White,Murder,2,"1 Male, 1 Female",White,Mecklenburg,NC,South,Lethal Injection,No,No,No,No
+12/03/1998,Kevin Cardwell,29,Male,Black,Murder,1,Male,Black,Henrico,VA,South,Lethal Injection,No,No,No,No
+12/04/1998,J.D. Gleaton,53,Male,Black,Murder,1,Male,White,Lexington,SC,South,Lethal Injection,No,No,No,No
+12/04/1998,Larry Gilbert,43,Male,Black,Murder,1,Male,White,Lexington,SC,South,Lethal Injection,No,No,No,No
+12/07/1998,Daniel Corwin,40,Male,White,Murder,3,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+12/08/1998,Jeff Emery,39,Male,White,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+12/10/1998,Tuan Nguyen,39,Male,Asian,Murder,3,"1 Male, 2 Female",White,Tulsa,OK,South,Lethal Injection,No,No,No,Yes
+12/11/1998,Louis Truesdale,40,Male,Black,Murder,1,Female,White,Lancaster,SC,South,Lethal Injection,No,No,No,No
+12/15/1998,James Meanes,42,Male,Black,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+12/17/1998,John Duvall,47,Male,White,Murder,1,Female,White,Stephens,OK,South,Lethal Injection,No,No,No,No
+12/18/1998,Andy Smith,38,Male,Black,Murder,2,"1 Male, 1 Female",Black,Anderson,SC,South,Lethal Injection,No,No,No,No
+01/05/1999,John Moody,46,Male,White,Murder,1,Female,White,Taylor,TX,South,Lethal Injection,No,No,No,No
+01/07/1999,John Castro,37,Male,Native American,Murder,1,Female,White,Kay,OK,South,Lethal Injection,No,No,No,No
+01/08/1999,Ronnie Howard,40,Male,Black,Murder,1,Male,Asian,Greenville,SC,South,Lethal Injection,No,No,No,No
+01/08/1999,Dobie Williams,38,Male,Black,Murder,1,Female,White,Sabine Parish,LA,South,Lethal Injection,No,No,No,No
+01/13/1999,Jess Gillies,38,Male,White,Murder,1,Female,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+01/13/1999,Kelvin Malone,37,Male,Black,Murder,1,Male,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+01/13/1999,Troy Farris,36,Male,White,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+01/20/1999,Mark Sheppard,27,Male,Black,Murder,2,"1 Male, 1 Female",White,Chesterfield,VA,South,Lethal Injection,No,No,No,No
+01/22/1999,Joseph Atkins,51,Male,White,Murder,2,"1 Male, 1 Female",Black,Charleston,SC,South,Lethal Injection,No,No,No,No
+01/26/1999,Martin Vega,52,Male,Latino,Murder,1,Male,White,Caldwell,TX,South,Lethal Injection,No,No,No,No
+02/03/1999,Darrick Gerlaugh,38,Male,Native American,Murder,1,Male,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+02/04/1999,Tony Fry,23,Male,White,Murder,1,Male,White,Chesterfield,VA,South,Lethal Injection,No,No,No,No
+02/04/1999,Sean Sellers,29,Male,White,Murder,3,"2 Male, 1 Female",White,Oklahoma,OK,South,Lethal Injection,Yes,No,No,No
+02/09/1999,Jaturun Siripongs,43,Male,Asian,Murder,2,"1 Male, 1 Female",Asian,Orange,CA,West,Lethal Injection,No,No,No,Yes
+02/10/1999,George Cordova,39,Male,Latino,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+02/11/1999,Danny Barber,43,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+02/16/1999,Johnie Cox,42,Male,White,Murder,3,"1 Male, 2 Female",White,White,AR,South,Lethal Injection,No,No,No,No
+02/16/1999,Andrew Cantu,31,Male,Latino,Murder,3,"2 Male, 1 Female",White,Taylor,TX,South,Lethal Injection,No,No,No,No
+02/19/1999,Wilford Berry,36,Male,White,Murder,1,Male,White,Cuyahoga,OH,Midwest,Lethal Injection,No,Yes,No,No
+02/24/1999,James Rodden,38,Male,White,Murder,1,Female,White,Clay,MO,Midwest,Lethal Injection,No,No,No,No
+02/24/1999,Karl LaGrand,35,Male,White,Murder,1,Male,White,Pima,AZ,West,Lethal Injection,No,No,No,Yes
+02/24/1999,Norman Green,38,Male,Black,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+03/03/1999,Walter LaGrand,37,Male,White,Murder,1,Male,White,Pima,AZ,West,Gas Chamber,No,No,No,Yes
+03/09/1999,George Quesinberry,37,Male,White,Murder,1,Male,White,Chesterfield,VA,South,Lethal Injection,No,No,No,No
+03/10/1999,Roy Roberts,46,Male,White,Murder,1,Male,White,Marion,MO,Midwest,Lethal Injection,No,No,No,No
+03/17/1999,Andrew Kokoraleis,35,Male,White,Murder,1,Female,White,DuPage,IL,Midwest,Lethal Injection,No,No,No,No
+03/25/1999,Charles Rector,44,Male,Black,Murder,1,Female,White,Travis,TX,South,Lethal Injection,No,No,No,No
+03/26/1999,David Fisher,57,Male,White,Murder,1,Male,White,Bedford,VA,South,Lethal Injection,No,No,No,No
+03/26/1999,James Rich,26,Male,White,Murder,1,Male,White,Greene,NC,South,Lethal Injection,No,Yes,No,No
+03/30/1999,Robert White,61,Male,White,Murder,1,Male,White,Collin,TX,South,Lethal Injection,No,No,No,No
+04/05/1999,Alvaro Calambro,25,Male,Asian,Murder,2,"1 Male, 1 Female",White,Washoe,NV,West,Lethal Injection,No,Yes,No,Yes
+04/12/1999,Marion Pruett,49,Male,White,Murder,1,Female,White,Crawford,AR,South,Lethal Injection,No,No,No,No
+04/13/1999,Carl Chichester,36,Male,Black,Murder,1,Male,White,Prince William,VA,South,Lethal Injection,No,No,No,No
+04/14/1999,Roy Ramsey,45,Male,Black,Murder,2,"1 Male, 1 Female",White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+04/20/1999,Arthur Jenkins,29,Male,White,Murder,2,Male,White,Warren,VA,South,Lethal Injection,No,No,No,No
+04/23/1999,David Lawrie,37,Male,White,Murder,4,Male,White,Kent,DE,South,Lethal Injection,No,No,No,No
+04/28/1999,Ralph Davis,61,Male,Black,Murder,1,Female,White,Butler,MO,Midwest,Lethal Injection,No,No,No,No
+04/28/1999,Aaron Foust,26,Male,White,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,Yes,No,No
+04/28/1999,Eric Payne,26,Male,White,Murder,2,Female,"1 White, 1 Black",Richmond,VA,South,Lethal Injection,No,Yes,No,No
+04/29/1999,Ronald Yeatts,38,Male,White,Murder,1,Female,White,Pittsylvania,VA,South,Lethal Injection,No,No,No,No
+05/04/1999,Jose De La Cruz,31,Male,Latino,Murder,1,Male,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+05/04/1999,Manuel Babbitt,50,Male,Black,Murder,1,Female,White,Sacramento,CA,West,Lethal Injection,No,No,No,No
+05/05/1999,Clydell Coleman,62,Male,Black,Murder,1,Female,Black,McLennan,TX,South,Lethal Injection,No,No,No,No
+05/05/1999,Robert Vickers,41,Male,White,Murder,1,Male,White,Pinal,AZ,West,Lethal Injection,No,No,No,No
+05/25/1999,Edward Harper,50,Male,White,Murder,2,"1 Male, 1 Female",White,Jefferson,KY,South,Lethal Injection,No,Yes,No,No
+05/26/1999,Jessie Wise,46,Male,Black,Murder,1,Female,Black,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+06/01/1999,William Little,38,Male,White,Murder,1,Female,White,Liberty,TX,South,Lethal Injection,No,No,No,No
+06/03/1999,Scotty Moore,43,Male,White,Murder,1,Male,Latino,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+06/16/1999,Bruce Kilgore,38,Male,Black,Murder,1,Female,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+06/16/1999,Michael Poland,59,Male,White,Murder,2,Male,White,Yavapai,AZ,West,Lethal Injection,No,No,No,No
+06/17/1999,Stanley Faulder,61,Male,White,Murder,1,Female,White,Gregg,TX,South,Lethal Injection,No,No,No,Yes
+06/18/1999,Brian Baldwin,40,Male,Black,Murder,1,Female,White,Monroe,AL,South,Electrocution,No,No,No,No
+06/30/1999,Robert Walls,33,Male,White,Murder,1,Male,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+07/01/1999,Charles Tuttle,35,Male,White,Murder,1,Female,White,Smith,TX,South,Lethal Injection,No,Yes,No,No
+07/06/1999,Gary Heidnick,55,Male,White,Murder,2,Female,Black,Philadelphia,PA,Northeast,Lethal Injection,No,Yes,No,No
+07/07/1999,Tyrone Fuller,35,Male,Black,Murder,1,Female,White,Grayson,TX,South,Lethal Injection,No,No,No,No
+07/08/1999,Norman Newsted,45,Male,White,Murder,1,Male,Black,Osage,OK,South,Lethal Injection,No,No,No,No
+07/08/1999,Allen Davis,54,Male,White,Murder,3,Female,White,St. Johns,FL,South,Electrocution,No,No,No,No
+07/21/1999,Thomas Strickler,33,Male,White,Murder,1,Female,Black,Augusta,VA,South,Lethal Injection,No,No,No,No
+08/04/1999,Ricky Blackmon,41,Male,White,Murder,1,Male,White,Shelby,TX,South,Lethal Injection,No,No,No,No
+08/05/1999,Charles Boyd,39,Male,Black,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+08/06/1999,Victor Kennedy,37,Male,Black,Murder,1,Female,White,Shelby,AL,South,Electrocution,No,No,No,No
+08/10/1999,Kenneth Dunn,39,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+08/11/1999,James Earhart,56,Male,White,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+08/17/1999,Marlon Williams,26,Male,Black,Murder,1,Female,White,Chesapeake City,VA,South,Lethal Injection,No,No,No,No
+08/18/1999,Joseph Trevino,37,Male,Latino,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+09/01/1999,Raymond Jones,39,Male,Black,Murder,1,Male,Asian,Jefferson,TX,South,Lethal Injection,No,No,No,No
+09/01/1999,David Leisure,49,Male,White,Murder,1,Male,White,Jefferson,MO,Midwest,Lethal Injection,No,No,No,No
+09/08/1999,Alan Willett,52,Male,White,Murder,2,Male,White,Johnson,AR,South,Lethal Injection,No,Yes,No,No
+09/08/1999,Mark Gardner,43,Male,White,Murder,3,"1 Male, 2 Female",White,Sebastian,AR,South,Lethal Injection,No,No,No,No
+09/10/1999,Willis Barnes,51,Male,Black,Murder,1,Female,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+09/14/1999,William Davis,42,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+09/16/1999,Everett Mueller,51,Male,White,Murder,1,Female,White,Chesterfield,VA,South,Lethal Injection,No,No,No,No
+09/21/1999,Richard Smith,43,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+09/24/1999,Willie Sullivan,28,Male,Black,Murder,1,Male,White,Kent,DE,South,Lethal Injection,No,No,No,No
+09/24/1999,Harvey Green,38,Male,Black,Murder,2,"1 Male, 1 Female",White,Pitt,NC,South,Lethal Injection,No,No,No,No
+10/12/1999,Alvin Crane,41,Male,White,Murder,1,Male,White,Ochiltree,TX,South,Lethal Injection,No,No,No,No
+10/14/1999,Jerry McFadden,51,Male,White,Murder,1,Female,White,Upshur,TX,South,Lethal Injection,No,No,No,No
+10/15/1999,Joesph Parsons,35,Male,White,Murder,1,Male,White,Iron,UT,West,Lethal Injection,No,Yes,No,No
+10/19/1999,Jason Joseph,27,Male,Black,Murder,1,Male,Black,Portsmouth City,VA,South,Lethal Injection,No,No,No,No
+10/21/1999,Arthur Boyd,53,Male,White,Murder,1,Female,White,Surry,NC,South,Lethal Injection,No,No,No,No
+10/27/1999,Ignacio Ortiz,57,Male,Latino,Murder,1,Female,Latino,Pima,AZ,West,Lethal Injection,No,No,No,No
+10/28/1999,Domingo Cantu,31,Male,Native American,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+11/09/1999,Thomas Royal,32,Male,Black,Murder,1,Male,Black,Hampton City,VA,South,Lethal Injection,No,No,No,No
+11/12/1999,Leroy Drayton,44,Male,Black,Murder,1,Female,White,Charleston,SC,South,Lethal Injection,No,No,No,No
+11/16/1999,Desmond Jennings,46,Male,Black,Murder,2,"1 Male, 1 Female",Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+11/17/1999,John Lamb,42,Male,White,Murder,1,Male,White,Hunt,TX,South,Lethal Injection,No,No,No,No
+11/18/1999,Jose Gutierrez,39,Male,Latino,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+11/19/1999,David Brown,51,Male,Black,Murder,2,Female,White,Union,NC,South,Lethal Injection,No,No,No,No
+12/02/1999,Cornel Cooks,43,Male,Black,Murder,1,Female,White,Comanche,OK,South,Lethal Injection,No,No,No,No
+12/03/1999,David Rocheville,31,Male,White,Murder,1,Male,White,Spartanburg,SC,South,Lethal Injection,No,No,No,No
+12/08/1999,David Long,46,Male,White,Murder,3,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+12/09/1999,Andre Graham,29,Male,Black,Murder,1,Female,White,Chesterfield,VA,South,Lethal Injection,No,No,No,No
+12/09/1999,Bobby Ross,41,Male,Black,Murder,1,Male,White,Roger Mills,OK,South,Lethal Injection,No,No,No,No
+12/09/1999,D.H. Fleenor,48,Male,White,Murder,2,"1 Male, 1 Female",White,Jefferson,IN,Midwest,Lethal Injection,No,No,No,No
+12/09/1999,James Beathard,42,Male,White,Murder,3,Female,White,Trinity,TX,South,Lethal Injection,No,No,No,No
+12/14/1999,Robert Atworth,30,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,Yes,No,No
+12/15/1999,Sammie Felder,54,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+01/06/2000,Malcolm Johnson,41,Male,Black,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/07/2000,David Duren,37,Male,White,Murder,1,Female,White,Jefferson,AL,South,Electrocution,No,No,No,No
+01/10/2000,Douglas Thomas,26,Male,White,Murder,2,Male,White,Middlesex,VA,South,Lethal Injection,Yes,No,No,No
+01/12/2000,Earl Heiselbertz,48,Male,White,Murder,2,Female,White,Sabine,TX,South,Lethal Injection,No,No,No,No
+01/13/2000,Steven Roach,23,Male,White,Murder,1,Female,White,Greene,VA,South,Lethal Injection,Yes,No,No,No
+01/13/2000,Gary Walker,46,Male,White,Murder,1,Male,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+01/18/2000,Spencer Goodman,31,Male,White,Murder,1,Female,White,Fort Bend,TX,South,Lethal Injection,No,No,No,No
+01/20/2000,David Hicks,38,Male,Black,Murder,1,Female,Black,Freestone,TX,South,Lethal Injection,No,No,No,No
+01/21/2000,Larry Robison,42,Male,White,Murder,5,"3 Male, 2 Female",White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+01/24/2000,Billy Hughes,47,Male,White,Murder,1,Male,White,Matagorda,TX,South,Lethal Injection,No,No,No,No
+01/25/2000,Glenn McGinnis,27,Male,Black,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,Yes,No,No,No
+01/27/2000,James Moreland,39,Male,White,Murder,1,Male,White,Henderson,TX,South,Lethal Injection,No,No,No,No
+02/10/2000,Michael Roberts,41,Male,Black,Murder,1,Female,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+02/16/2000,Anthony Chaney,45,Male,White,Murder,1,Male,White,Coconino,AZ,West,Lethal Injection,No,No,No,No
+02/23/2000,Terry Sims,58,Male,White,Murder,1,Male,White,Seminole,FL,South,Lethal Injection,No,No,No,No
+02/23/2000,Cornelius Goss,38,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+02/24/2000,Anthony Bryan,40,Male,White,Murder,1,Male,White,Santa Rosa,FL,South,Lethal Injection,No,No,No,No
+02/24/2000,Betty Beets,62,Female,White,Murder,1,Male,White,Henderson,TX,South,Lethal Injection,No,No,No,No
+03/01/2000,Odell Barnes,31,Male,Black,Murder,1,Female,Black,Lubbock,TX,South,Lethal Injection,No,No,No,No
+03/03/2000,Freddie Wright,48,Male,Black,Murder,2,"1 Male, 1 Female",White,Mobile,AL,South,Electrocution,No,No,No,No
+03/14/2000,Ponchai Wilkerson,28,Male,Black,Murder,1,Male,Asian,Harris,TX,South,Lethal Injection,No,No,No,No
+03/15/2000,Timothy Gribble,36,Male,White,Murder,1,Female,White,Galveston,TX,South,Lethal Injection,No,No,No,No
+03/15/2000,Patrick Poland,50,Male,White,Murder,2,Male,White,Yavapai,AZ,West,Lethal Injection,No,No,No,No
+03/15/2000,Darrell Rich,45,Male,Native American,Murder,3,Female,White,Yolo,CA,West,Lethal Injection,No,No,No,No
+03/16/2000,Lonnie Weeks,28,Male,Black,Murder,1,Male,Latino,Prince William,VA,South,Lethal Injection,No,No,No,No
+03/22/2000,James Hampton,62,Male,White,Murder,1,Female,White,Callaway,MO,Midwest,Lethal Injection,No,Yes,No,No
+03/23/2000,Kelly Rogers,31,Male,Black,Murder,1,Female,White,Payne,OK,South,Lethal Injection,No,No,No,No
+04/14/2000,Robert Tarver,52,Male,Black,Murder,1,Male,White,Russell,AL,South,Electrocution,No,No,No,No
+04/19/2000,Robert Coe,44,Male,White,Murder,1,Female,White,Weakley,TN,South,Lethal Injection,No,No,No,No
+04/27/2000,Ronald Boyd,43,Male,Black,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+05/02/2000,Christina Riggs,28,Female,White,Murder,2,"1 Male, 1 Female",White,Pulaski,AR,South,Lethal Injection,No,Yes,No,No
+05/04/2000,Tommy Jackson,43,Male,Black,Murder,1,Female,White,Williamson,TX,South,Lethal Injection,No,No,No,No
+05/09/2000,William Kitchens,37,Male,White,Murder,1,Female,White,Taylor,TX,South,Lethal Injection,No,No,No,No
+05/11/2000,Michael McBride,38,Male,White,Murder,2,"1 Male, 1 Female",White,Lubbock,TX,South,Lethal Injection,No,No,No,No
+05/23/2000,James Richardson,32,Male,Black,Murder,1,Male,White,Navarro,TX,South,Lethal Injection,No,No,No,No
+05/24/2000,Richard Foster,47,Male,White,Murder,1,Male,White,Parker,TX,South,Lethal Injection,No,No,No,No
+05/25/2000,Charles Foster,51,Male,Black,Murder,1,Male,Black,Muskogee,OK,South,Lethal Injection,No,No,No,No
+05/25/2000,James Clayton,33,Male,Black,Murder,1,Female,White,Taylor,TX,South,Lethal Injection,No,No,No,No
+05/31/2000,Robert Carter,34,Male,Black,Murder,6,"1 Male, 5 Female",Black,Bastrop,TX,South,Lethal Injection,No,No,No,No
+06/01/2000,James Robedeaux,51,Male,Native American,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+06/02/2000,Pernell Ford,35,Male,Black,Murder,2,Female,White,Calhoun,AL,South,Electrocution,No,Yes,No,No
+06/06/2000,Feltus Taylor,38,Male,Black,Murder,1,Female,White,East Baton Rouge Parish,LA,South,Lethal Injection,No,No,No,No
+06/07/2000,Bennie Demps,49,Male,Black,Murder,1,Male,Black,Bradford,FL,South,Lethal Injection,No,No,No,No
+06/08/2000,Roger Berget,39,Male,White,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+06/12/2000,Wayne Mason,48,Male,White,Murder,2,Female,White,Smith,TX,South,Lethal Injection,No,No,No,No
+06/14/2000,John Burks,44,Male,Black,Murder,1,Male,Latino,McLennan,TX,South,Lethal Injection,No,No,No,No
+06/15/2000,William Bryson,29,Male,Black,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+06/15/2000,Paul Nuncio,31,Male,Latino,Murder,1,Female,White,Hale,TX,South,Lethal Injection,No,No,No,No
+06/21/2000,Thomas Provenzano,51,Male,White,Murder,1,Male,White,Orange,FL,South,Lethal Injection,No,No,No,No
+06/22/2000,Shaka Sankofa (Gary Graham),36,Male,Black,Murder,1,Male,White,Orange,TX,South,Lethal Injection,Yes,No,No,No
+06/28/2000,Bert Hunter,53,Male,White,Murder,2,"1 Male, 1 Female",White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+06/29/2000,Jessy San Miguel,29,Male,Latino,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+07/06/2000,Michael Clagett,39,Male,White,Murder,4,"3 Male, 1 Female","2 White, 2 Asian",Virginia Beach City,VA,South,Electrocution,No,No,No,No
+07/12/2000,Orien Joiner,50,Male,White,Murder,2,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+07/20/2000,Gregg Braun,39,Male,White,Murder,1,Female,White,Carter,OK,South,Lethal Injection,No,No,No,No
+07/26/2000,Juan Soria,33,Male,Latino,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+08/09/2000,Oliver Cruz,33,Male,Latino,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+08/09/2000,Brian Robertson,36,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+08/10/2000,George Wallace,59,Male,White,Murder,2,Male,White,Le Flore,OK,South,Lethal Injection,No,No,No,No
+08/16/2000,John Satterwhite,53,Male,Black,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+08/22/2000,Richard Jones,40,Male,White,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+08/23/2000,David Gibbs,39,Male,White,Murder,2,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+08/25/2000,Dan Hauser,30,Male,White,Murder,1,Female,White,Okaloosa,FL,South,Lethal Injection,No,Yes,No,No
+08/30/2000,Russel Burkett,32,Male,White,Murder,2,Female,White,Virginia Beach City,VA,South,Lethal Injection,No,No,No,No
+08/30/2000,Jeffrey Caldwell,37,Male,Black,Murder,3,"1 Male, 2 Female",Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+08/30/2000,Gary Roll,47,Male,White,Murder,3,"2 Male, 1 Female",White,Boone,MO,Midwest,Lethal Injection,No,No,No,No
+09/13/2000,George Harris,41,Male,Black,Murder,1,Male,Black,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+09/14/2000,Derek Barnabei,33,Male,White,Murder,1,Female,White,Norfolk City,VA,South,Lethal Injection,No,No,No,No
+09/27/2000,Ricky McGinn,43,Male,White,Murder,1,Female,White,Brown,TX,South,Lethal Injection,No,No,No,No
+10/10/2000,Bobby Ramdass,28,Male,Black,Murder,1,Male,,Fairfax,VA,South,Lethal Injection,No,No,No,No
+11/01/2000,Jeffrey Dillingham,27,Male,White,Murder,1,Female,White,Wichita,TX,South,Lethal Injection,No,No,No,No
+11/03/2000,Kevin Young,32,Male,Black,Murder,1,Male,White,Anderson,SC,South,Lethal Injection,No,No,No,No
+11/08/2000,Donald Miller,36,Male,White,Murder,1,Female,White,Pima,AZ,West,Lethal Injection,No,No,No,No
+11/09/2000,Michael Sexton,34,Male,Black,Murder,1,Female,White,Wake,NC,South,Lethal Injection,No,No,No,No
+11/09/2000,Miguel Flores,31,Male,Latino,Murder,1,Female,White,Hutchinson,TX,South,Lethal Injection,No,No,No,Yes
+11/14/2000,Stacey Lawton,31,Male,Black,Murder,1,Male,White,Smith,TX,South,Lethal Injection,No,No,No,No
+11/15/2000,Tony Chambers,32,Male,Black,Murder,1,Female,Black,Smith,TX,South,Lethal Injection,No,No,No,No
+11/15/2000,James Chambers,48,Male,White,Murder,1,Male,White,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+11/17/2000,Dwayne Weeks,37,Male,Black,Murder,2,"1 Male, 1 Female",Black,New Castle,DE,South,Lethal Injection,No,No,No,No
+12/05/2000,Garry Miller,33,Male,White,Murder,1,Female,White,Jones,TX,South,Lethal Injection,No,No,No,No
+12/06/2000,Christopher Goins,27,Male,Black,Murder,1,Female,Black,Richmond,VA,South,Lethal Injection,No,No,No,No
+12/06/2000,Daniel Hittle,50,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+12/07/2000,Edward Castro,50,Male,Latino,Murder,1,Male,White,Marion,FL,South,Lethal Injection,No,Yes,No,No
+12/07/2000,Claude Jones,60,Male,White,Murder,1,Male,White,San Jacinto,TX,South,Lethal Injection,No,No,No,No
+12/19/2000,David Johnson,37,Male,Black,Murder,1,Male,Black,Pulaski,AR,South,Lethal Injection,No,No,No,No
+01/09/2001,Eddie Trice,48,Male,Black,Murder,1,Male,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/09/2001,Jack Clark,37,Male,White,Murder,1,Female,Latino,Lubbock,TX,South,Lethal Injection,No,No,No,No
+01/11/2001,Wanda Allen,41,Female,Black,Murder,1,Male,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/11/2001,Robert Glock,39,Male,White,Murder,1,Female,White,Manatee,FL,South,Lethal Injection,No,No,No,No
+01/16/2001,Floyd Medlock,29,Male,White,Murder,1,Female,White,Canadian,OK,South,Lethal Injection,No,Yes,No,No
+01/18/2001,Dion Smallwood,31,Male,Native American,Murder,1,Male,Latino,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/18/2001,Alvin Goodwin,37,Male,White,Murder,1,Male,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+01/23/2001,Mark Fowler,35,Male,White,Murder,3,Male,"2 White, 1 Asian",Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/25/2001,Billy Fox,35,Male,White,Murder,3,Male,"2 White, 1 Asian",Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/29/2001,Caruthers Alexander,52,Male,Black,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+01/30/2001,Loyd Lafevers,35,Male,White,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+02/01/2001,D.L. Jones,61,Male,White,Murder,1,Male,White,Comanche,OK,South,Lethal Injection,No,No,No,No
+02/07/2001,Stanley Lingar,37,Male,White,Murder,1,Male,White,St. Francois,MO,Midwest,Lethal Injection,No,No,No,No
+02/08/2001,Adolph Hernandez,50,Male,Latino,Murder,1,Female,Latino,Lubbock,TX,South,Lethal Injection,No,No,No,No
+03/01/2001,Robert Clayton,40,Male,White,Murder,1,Female,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+03/01/2001,Thomas Akers,31,Male,White,Murder,1,Male,White,Franklin,VA,South,Lethal Injection,No,Yes,No,No
+03/07/2001,Dennis Dowthitt,55,Male,White,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+03/09/2001,Willie Fisher,39,Male,Black,Murder,1,Female,Black,Forsyth,NC,South,Lethal Injection,No,No,No,No
+03/14/2001,Gerald Bivins,41,Male,White,Murder,1,Male,White,Boone,IN,Midwest,Lethal Injection,No,Yes,No,No
+03/27/2001,Robert Massie,59,Male,White,Murder,1,Male,White,San Francisco,CA,West,Lethal Injection,No,Yes,No,No
+03/27/2001,Ronald Fluke,52,Male,White,Murder,3,Female,White,Tulsa,OK,South,Lethal Injection,No,Yes,No,No
+03/28/2001,Thomas Ervin,50,Male,White,Murder,2,"1 Male, 1 Female",White,Callaway,MO,Midwest,Lethal Injection,No,No,No,No
+04/03/2001,Jason Massey,27,Male,White,Murder,2,"1 Male, 1 Female",White,Ellis,TX,South,Lethal Injection,No,No,No,No
+04/21/2001,Sebastian Bridges,37,Male,White,Murder,1,Male,White,Clark,NV,West,Lethal Injection,No,Yes,No,Yes
+04/25/2001,David Goff,32,Male,Black,Murder,1,Male,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+04/25/2001,Mose Young,46,Male,Black,Murder,3,Male,White,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+04/26/2001,David Dawson,46,Male,White,Murder,1,Female,White,Kent,DE,South,Lethal Injection,No,No,No,No
+05/01/2001,Marilyn Plantz,40,Female,White,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+05/08/2001,Clay Smith,30,Male,White,Murder,5,"1 Male, 4 Female",White,Jefferson,AR,South,Lethal Injection,No,Yes,No,No
+05/22/2001,Terrance James,41,Male,Native American,Murder,1,Male,White,Muskogee,OK,South,Lethal Injection,No,No,No,No
+05/23/2001,Samuel Smith,40,Male,Black,Murder,1,Male,Black,Callaway,MO,Midwest,Lethal Injection,No,No,No,No
+05/25/2001,Abdullah Hameen,37,Male,Black,Murder,1,Male,Black,New Castle,DE,South,Lethal Injection,No,No,No,No
+05/29/2001,Vincent Johnson,42,Male,Black,Murder,1,Female,Black,Pottawatomie,OK,South,Lethal Injection,No,No,No,No
+06/11/2001,Timothy McVeigh*,33,Male,White,Murder,168,,,Oklahoma,FE,South,Lethal Injection,No,Yes,Yes,No
+06/13/2001,John Wheat,57,Male,White,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+06/14/2001,Jay Scott,48,Male,Black,Murder,1,Male,Black,Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+06/19/2001,Juan Garza*,44,Male,Latino,Murder,3,Male,Latino,,FE,South,Lethal Injection,No,No,Yes,No
+06/26/2001,Miguel Richardson,46,Male,Black,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+06/27/2001,Jim Lowery,54,Male,White,Murder,2,"1 Male, 1 Female",White,Boone,IN,Midwest,Lethal Injection,No,No,No,No
+07/11/2001,Jerome Mallet,42,Male,Black,Murder,1,Male,White,Perry,MO,Midwest,Lethal Injection,No,No,No,No
+07/11/2001,James Wilkens,39,Male,White,Murder,1,Male,White,Smith,TX,South,Lethal Injection,No,No,No,No
+07/17/2001,Jerald Harjo,40,Male,Native American,Murder,1,Female,Native American,Seminole,OK,South,Lethal Injection,No,No,No,No
+08/08/2001,Mack Hill,47,Male,White,Murder,1,Male,White,Lubbock,TX,South,Lethal Injection,No,No,No,No
+08/16/2001,Jeffrey Doughtie,39,Male,White,Murder,2,"1 Male, 1 Female",White,Nueces,TX,South,Lethal Injection,No,No,No,No
+08/24/2001,Clifton White,43,Male,White,Murder,1,Female,White,Mecklenburg,NC,South,Lethal Injection,No,No,No,No
+08/28/2001,James Elledge,58,Male,White,Murder,1,Female,White,Snohomish,WA,West,Lethal Injection,No,Yes,No,No
+08/28/2001,Jack Walker,35,Male,White,Murder,2,"1 Male, 1 Female",White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+08/31/2001,Ronald Frye,42,Male,White,Murder,1,Male,White,Catawba,NC,South,Lethal Injection,No,No,No,No
+09/18/2001,James Knox,50,Male,White,Murder,1,Male,Latino,Galveston,TX,South,Lethal Injection,No,No,No,No
+10/03/2001,Michael Roberts,27,Male,White,Murder,1,Female,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+10/12/2001,David Ward,39,Male,Black,Murder,1,Female,Black,Pitt,NC,South,Lethal Injection,No,No,No,No
+10/18/2001,Alvie Hale,53,Male,White,Murder,1,Male,White,Pottawatomie,OK,South,Lethal Injection,No,No,No,No
+10/18/2001,Christopher Beck,26,Male,White,Murder,3,"2 Male, 1 Female",White,Arlington,VA,South,Lethal Injection,No,No,No,No
+10/22/2001,Gerald Mitchell,33,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,Yes,No,No,No
+10/24/2001,Stephen Johns,55,Male,White,Murder,1,Male,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+10/25/2001,Terry Mincey,40,Male,White,Murder,1,Female,White,Bibb,GA,South,Lethal Injection,No,No,No,No
+11/06/2001,Terry Clark,45,Male,White,Murder,1,Female,White,Grant,NM,West,Lethal Injection,No,Yes,No,No
+11/06/2001,Jose High,45,Male,Black,Murder,1,Male,White,Taliaferro,GA,South,Lethal Injection,No,No,No,No
+11/14/2001,Jeffrey Tucker,41,Male,White,Murder,1,Male,White,Parker,TX,South,Lethal Injection,No,No,No,No
+11/15/2001,Emerson Rudd,31,Male,Black,Murder,1,Male,Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+11/15/2001,Fred Gilreath,63,Male,White,Murder,2,"1 Male, 1 Female",White,Cobb,GA,South,Lethal Injection,No,No,No,No
+11/30/2001,John Rose,43,Male,White,Murder,1,Female,White,Haywood,NC,South,Lethal Injection,No,No,No,No
+12/04/2001,Lois Smith,61,Female,White,Murder,1,Female,White,Sequoyah,OK,South,Lethal Injection,No,No,No,No
+12/06/2001,Sahib Al-Mosawi,53,Male,Other,Murder,2,"1 Male, 1 Female",,Oklahoma,OK,South,Lethal Injection,No,No,No,Yes
+12/11/2001,Byron Parker,41,Male,White,Murder,1,Female,White,Douglas,GA,South,Lethal Injection,No,No,No,No
+12/12/2001,Vincent Cooks,37,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+01/09/2002,Michael Moore,38,Male,White,Murder,1,Female,White,Coryell,TX,South,Lethal Injection,No,No,No,No
+01/09/2002,James Johnson,52,Male,White,Murder,4,"2 Male, 2 Female",White,Moniteau,MO,Midwest,Lethal Injection,No,No,No,No
+01/16/2002,Jermarr Arnold,43,Male,Black,Murder,1,Female,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+01/24/2002,Ronald Spivey,62,Male,White,Murder,1,Male,White,Muscogee,GA,South,Lethal Injection,No,No,No,No
+01/29/2002,Stephen Anderson,48,Male,White,Murder,1,Female,White,San Bernardino,CA,West,Lethal Injection,No,No,No,No
+01/29/2002,John Romano,43,Male,White,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/30/2002,Windell Broussard,41,Male,Black,Murder,2,"1 Male, 1 Female",Black,Jefferson,TX,South,Lethal Injection,No,No,No,No
+01/31/2002,David Woodruff,42,Male,White,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/31/2002,Randall Hafdahl,48,Male,White,Murder,1,Male,White,Randall,TX,South,Lethal Injection,No,No,No,No
+02/06/2002,Michael Owsley,40,Male,Black,Murder,1,Male,Black,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+02/19/2002,John Byrd,38,Male,White,Murder,1,Male,White,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+02/28/2002,Monty Delk,35,Male,White,Murder,1,Male,White,Anderson,TX,South,Lethal Injection,No,No,No,No
+03/06/2002,Jeffrey Tokar,37,Male,White,Murder,1,Male,White,Warren,MO,Midwest,Lethal Injection,No,No,No,No
+03/07/2002,Gerald Tigner,29,Male,Black,Murder,2,Male,Black,McLennan,TX,South,Lethal Injection,No,No,No,No
+03/12/2002,Tracy Housel,43,Male,White,Murder,1,Male,White,Gwinnett,GA,South,Lethal Injection,No,No,No,No
+03/14/2002,James Patterson,35,Male,White,Murder,1,Female,White,Prince George,VA,South,Lethal Injection,No,Yes,No,No
+04/02/2002,Daniel Zirkle,33,Male,White,Murder,2,Female,White,Page,VA,South,Lethal Injection,No,Yes,No,No
+04/10/2002,Jose santellan,40,Male,Latino,Murder,1,Female,Latino,Kerr,TX,South,Lethal Injection,No,No,No,No
+04/10/2002,Paul Kreutzer,30,Male,White,Murder,1,Female,White,Callaway,MO,Midwest,Lethal Injection,No,No,No,No
+04/11/2002,Wlliam Burns,43,Male,Black,Murder,1,Male,White,Bowie,TX,South,Lethal Injection,No,No,No,No
+04/18/2002,Gerald Casey,47,Male,White,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+04/26/2002,Alton Coleman,46,Male,Black,Murder,1,Female,White,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+04/30/2002,Rodolfo Hernandez,52,Male,Latino,Murder,1,Male,Latino,Comal,TX,South,Lethal Injection,No,No,No,No
+05/03/2002,Richard Johnson,39,Male,White,Murder,1,Male,Black,Jasper,SC,South,Lethal Injection,No,No,No,No
+05/09/2002,Reginald Reeves,28,Male,Black,Murder,1,Female,White,Red River,TX,South,Lethal Injection,No,No,No,No
+05/10/2002,Lesile Martin,35,Male,White,Murder,1,Female,White,Calcasieu Parish,LA,South,Lethal Injection,No,No,No,No
+05/10/2002,Lynda Block,54,Female,White,Murder,1,Male,White,Lee,AL,South,Electrocution,No,Yes,No,No
+05/16/2002,Ronford Styron,32,Male,White,Murder,1,Male,White,Liberty,TX,South,Lethal Injection,No,No,No,No
+05/22/2002,Johnny Martinez,29,Male,Latino,Murder,1,Male,White,Nueces,TX,South,Lethal Injection,No,No,No,No
+05/28/2002,Napoleon Beazley,25,Male,Black,Murder,1,Male,White,Smith,TX,South,Lethal Injection,Yes,No,No,No
+05/30/2002,Stanley Baker,35,Male,White,Murder,1,Male,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+06/12/2002,Walter Mickens,47,Male,Black,Murder,1,Male,White,Newport News City,VA,South,Lethal Injection,No,No,No,No
+06/13/2002,Daniel Reneau,27,Male,White,Murder,1,Male,White,Kerr,TX,South,Lethal Injection,No,No,No,No
+06/25/2002,Robert Coulson,33,Male,White,Murder,5,"2 Male, 3 Female",White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/26/2002,Jeffrey Williams,30,Male,Black,Murder,1,Female,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+07/17/2002,Tracy Hansen,39,Male,White,Murder,1,Male,White,Chickasaw,MS,South,Lethal Injection,No,No,No,No
+07/23/2002,Randall Cannon,42,Male,White,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+07/30/2002,Earl Frederick,51,Male,White,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,Yes,No,No
+08/07/2002,Richard Kutzner,59,Male,White,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+08/08/2002,T.J. Jones,25,Male,Black,Murder,1,Male,White,Gregg,TX,South,Lethal Injection,Yes,No,No,No
+08/14/2002,Javier Medina,33,Male,Latino,Murder,1,Male,Latino,Dallas,TX,South,Lethal Injection,No,No,No,Yes
+08/14/2002,Daniel Basile,35,Male,White,Murder,1,Female,White,St. Charles,MO,Midwest,Lethal Injection,No,No,No,No
+08/16/2002,Wallace Fugate,52,Male,White,Murder,1,Female,White,Putnam,GA,South,Lethal Injection,No,No,No,No
+08/20/2002,Gary Etheridge,38,Male,White,Murder,1,Female,White,Brazoria,TX,South,Lethal Injection,No,No,No,No
+08/23/2002,Anthony Green,37,Male,Black,Murder,1,Female,White,Charleston,SC,South,Lethal Injection,No,No,No,No
+08/28/2002,Toronto Patterson,27,Male,Black,Murder,3,Female,Black,Dallas,TX,South,Lethal Injection,Yes,No,No,No
+09/10/2002,Tony Walker,36,Male,Black,Murder,2,"1 Male, 1 Female",Black,Morris,TX,South,Lethal Injection,No,No,No,No
+09/13/2002,Michael Passaro,40,Male,White,Murder,1,Female,White,Horry,SC,South,Lethal Injection,No,Yes,No,No
+09/17/2002,Jessie Patrick,44,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+09/18/2002,Ronald Shamburger,30,Male,White,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,No,No,No
+09/24/2002,Rex Mays,42,Male,White,Murder,2,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+09/25/2002,Calvin King,48,Male,Black,Murder,1,Male,Black,Jefferson,TX,South,Lethal Injection,No,No,No,No
+09/25/2002,Robert Buell,62,Male,White,Murder,1,Female,White,Wayne,OH,Midwest,Lethal Injection,No,No,No,No
+10/01/2002,James Powell,56,Male,White,Murder,1,Female,White,Newton,TX,South,Lethal Injection,No,No,No,No
+10/02/2002,Rigoberto Sanchez-Velasco,43,Male,Latino,Murder,1,Female,Latino,Miami-Dade,FL,South,Lethal Injection,No,Yes,No,Yes
+10/09/2002,Aileen Wournos,46,Female,White,Murder,1,Male,White,Volusia,FL,South,Lethal Injection,No,Yes,No,No
+11/13/2002,William Putman,59,Male,White,Murder,2,"1 Male, 1 Female",White,Laurens,GA,South,Lethal Injection,No,No,No,No
+11/14/2002,Mir Aimal Kasi,38,Male,Other,Murder,1,Male,White,Fairfax,VA,South,Lethal Injection,No,No,No,Yes
+11/19/2002,Craig Ogan,47,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+11/20/2002,William Jones,37,Male,White,Murder,1,Male,White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+11/20/2002,William Chappell,66,Male,White,Murder,2,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+12/04/2002,Leonard Rojas,52,Male,Latino,Murder,2,"1 Male, 1 Female","1 White, 1 Latino",Johnson,TX,South,Lethal Injection,No,No,No,No
+12/06/2002,Ernest Basden,49,Male,White,Murder,1,Male,White,Duplin,NC,South,Lethal Injection,No,No,No,No
+12/09/2002,Linroy Bottoson,63,Male,Black,Murder,1,Female,Black,Orange,FL,South,Lethal Injection,No,No,No,No
+12/10/2002,Desmond Carter,35,Male,Black,Murder,1,Female,White,Rockingham,NC,South,Lethal Injection,No,No,No,No
+12/10/2002,Jerry McCracken,35,Male,White,Murder,4,"3 Male, 1 Female",White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+12/11/2002,Jessie Williams,51,Male,White,Murder,1,Female,White,Jackson,MS,South,Lethal Injection,No,No,No,No
+12/11/2002,James Collier,56,Male,White,Murder,2,"1 Male, 1 Female",White,Wichita,TX,South,Lethal Injection,No,No,No,No
+12/12/2002,Anthony Johnson,46,Male,White,Murder,1,Male,White,Madison,AL,South,Lethal Injection,No,No,No,No
+12/12/2002,Jay Neill,37,Male,White,Murder,4,"1 Male, 3 Female",White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+12/17/2002,Ernest Carter,36,Male,Black,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/14/2003,Samuel Gallamore,31,Male,White,Murder,3,"1 Male, 2 Female",White,Comal,TX,South,Lethal Injection,No,No,No,No
+01/15/2003,John Baltazar,30,Male,Latino,Murder,1,Female,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+01/16/2003,Daniel Revilla,34,Male,White,Murder,1,Male,Latino,Jackson,OK,South,Lethal Injection,No,No,No,No
+01/22/2003,Robert Lookingbill,37,Male,White,Murder,1,Female,White,Hidalgo,TX,South,Lethal Injection,No,No,No,No
+01/28/2003,Alva Curry,33,Male,Black,Murder,1,Male,Latino,Travis,TX,South,Lethal Injection,No,No,No,No
+01/29/2003,Richard Dinkins,40,Male,White,Murder,2,Female,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+01/30/2003,Granville Riddle,32,Male,White,Murder,1,Male,White,Potter,TX,South,Lethal Injection,No,No,No,No
+02/04/2003,John Elliott,42,Male,Latino,Murder,1,Female,Latino,Travis,TX,South,Lethal Injection,No,No,No,Yes
+02/05/2003,Kenneth Kenley,42,Male,White,Murder,1,Male,White,Butler,MO,Midwest,Lethal Injection,No,No,No,No
+02/06/2003,Henry Dunn,28,Male,Black,Murder,1,Male,Latino,Smith,TX,South,Lethal Injection,No,No,No,No
+02/12/2003,Richard Fox,47,Male,White,Murder,1,Female,White,Wood,OH,Midwest,Lethal Injection,No,No,No,No
+02/13/2003,Bobby Fields,39,Male,Black,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+02/25/2003,Richard Williams,33,Male,Black,Murder,1,Female,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+02/26/2003,Amos King,48,Male,Black,Murder,1,Female,White,Pinellas,FL,South,Lethal Injection,No,No,No,No
+03/11/2003,Bobby Cook,41,Male,White,Murder,1,Male,White,Anderson,TX,South,Lethal Injection,No,No,No,No
+03/13/2003,Michael Thompson,43,Male,White,Murder,1,Female,White,Blount,AL,South,Lethal Injection,No,No,No,No
+03/18/2003,Walanzo Robinson,31,Male,Black,Murder,1,Male,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+03/18/2003,Louis Jones*,53,Male,Black,Murder,1,Female,White,,FE,South,Lethal Injection,No,No,Yes,No
+03/20/2003,Keith Clay,35,Male,Black,Murder,1,Male,,Harris,TX,South,Lethal Injection,No,No,No,No
+03/25/2003,Larry Moon,57,Male,White,Murder,1,Male,White,Catoosa,GA,South,Lethal Injection,No,No,No,No
+03/25/2003,John Hooker,49,Male,Black,Murder,2,Female,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+03/26/2003,James Colburn,43,Male,White,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+04/03/2003,Scott Hain,32,Male,White,Murder,2,"1 Male, 1 Female",White,Creek,OK,South,Lethal Injection,Yes,No,No,No
+04/08/2003,Don Hawkins,43,Male,White,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+04/09/2003,Earl Bramblett,61,Male,White,Murder,4,"1 Male, 3 Female",White,Roanoke,VA,South,Electrocution,No,No,No,No
+04/17/2003,Larry Jackson,40,Male,Black,Murder,1,Female,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+04/22/2003,Juan Chavez,34,Male,Latino,Murder,1,Male,Latino,Dallas,TX,South,Lethal Injection,No,No,No,No
+04/24/2003,Gary Brown,44,Male,White,Murder,1,Male,White,Jefferson,AL,South,Lethal Injection,No,No,No,No
+04/29/2003,David Brewer,44,Male,White,Murder,1,Female,White,Greene,OH,Midwest,Lethal Injection,No,No,No,No
+05/02/2003,Kevin Hough,43,Male,White,Murder,2,Male,White,Allen,IN,Midwest,Lethal Injection,No,No,No,No
+05/06/2003,Roger Vaughn,47,Male,White,Murder,1,Female,White,Wilbarger,TX,South,Lethal Injection,No,No,No,No
+05/06/2003,Carl Isaacs,49,Male,White,Murder,6,"5 Male, 1 Female",White,Seminole,GA,South,Lethal Injection,No,No,No,No
+05/15/2003,Bruce Jacobs,56,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+05/16/2003,Newton Slawson,48,Male,White,Murder,4,"2 Male, 2 Female",White,Hillsborough,FL,South,Lethal Injection,No,Yes,No,No
+05/27/2003,Robert Knighton,62,Male,White,Murder,2,"1 Male, 1 Female",White,Noble,OK,South,Lethal Injection,No,No,No,No
+06/05/2003,Kenneth Charm,37,Male,Black,Murder,1,,Black,Comanche,OK,South,Lethal Injection,No,No,No,No
+06/11/2003,Kia Johnson,38,Male,Black,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+06/13/2003,Joseph Trueblood,46,Male,White,Murder,3,"1 Male, 2 Female",White,Tippecanoe,IN,Midwest,Lethal Injection,No,No,No,No
+06/18/2003,Ernest Martin,42,Male,Black,Murder,1,Male,Black,Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+07/01/2003,Lewis Gilbert,31,Male,White,Murder,1,Female,White,Cleveland,OK,South,Lethal Injection,No,No,No,No
+07/02/2003,Hilton Crawford,64,Male,White,Murder,1,Male,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+07/08/2003,Robert Duckett,39,Male,White,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+07/09/2003,Christopher Black,43,Male,Black,Murder,1,Female,Black,Bell,TX,South,Lethal Injection,No,No,No,No
+07/09/2003,Riley Noel,31,Male,Black,Murder,3,Male,Black,Pulaski,AR,South,Lethal Injection,No,No,No,No
+07/22/2003,Bobby Swisher,27,Male,White,Murder,1,Female,White,Augusta,VA,South,Lethal Injection,No,No,No,No
+07/22/2003,Bryan Toles,31,Male,Black,Murder,2,Male,Black,Comanche,OK,South,Lethal Injection,No,No,No,No
+07/23/2003,Cedric Ransom,29,Male,Black,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+07/24/2003,Jackie Willingham,33,Male,White,Murder,1,Female,White,Comanche,OK,South,Lethal Injection,No,No,No,No
+07/24/2003,Allen Janecka,53,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+07/29/2003,Harold McElmurry,33,Male,White,Murder,2,"1 Male, 1 Female",White,McIntosh,OK,South,Lethal Injection,No,No,No,No
+08/07/2003,Tommy Fortenberry,39,Male,White,Murder,4,"3 Male, 1 Female",White,Etowah,AL,South,Lethal Injection,No,No,No,No
+08/22/2003,William Jones,34,Male,Black,Murder,1,Male,Black,Wake,NC,South,Lethal Injection,No,No,No,No
+09/03/2003,Paul Hill,49,Male,White,Murder,2,Male,White,Escambia,FL,South,Lethal Injection,No,Yes,No,No
+09/10/2003,Larry Hayes,54,Male,White,Murder,2,Female,"1 White, 1 Black",Montgomery,TX,South,Lethal Injection,No,Yes,No,No
+09/12/2003,Henry Hunt,58,Male,Native American,Murder,2,Male,Native American,Robeson,NC,South,Lethal Injection,No,No,No,No
+09/26/2003,Joseph Bates,35,Male,White,Murder,1,Male,White,Yadkin,NC,South,Lethal Injection,No,No,No,No
+10/03/2003,Edward Hartman,39,Male,White,Murder,1,Male,White,Northampton,NC,South,Lethal Injection,No,No,No,No
+10/29/2003,John Smith,42,Male,White,Murder,2,"1 Male, 1 Female",White,Audrain,MO,Midwest,Lethal Injection,No,Yes,No,No
+11/04/2003,James Brown,55,Male,White,Murder,1,Female,White,Gwinnett,GA,South,Lethal Injection,No,No,No,No
+11/07/2003,Joseph Keel,39,Male,White,Murder,1,Male,White,Edgecombe,NC,South,Lethal Injection,No,No,No,No
+11/14/2003,John Daniels,46,Male,Black,Murder,1,Female,Black,Mecklenburg,NC,South,Lethal Injection,No,No,No,No
+11/20/2003,Robert Henry,41,Male,White,Murder,2,Female,White,San Patricio,TX,South,Lethal Injection,No,No,No,No
+12/03/2003,Richard Duncan,61,Male,White,Murder,2,"1 Male, 1 Female",White,Harris,TX,South,Lethal Injection,No,No,No,No
+12/04/2003,Ivan Murphy,38,Male,White,Murder,1,Female,White,Grayson,TX,South,Lethal Injection,No,No,No,No
+12/05/2003,Robbie Lyons,31,Male,Black,Murder,1,Male,White,Forsyth,NC,South,Lethal Injection,No,No,No,No
+01/06/2004,Ynobe Matthews,27,Male,Black,Murder,1,Female,White,Brazos,TX,South,Lethal Injection,No,Yes,No,No
+01/06/2004,Charles Singleton,44,Male,Black,Murder,1,Female,White,Ashley,AR,South,Lethal Injection,No,No,No,No
+01/09/2004,Raymond Rowsey,32,Male,White,Murder,1,Male,White,Alamance,NC,South,Lethal Injection,No,No,No,No
+01/13/2004,Tyrone Darks,39,Male,Black,Murder,1,Female,Black,Cleveland,OK,South,Lethal Injection,No,No,No,No
+01/14/2004,Lewis Williams,45,Male,Black,Murder,1,Female,White,Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+01/14/2004,Kenneth Bruce,32,Male,Black,Murder,1,Female,White,Collin,TX,South,Lethal Injection,No,No,No,No
+01/21/2004,Kevin Zimmerman,42,Male,White,Murder,1,Male,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+01/28/2004,Billy Vickers,58,Male,White,Murder,1,Male,White,Lamar,TX,South,Lethal Injection,No,No,No,No
+02/03/2004,John Roe,41,Male,White,Murder,1,Female,White,Franklin,OH,Midwest,Lethal Injection,No,No,No,No
+02/04/2004,Johnny Robinson,51,Male,Black,Murder,1,Female,White,St. Johns,FL,South,Lethal Injection,No,No,No,No
+02/11/2004,Edward Lagrone,46,Male,Black,Murder,3,Female,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+02/12/2004,Bobby Hopkins,36,Male,Black,Murder,2,Female,White,Johnson,TX,South,Lethal Injection,No,No,No,No
+02/17/2004,Norman Cleary,38,Male,White,Murder,1,Female,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+02/17/2004,Cameron Willingham,36,Male,White,Murder,3,Female,White,Navarro,TX,South,Lethal Injection,No,No,No,No
+03/03/2004,Marcus Cotton,29,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/09/2004,David Brown,49,Male,White,Murder,1,Male,White,Grady,OK,South,Lethal Injection,No,No,No,No
+03/18/2004,Brian Cherrix,30,Male,White,Murder,1,Female,White,Accomack,VA,South,Lethal Injection,No,No,No,No
+03/19/2004,David Hill,39,Male,White,Murder,1,Male,White,Georgetown,SC,South,Lethal Injection,No,No,No,No
+03/23/2004,Hung Thanh Le,37,Male,Asian,Murder,1,Male,Asian,Oklahoma,OK,South,Lethal Injection,No,No,No,Yes
+03/26/2004,Lawrence Colwell,35,Male,White,Murder,1,Male,White,Clark,NV,West,Lethal Injection,No,Yes,No,No
+03/30/2004,William Wickline,52,Male,White,Murder,2,"1 Male, 1 Female",White,Franklin,OH,Midwest,Lethal Injection,No,No,No,No
+03/31/2004,Dennis Orbe,39,Male,White,Murder,1,Male,White,York,VA,South,Lethal Injection,No,No,No,No
+04/16/2004,Jerry McWee,51,Male,White,Murder,1,Male,White,Aiken,SC,South,Lethal Injection,No,No,No,No
+04/23/2004,Jason Byram,38,Male,White,Murder,1,Female,White,Richland,SC,South,Lethal Injection,No,No,No,No
+05/18/2004,Kelsey Patterson,50,Male,Black,Murder,2,"1 Male, 1 Female",White,Anderson,TX,South,Lethal Injection,No,No,No,No
+05/26/2004,John Blackwelder,49,Male,White,Murder,1,Male,White,Columbia,FL,South,Lethal Injection,No,Yes,No,No
+05/28/2004,James Tucker,47,Male,White,Murder,2,Female,White,Calhoun,SC,South,Electrocution,No,No,No,No
+06/08/2004,Robert Bryan,63,Male,White,Murder,1,Female,White,Beckham,OK,South,Lethal Injection,No,No,No,No
+06/08/2004,William Zuern,45,Male,White,Murder,1,Male,White,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+06/17/2004,Steven Oken,42,Male,White,Murder,1,Female,White,Baltimore,MD,South,Lethal Injection,No,No,No,No
+06/30/2004,David Harris,43,Male,White,Murder,1,Male,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+07/01/2004,Robert Hicks,47,Male,White,Murder,1,Female,White,Spalding,GA,South,Lethal Injection,No,No,No,No
+07/14/2004,Stephen Vrabel,47,Male,White,Murder,2,Female,White,Mahoning,OH,Midwest,Lethal Injection,No,Yes,No,No
+07/19/2004,Eddie Crawford,57,Male,White,Murder,1,Female,White,Spalding,GA,South,Lethal Injection,No,No,No,No
+07/20/2004,Scott Mink,40,Male,White,Murder,2,"1 Male, 1 Female",White,Montgomery,OH,Midwest,Lethal Injection,No,Yes,No,No
+07/22/2004,Mark Bailey,34,Male,White,Murder,2,"1 Male, 1 Female",White,Hampton City,VA,South,Lethal Injection,No,No,No,No
+08/05/2004,James Hubbard,74,Male,White,Murder,1,Female,White,Tuscaloosa,AL,South,Lethal Injection,No,No,No,No
+08/12/2004,Terry Dennis,56,Male,White,Murder,1,Female,White,Washoe,NV,West,Lethal Injection,No,Yes,No,No
+08/18/2004,James Hudson,57,Male,White,Murder,3,"2 Male, 1 Female",White,Halifax,VA,South,Lethal Injection,No,Yes,No,No
+08/25/2004,Jasen Busby,28,Male,White,Murder,2,Female,White,Cherokee,TX,South,Lethal Injection,No,No,No,No
+08/26/2004,Windel Workman,46,Male,White,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+08/26/2004,James Allridge,41,Male,Black,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+09/09/2004,James Reid,58,Male,Black,Murder,1,Female,Black,Montgomery,VA,South,Lethal Injection,No,No,No,No
+09/21/2004,Andrew Flores,32,Male,Latino,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+09/30/2004,David Hocker,33,Male,White,Murder,1,Male,White,Henry,AL,South,Lethal Injection,No,Yes,No,No
+10/05/2004,Edward Green,30,Male,Black,Murder,2,"1 Male, 1 Female",Black,Harris,TX,South,Lethal Injection,No,No,No,No
+10/06/2004,Peter Miniel,42,Male,Latino,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+10/08/2004,Sammy Perkins,51,Male,Black,Murder,1,Female,Black,Pitt,NC,South,Lethal Injection,No,No,No,No
+10/12/2004,Donald Aldrich,39,Male,White,Murder,1,Male,Latino,Kerr,TX,South,Lethal Injection,No,No,No,No
+10/13/2004,Adremy Dennis,28,Male,Black,Murder,1,Male,White,Summit,OH,Midwest,Lethal Injection,No,No,No,No
+10/20/2004,Ricky Morrow,53,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+10/22/2004,Charles Roache,30,Male,White,Murder,2,Female,White,Haywood,NC,South,Lethal Injection,No,Yes,No,No
+10/26/2004,Dominique Green,30,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+11/02/2004,Lorenzo Morris,52,Male,Black,Murder,1,,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+11/04/2004,Robert Morrow,47,Male,White,Murder,1,Female,White,Liberty,TX,South,Lethal Injection,No,No,No,No
+11/09/2004,Demarco McCullum,30,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+11/10/2004,Frederick McWilliams,30,Male,Black,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+11/12/2004,Frank Chandler,32,Male,White,Murder,1,Female,White,Surry,NC,South,Lethal Injection,No,No,No,No
+11/17/2004,Anthony Fuentes,30,Male,Latino,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+01/04/2005,James Porter,33,Male,White,Murder,1,Male,Latino,Bowie,TX,South,Lethal Injection,No,Yes,No,No
+01/19/2005,Donald Beardslee,61,Male,White,Murder,2,Female,White,San Mateo,CA,West,Lethal Injection,No,No,No,No
+01/25/2005,Troy Kunkle,38,Male,White,Murder,1,Male,White,Nueces,TX,South,Lethal Injection,No,No,No,No
+01/25/2005,Timothy Carr,34,Male,White,Murder,1,Male,White,Monroe,GA,South,Lethal Injection,No,No,No,No
+02/17/2005,Dennis Bagwell,41,Male,White,Murder,4,Female,White,Atascosa,TX,South,Lethal Injection,No,No,No,No
+03/01/2005,Stephen Mobley,39,Male,White,Murder,1,Male,White,Hall,GA,South,Lethal Injection,No,No,No,No
+03/08/2005,William Smith,47,Male,Black,Murder,1,Female,Black,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+03/08/2005,George Hopper,50,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+03/10/2005,Donald Wallace,47,Male,White,Murder,4,"2 Male, 2 Female",White,Vigo,IN,Midwest,Lethal Injection,No,No,No,No
+03/11/2005,William Powell,58,Male,White,Murder,1,Female,White,Cleveland,NC,South,Lethal Injection,No,No,No,No
+03/15/2005,Jimmy Slaughter,57,Male,White,Murder,2,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+03/16/2005,Stanley Hall,37,Male,Black,Murder,1,Female,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+04/05/2005,Glen Ocha,47,Male,White,Murder,1,Female,White,Osceola,FL,South,Lethal Injection,No,Yes,No,No
+04/15/2005,Richard Longworth,36,Male,White,Murder,2,Male,White,Spartanburg,SC,South,Lethal Injection,No,No,No,No
+04/20/2005,Douglas Roberts,42,Male,White,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+04/21/2005,Bill Benefiel,48,Male,White,Murder,1,Female,White,Vigo,IN,Midwest,Lethal Injection,No,No,No,No
+04/27/2005,Donald Jones,38,Male,Black,Murder,1,Female,Black,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+04/28/2005,Mario Centobie,39,Male,White,Murder,1,Male,White,St. Clair,AL,South,Lethal Injection,No,Yes,No,No
+05/03/2005,Lonnie Pursley,43,Male,White,Murder,1,Male,White,Polk,TX,South,Lethal Injection,No,No,No,No
+05/06/2005,Earl Richmond,43,Male,Black,Murder,3,"1 Male, 2 Female",Black,Cumberland,NC,South,Lethal Injection,No,No,No,No
+05/12/2005,George Miller,37,Male,Black,Murder,1,Male,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+05/13/2005,Michael Ross,45,Male,White,Murder,4,Female,White,New London,CT,Northeast,Lethal Injection,No,Yes,No,No
+05/18/2005,Vernon Brown,51,Male,Black,Murder,1,Female,Black,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+05/18/2005,Bryan Wolfe,44,Male,Black,Murder,1,Female,Black,Jefferson,TX,South,Lethal Injection,No,No,No,No
+05/19/2005,Richard Cartwright,31,Male,White,Murder,1,Male,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+05/25/2005,Gregory Johnson,40,Male,White,Murder,1,Female,White,Madison,IN,Midwest,Lethal Injection,No,No,No,No
+06/02/2005,Jerry Henderson,58,Male,White,Murder,1,Male,White,Talladega,AL,South,Lethal Injection,No,No,No,No
+06/07/2005,Alexander Martinez,28,Male,Latino,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,Yes,No,No
+07/12/2005,Robert Conklin,44,Male,White,Murder,1,Male,White,Fulton,GA,South,Lethal Injection,No,No,No,No
+07/19/2005,Michael Pennington,37,Male,Black,Murder,1,Male,White,Comanche,OK,South,Lethal Injection,No,No,No,No
+07/27/2005,Kevin Conner,38,Male,White,Murder,3,Male,White,Marion,IN,Midwest,Lethal Injection,No,Yes,No,No
+07/28/2005,David Martinez,29,Male,Latino,Murder,1,Female,White,Travis,TX,South,Lethal Injection,No,No,No,No
+08/04/2005,George Sibley,62,Male,White,Murder,1,Male,White,Lee,AL,South,Lethal Injection,No,No,No,No
+08/10/2005,Gary Sterling,38,Male,Black,Murder,1,Male,White,Navarro,TX,South,Lethal Injection,No,No,No,No
+08/11/2005,Kenneth Turrentine,52,Male,Black,Murder,1,Female,Black,Tulsa,OK,South,Lethal Injection,No,No,No,No
+08/23/2005,Robert Shields,30,Male,White,Murder,1,Female,White,Galveston,TX,South,Lethal Injection,No,No,No,No
+08/31/2005,Timothy Johnston,44,Male,White,Murder,1,Female,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+09/14/2005,Frances Newton,40,Female,Black,Murder,3,"2 Male, 1 Female",Black,Harris,TX,South,Lethal Injection,No,No,No,No
+09/22/2005,John Peoples,48,Male,White,Murder,3,"2 Male, 1 Female",White,Talladega,AL,South,Lethal Injection,No,No,No,No
+09/27/2005,Herman Ashworth,32,Male,White,Murder,1,Male,White,Licking,OH,Midwest,Lethal Injection,No,Yes,No,No
+09/28/2005,Alan Matheney,54,Male,White,Murder,1,Female,White,Lake,IN,Midwest,Lethal Injection,No,No,No,No
+10/06/2005,Ronald Howard,32,Male,Black,Murder,1,Male,White,Travis,TX,South,Lethal Injection,No,No,No,No
+10/20/2005,Luis Ramirez,42,Male,Latino,Murder,1,Male,Latino,Tom Green,TX,South,Lethal Injection,No,No,No,No
+10/25/2005,William Williams,48,Male,Black,Murder,4,"3 Male, 1 Female","3 White, 1 Black",Summit,OH,Midwest,Lethal Injection,No,No,No,No
+10/26/2005,Marlin Gray,38,Male,Black,Murder,1,Female,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+11/03/2005,Melvin White,55,Male,White,Murder,1,Female,White,Pecos,TX,South,Lethal Injection,No,No,No,No
+11/04/2005,Brian Steckel,36,Male,White,Murder,1,Female,White,New Castle,DE,South,Lethal Injection,No,No,No,No
+11/04/2005,Arthur Wise,51,Male,Black,Murder,4,"3 Male, 1 Female",White,Aiken,SC,South,Lethal Injection,No,Yes,No,No
+11/09/2005,Charles Thacker,38,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+11/11/2005,Steven McHone,35,Male,White,Murder,2,"1 Male, 1 Female",White,Surry,NC,South,Lethal Injection,No,No,No,No
+11/15/2005,Robert Rowell,50,Male,White,Murder,2,Male,"1 White, 1 Latino",Harris,TX,South,Lethal Injection,No,No,No,No
+11/16/2005,Shannon Thomas,34,Male,Black,Murder,3,"2 Male, 1 Female","1 White, 2 Latino",Harris,TX,South,Lethal Injection,No,No,No,No
+11/18/2005,Elias Syriani,67,Male,White,Murder,1,Female,,Mecklenburg,NC,South,Lethal Injection,No,No,No,No
+11/28/2005,Eric Nance,45,Male,White,Murder,1,Female,White,Hot Spring,AR,South,Lethal Injection,No,No,No,No
+11/29/2005,John Hicks,49,Male,Black,Murder,2,Female,Black,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+12/02/2005,Shawn Humphries,33,Male,White,Murder,1,Male,White,Greenville,SC,South,Lethal Injection,No,No,No,No
+12/02/2005,Kenneth Boyd,57,Male,White,Murder,2,"1 Male, 1 Female",White,Rockingham,NC,South,Lethal Injection,No,No,No,No
+12/05/2005,Wesley Baker,47,Male,Black,Murder,1,Female,White,Harford,MD,South,Lethal Injection,No,No,No,No
+12/13/2005,Stanley Williams,51,Male,Black,Murder,4,"2 Male, 2 Female","1 White, 3 Asian",Los Angeles,CA,West,Lethal Injection,No,No,No,No
+12/14/2005,John Nixon,77,Male,White,Murder,1,Female,White,Rankin,MS,South,Lethal Injection,No,No,No,No
+01/17/2006,Clarence Allen,76,Male,Native American,Murder,3,"2 Male, 1 Female",White,Glenn,CA,West,Lethal Injection,No,No,No,No
+01/20/2006,Perrie Simpson,43,Male,Black,Murder,1,Male,White,Rockingham,NC,South,Lethal Injection,No,No,No,No
+01/25/2006,Marion Dudley,33,Male,Black,Murder,3,"2 Male, 1 Female",Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+01/27/2006,Marvin Bieghler,58,Male,White,Murder,2,"1 Male, 1 Female",White,Howard,IN,Midwest,Lethal Injection,No,No,No,No
+01/31/2006,Jaime Elizalde,34,Male,Latino,Murder,2,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+02/07/2006,Glenn Benner,43,Male,White,Murder,2,Female,White,Summit,OH,Midwest,Lethal Injection,No,No,No,No
+02/08/2006,Robert Neville,31,Male,White,Murder,1,Male,Native American,Tarrant,TX,South,Lethal Injection,No,No,No,No
+02/15/2006,Clyde Smith,32,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/15/2006,Tommie Hughes,31,Male,Black,Murder,1,Female,Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+03/17/2006,Patrick Moody,39,Male,White,Murder,1,Male,White,Davidson,NC,South,Lethal Injection,No,No,No,No
+03/22/2006,Robert Salazar,27,Male,Latino,Murder,1,Female,Latino,Lubbock,TX,South,Lethal Injection,No,No,No,No
+03/29/2006,Kevin Kincy,38,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+04/18/2006,Richard Thornburg,40,Male,White,Murder,3,Male,White,Grady,OK,South,Lethal Injection,No,No,No,No
+04/21/2006,Willie Brown,61,Male,Black,Murder,1,Female,Black,Martin,NC,South,Lethal Injection,No,No,No,No
+04/26/2006,Daryl Mack,47,Male,Black,Murder,1,Female,White,Washoe,NV,West,Lethal Injection,No,Yes,No,No
+04/27/2006,Dexter Vinson,43,Male,Black,Murder,1,Female,White,Portsmouth City,VA,South,Lethal Injection,No,No,No,No
+05/02/2006,Joseph Clark,57,Male,Black,Murder,1,Male,White,Lucas,OH,Midwest,Lethal Injection,No,No,No,No
+05/04/2006,Jackie Wilson,40,Male,Latino,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+05/17/2006,Jermaine Herron,27,Male,Black,Murder,2,"1 Male, 1 Female",White,Refugio,TX,South,Lethal Injection,No,No,No,No
+05/24/2006,Jesus Aguilar,42,Male,Latino,Murder,2,"1 Male, 1 Female",Latino,Cameron,TX,South,Lethal Injection,No,No,No,No
+06/01/2006,John Boltz,74,Male,White,Murder,1,Male,White,Pottawatomie,OK,South,Lethal Injection,No,No,No,No
+06/06/2006,Timothy Titsworth,34,Male,White,Murder,1,Female,White,Randall,TX,South,Lethal Injection,No,No,No,No
+06/20/2006,Lamont Reese,28,Male,Black,Murder,3,Male,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+06/27/2006,Angel Resendiz,46,Male,Latino,Murder,1,Female,Latino,Harris,TX,South,Lethal Injection,No,No,No,Yes
+06/28/2006,Sedley Alley,51,Male,White,Murder,1,Female,White,Shelby,TN,South,Lethal Injection,No,No,No,No
+07/11/2006,Derrick O'Brien,31,Male,Black,Murder,2,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+07/12/2006,Rocky Barton,49,Male,White,Murder,1,Female,White,Warren,OH,Midwest,Lethal Injection,No,Yes,No,No
+07/14/2006,William Downs,39,Male,White,Murder,1,Male,Black,Aiken,SC,South,Lethal Injection,No,Yes,No,No
+07/19/2006,Mauriceo Brown,31,Male,Black,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+07/20/2006,Brandon Hedrick,27,Male,White,Murder,1,Female,Black,Appomattox,VA,South,Electrocution,No,No,No,No
+07/20/2006,Robert Anderson,40,Male,White,Murder,1,Female,White,Potter,TX,South,Lethal Injection,No,No,No,No
+07/27/2006,Michael Lenz,42,Male,White,Murder,1,Male,White,Augusta,VA,South,Lethal Injection,No,No,No,No
+08/03/2006,William Wyatt,41,Male,Black,Murder,1,Male,Black,Bowie,TX,South,Lethal Injection,No,No,No,No
+08/08/2006,Darrell Ferguson,28,Male,White,Murder,3,"1 Male, 2 Female",White,Montgomery,OH,Midwest,Lethal Injection,No,Yes,No,No
+08/11/2006,David Dawson,49,Male,White,Murder,3,"2 Male, 1 Female",White,Yellowstone,MT,West,Lethal Injection,No,Yes,No,No
+08/17/2006,Richard Hinojosa,45,Male,Latino,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+08/18/2006,Samuel Flippen,37,Male,White,Murder,1,Female,White,Forsyth,NC,South,Lethal Injection,No,No,No,No
+08/24/2006,Justin Fuller,27,Male,Black,Murder,1,Male,White,Smith,TX,South,Lethal Injection,No,No,No,No
+08/29/2006,Eric Patton,49,Male,Black,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+08/31/2006,James Malicoat,31,Male,White,Murder,1,Female,White,Grady,OK,South,Lethal Injection,No,No,No,No
+08/31/2006,Derrick Frazier,29,Male,Black,Murder,2,"1 Male, 1 Female",White,Refugio,TX,South,Lethal Injection,No,No,No,No
+09/12/2006,Farley Matchett,43,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+09/20/2006,Clarence Hill,48,Male,Black,Murder,1,Male,White,Escambia,FL,South,Lethal Injection,No,No,No,No
+10/18/2006,Arthur Rutherford,57,Male,White,Murder,1,Female,White,Santa Rosa,FL,South,Lethal Injection,No,No,No,No
+10/18/2006,Bobby Wilcher,43,Male,White,Murder,2,Female,White,Scott,MS,South,Lethal Injection,No,No,No,No
+10/24/2006,Jeffrey Lundgren,56,Male,White,Murder,5,"1 Male, 4 Female",White,Lake,OH,Midwest,Lethal Injection,No,No,No,No
+10/25/2006,Gregory Summers,48,Male,White,Murder,3,"2 Male, 1 Female",White,Denton,TX,South,Lethal Injection,No,No,No,No
+10/25/2006,Danny Rolling,52,Male,White,Murder,5,"1 Male, 4 Female","4 White, 1 Latino",Alachua,FL,South,Lethal Injection,No,No,No,No
+10/26/2006,Larry Hutcherson,37,Male,White,Murder,1,Female,White,Mobile,AL,South,Lethal Injection,No,No,No,No
+11/01/2006,Donell Jackson,33,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+11/08/2006,Willie Shannon,33,Male,Black,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+11/09/2006,John Schmitt,33,Male,White,Murder,1,Male,Black,Chesterfield,VA,South,Lethal Injection,No,No,No,No
+12/13/2006,Angel Diaz,55,Male,Latino,Murder,1,Male,White,Miami-Dade,FL,South,Lethal Injection,No,No,No,Yes
+01/09/2007,Corey Hamilton,38,Male,Black,Murder,4,"3 Male, 1 Female",White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+01/10/2007,Carlos Granados,36,Male,Latino,Murder,2,"1 Male, 1 Female",Latino,Williamson,TX,South,Lethal Injection,No,No,No,No
+01/17/2007,Jonathan Moore,33,Male,White,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+01/30/2007,Christopher Swift,31,Male,White,Murder,2,Female,White,Denton,TX,South,Lethal Injection,No,Yes,No,No
+02/07/2007,James Jackson,47,Male,Black,Murder,3,Female,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+02/22/2007,Newton Anderson,30,Male,White,Murder,2,"1 Male, 1 Female",White,Smith,TX,South,Lethal Injection,No,No,No,No
+02/27/2007,Donald Miller,44,Male,White,Murder,2,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/06/2007,Robert Perez,48,Male,Latino,Murder,2,Male,Latino,Dallas,TX,South,Lethal Injection,No,No,No,No
+03/07/2007,Joseph Nichols,45,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/20/2007,Charles Nealy,42,Male,Black,Murder,1,Male,Asian,Dallas,TX,South,Lethal Injection,No,No,No,No
+03/28/2007,Vincent Gutierrez,28,Male,Latino,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+03/29/2007,Roy Pippin,51,Male,White,Murder,2,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+04/11/2007,James Clark,38,Male,White,Murder,1,Female,White,Denton,TX,South,Lethal Injection,No,No,No,No
+04/24/2007,James Filiaggi,41,Male,White,Murder,1,Female,White,Lorain,OH,Midwest,Lethal Injection,No,No,No,No
+04/26/2007,Ryan Dickson,30,Male,White,Murder,2,"1 Male, 1 Female",White,Potter,TX,South,Lethal Injection,No,No,No,No
+05/03/2007,Aaron Jones,55,Male,Black,Murder,2,"1 Male, 1 Female",White,Blount,AL,South,Lethal Injection,No,No,No,No
+05/04/2007,David Woods,42,Male,White,Murder,1,Male,Latino,Delaware,IN,Midwest,Lethal Injection,No,No,No,No
+05/09/2007,Philip Workman,53,Male,White,Murder,1,Male,White,Shelby,TN,South,Lethal Injection,No,No,No,No
+05/16/2007,Charles Smith,41,Male,White,Murder,1,Male,White,Pecos,TX,South,Lethal Injection,No,No,No,No
+05/22/2007,Robert Comer,50,Male,White,Murder,1,Male,White,Maricopa,AZ,West,Lethal Injection,No,Yes,No,No
+05/24/2007,Christopher Newton,37,Male,White,Murder,1,Male,White,Richland,OH,Midwest,Lethal Injection,No,Yes,No,No
+06/06/2007,Michael Griffith,56,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+06/15/2007,Michael Lambert,36,Male,White,Murder,1,Male,White,Delaware,IN,Midwest,Lethal Injection,No,No,No,No
+06/20/2007,Lionell Rodriguez,36,Male,Latino,Murder,1,Female,Asian,Harris,TX,South,Lethal Injection,No,No,No,No
+06/21/2007,Gilberto Reyes,33,Male,Latino,Murder,1,Female,Latino,Bailey,TX,South,Lethal Injection,No,No,No,No
+06/22/2007,Calvin Shuler,40,Male,Black,Murder,1,Male,White,Dorchester,SC,South,Lethal Injection,No,No,No,No
+06/26/2007,Jimmy Bland,49,Male,White,Murder,1,Male,White,Tillman,OK,South,Lethal Injection,No,No,No,No
+06/26/2007,Patrick Knight,39,Male,White,Murder,2,"1 Male, 1 Female",White,Randall,TX,South,Lethal Injection,No,No,No,No
+06/26/2007,John Hightower,63,Male,Black,Murder,3,Female,Black,Morgan,GA,South,Lethal Injection,No,No,No,No
+07/11/2007,Elijah Page,25,Male,White,Murder,1,Male,White,Lawrence,SD,Midwest,Lethal Injection,No,Yes,No,No
+07/24/2007,Lonnie Johnson,44,Male,Black,Murder,2,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+07/26/2007,Darrell Grayson,46,Male,Black,Murder,1,Female,White,Shelby,AL,South,Lethal Injection,No,No,No,No
+08/15/2007,Kenneth Parr,27,Male,Black,Murder,1,Female,White,Matagorda,TX,South,Lethal Injection,No,No,No,No
+08/21/2007,Frank Welch,46,Male,White,Murder,1,Female,White,Garvin,OK,South,Lethal Injection,No,No,No,No
+08/22/2007,Johnny Conner,32,Male,Black,Murder,1,Female,Asian,Harris,TX,South,Lethal Injection,No,No,No,No
+08/23/2007,Luther Williams,47,Male,Black,Murder,1,Male,White,Tuscaloosa,AL,South,Lethal Injection,No,No,No,No
+08/28/2007,DaRoyce Mosley,32,Male,Black,Murder,4,"3 Male, 1 Female",White,Gregg,TX,South,Lethal Injection,No,No,No,No
+08/29/2007,John Amador,32,Male,Latino,Murder,1,Male,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+09/05/2007,Tony Roach,30,Male,White,Murder,1,Female,White,Potter,TX,South,Lethal Injection,No,No,No,No
+09/12/2007,Daryl Holton,45,Male,White,Murder,4,"3 Male, 1 Female","3 White, 1 Black",Bedford,TN,South,Electrocution,No,Yes,No,No
+09/20/2007,Clifford Kimmel,32,Male,White,Murder,3,"1 Male, 2 Female",White,Bexar,TX,South,Lethal Injection,No,No,No,No
+09/25/2007,Michael Richard,49,Male,Black,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/06/2008,William Lynd,53,Male,White,Murder,1,Female,White,Chatham,GA,South,Lethal Injection,No,No,No,No
+05/21/2008,Earl Berry,49,Male,White,Murder,1,Female,White,Chickasaw,MS,South,Lethal Injection,No,No,No,No
+05/27/2008,Kevin Green,31,Male,Black,Murder,1,Female,White,Brunswick,VA,South,Lethal Injection,No,No,No,No
+06/04/2008,Curtis Osborne,37,Male,Black,Murder,2,"1 Male, 1 Female",Black,Spalding,GA,South,Lethal Injection,No,No,No,No
+06/06/2008,David Hill,48,Male,White,Murder,3,"1 Male, 2 Female","2 White, 1 Black",Aiken,SC,South,Lethal Injection,No,Yes,No,No
+06/11/2008,Karl Chamberlain,37,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+06/17/2008,Terry Short,47,Male,White,Murder,1,Male,Asian,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+06/20/2008,James Reed,49,Male,Black,Murder,2,"1 Male, 1 Female",Black,Charleston,SC,South,Electrocution,No,No,No,No
+06/25/2008,Robert Yarbrough,30,Male,Black,Murder,1,Male,White,Mecklenburg,VA,South,Lethal Injection,No,No,No,No
+07/01/2008,Mark Schwab,39,Male,White,Murder,1,Male,Latino,Brevard,FL,South,Lethal Injection,No,No,No,No
+07/10/2008,Kent Jackson,26,Male,Black,Murder,1,Female,White,King George,VA,South,Lethal Injection,No,No,No,No
+07/10/2008,Carlton Turner,29,Male,Black,Murder,2,"1 Male, 1 Female",Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+07/23/2008,Dale Bishop,34,Male,White,Murder,1,Male,White,Lee,MS,South,Lethal Injection,No,No,No,No
+07/23/2008,Derrick Sonnier,40,Male,Black,Murder,2,"1 Male, 1 Female",Black,Harris,TX,South,Lethal Injection,No,No,No,No
+07/24/2008,Christopher Emmett,36,Male,White,Murder,1,Male,White,Danville City,VA,South,Lethal Injection,No,No,No,No
+07/31/2008,Larry Davis,40,Male,Black,Murder,1,Male,White,Potter,TX,South,Lethal Injection,No,No,No,No
+08/05/2008,Jose Medellin,33,Male,Latino,Murder,2,Female,White,Harris,TX,South,Lethal Injection,No,No,No,Yes
+08/07/2008,Heliberto Chi,29,Male,Latino,Murder,1,Male,White,Tarrant,TX,South,Lethal Injection,No,No,No,Yes
+08/12/2008,Leon Dorsey,32,Male,Black,Murder,2,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+08/14/2008,Michael Rodriguez,45,Male,Latino,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,Yes,No,No
+09/16/2008,Jack Alderman,57,Male,White,Murder,1,Female,White,Chatham,GA,South,Lethal Injection,No,No,No,No
+09/17/2008,William Murray,39,Male,White,Murder,1,Female,White,Kaufman,TX,South,Lethal Injection,No,No,No,No
+09/23/2008,Richard Henyard,34,Male,Black,Murder,2,Female,Black,Lake,FL,South,Lethal Injection,No,No,No,No
+09/25/2008,Jessie Cummings,52,Male,White,Murder,1,Female,White,Coal,OK,South,Lethal Injection,No,No,No,No
+10/14/2008,Richard Cooey,41,Male,White,Murder,2,Female,White,Summit,OH,Midwest,Lethal Injection,No,No,No,No
+10/14/2008,Alvin Kelly,57,Male,White,Murder,3,"2 Male, 1 Female",White,Gregg,TX,South,Lethal Injection,No,No,No,No
+10/16/2008,Kevin Watts,27,Male,Black,Murder,3,"1 Male, 2 Female",Asian,Bexar,TX,South,Lethal Injection,No,No,No,No
+10/21/2008,Joseph Ries,29,Male,White,Murder,1,Male,White,Hopkins,TX,South,Lethal Injection,No,No,No,No
+10/28/2008,Eric Nenno,47,Male,White,Murder,1,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+10/30/2008,Gregory Wright,42,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+11/06/2008,Elkie Taylor,46,Male,Black,Murder,1,Male,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+11/12/2008,George Whitaker,36,Male,Black,Murder,1,Female,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+11/13/2008,Denard Manns,42,Male,Black,Murder,1,Female,White,Bell,TX,South,Lethal Injection,No,No,No,No
+11/19/2008,Gregory Bryant-Bey,53,Male,Black,Murder,1,Male,White,Lucas,OH,Midwest,Lethal Injection,No,No,No,No
+11/20/2008,Robert Hudson,45,Male,Black,Murder,1,Female,Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+11/21/2008,Marco Chapman,37,Male,White,Murder,2,"1 Male, 1 Female",White,Fayette,KY,South,Lethal Injection,No,Yes,No,No
+12/05/2008,Joseph Gardner,38,Male,Black,Murder,1,Female,White,Dorchester,SC,South,Lethal Injection,No,No,No,No
+01/14/2009,Curtis Moore,40,Male,Black,Murder,3,"2 Male, 1 Female",Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+01/15/2009,James Callahan,62,Male,White,Murder,1,Female,White,Calhoun,AL,South,Lethal Injection,No,No,No,No
+01/21/2009,Frank Moore,49,Male,Black,Murder,2,Male,Black,Bexar,TX,South,Lethal Injection,No,No,No,No
+01/22/2009,Reginald Perkins,53,Male,Black,Murder,1,Female,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+01/22/2009,Darwin Brown,32,Male,Black,Murder,1,Male,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+01/28/2009,Virgil Martinez,41,Male,Latino,Murder,4,"2 Male, 2 Female",Latino,Brazoria,TX,South,Lethal Injection,No,No,No,No
+01/29/2009,Ricardo Ortiz,46,Male,Latino,Murder,1,Male,Latino,El Paso,TX,South,Lethal Injection,No,No,No,No
+02/04/2009,David Martinez,36,Male,Latino,Murder,2,"1 Male, 1 Female",Latino,Bexar,TX,South,Lethal Injection,No,Yes,No,No
+02/04/2009,Steve Henley,55,Male,White,Murder,2,"1 Male, 1 Female",White,Jackson,TN,South,Lethal Injection,No,No,No,No
+02/10/2009,Dale Scheanette,35,Male,Black,Murder,1,Female,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+02/11/2009,Wayne Tompkins,51,Male,White,Murder,1,Female,White,Hillsborough,FL,South,Lethal Injection,No,No,No,No
+02/12/2009,Johnny Johnson,51,Male,Black,Murder,1,Female,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+02/12/2009,Danny Bradley,49,Male,White,Murder,1,Female,White,Calhoun,AL,South,Lethal Injection,No,No,No,No
+02/19/2009,Edward Bell,44,Male,Black,Murder,1,Male,White,Frederick,VA,South,Lethal Injection,No,No,No,Yes
+02/20/2009,Luke Williams,56,Male,White,Murder,2,"1 Male, 1 Female",White,Edgefield,SC,South,Lethal Injection,No,No,No,No
+03/03/2009,Willie Pondexter,34,Male,Black,Murder,1,Female,White,Red River,TX,South,Lethal Injection,No,No,No,No
+03/04/2009,Kenneth Morris,38,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+03/10/2009,Robert Newland,65,Male,White,Murder,1,Female,White,Glynn,GA,South,Lethal Injection,No,No,No,No
+03/10/2009,James Martinez,34,Male,Latino,Murder,2,"1 Male, 1 Female",White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+03/11/2009,Luis Salazar,38,Male,Latino,Murder,1,Female,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+04/15/2009,Michael Rosales,35,Male,Latino,Murder,1,Female,Black,Lubbock,TX,South,Lethal Injection,No,No,No,No
+04/16/2009,Jimmy Dill,49,Male,Black,Murder,1,Male,Black,Jefferson,AL,South,Lethal Injection,No,No,No,No
+04/29/2009,William Mize,52,Male,White,Murder,1,Male,White,Oconee,GA,South,Lethal Injection,No,No,No,No
+04/30/2009,Derrick Johnson,28,Male,Black,Murder,1,Female,Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+05/08/2009,Thomas Ivey,34,Male,Black,Murder,2,Male,White,Orangeburg,SC,South,Lethal Injection,No,No,No,No
+05/14/2009,Willie McNair,44,Male,Black,Murder,1,Female,White,Montgomery,AL,South,Lethal Injection,No,No,No,No
+05/14/2009,Donald Gilson,48,Male,White,Murder,1,Male,White,Cleveland,OK,South,Lethal Injection,No,No,No,No
+05/19/2009,Michael Riley,51,Male,Black,Murder,1,Female,White,Wood,TX,South,Lethal Injection,No,No,No,No
+05/20/2009,Dennis Skillicorn,49,Male,White,Murder,1,Male,White,Lafayette,MO,Midwest,Lethal Injection,No,No,No,No
+06/02/2009,Terry Hankins,34,Male,White,Murder,2,"1 Male, 1 Female",White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+06/03/2009,Daniel Wilson,39,Male,White,Murder,1,Female,White,Lorain,OH,Midwest,Lethal Injection,No,No,No,No
+06/11/2009,Jack Trawick,62,Male,White,Murder,1,Female,White,Jefferson,AL,South,Lethal Injection,No,Yes,No,No
+07/09/2009,Michael DeLozier,32,Male,White,Murder,2,Male,White,McCurtain,OK,South,Lethal Injection,No,No,No,No
+07/14/2009,John Fautenberry,45,Male,White,Murder,1,Male,White,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+07/21/2009,Marvallous Keene,36,Male,Black,Murder,5,"2 Male, 3 Female","2 White, 3 Black",Montgomery,OH,Midwest,Lethal Injection,No,No,No,No
+08/18/2009,Jason Getsy,33,Male,White,Murder,1,Female,White,Trumbull,OH,Midwest,Lethal Injection,No,No,No,No
+08/19/2009,John Marek,45,Male,White,Murder,1,Female,White,Broward,FL,South,Lethal Injection,No,No,No,No
+09/16/2009,Stephen Moody,52,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+09/22/2009,Christopher Coleman,37,Male,Black,Murder,3,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+10/08/2009,Max Payne,38,Male,White,Murder,1,Male,White,Cullman,AL,South,Lethal Injection,No,No,No,No
+10/20/2009,Mark McClain,42,Male,White,Murder,1,Female,White,Richmond,GA,South,Lethal Injection,No,No,No,No
+10/27/2009,Reginald Blanton,28,Male,Black,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+11/05/2009,Khristian Oliver,32,Male,Black,Murder,1,Male,White,Nacogdoches,TX,South,Lethal Injection,No,No,No,No
+11/10/2009,Yosvanis Valle,34,Male,Latino,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,Yes
+11/10/2009,John Muhammad,48,Male,Black,Murder,1,Male,White,Prince William,VA,South,Lethal Injection,No,No,No,No
+11/17/2009,Larry Elliott,60,Male,White,Murder,1,Female,White,Prince William,VA,South,Electrocution,No,No,No,No
+11/18/2009,Danielle Simpson,30,Male,Black,Murder,1,Female,White,Anderson,TX,South,Lethal Injection,No,No,No,No
+11/19/2009,Robert Thompson,34,Male,Black,Murder,1,Male,,Harris,TX,South,Lethal Injection,No,No,No,No
+12/02/2009,Cecil Johnson,53,Male,Black,Murder,3,Male,Black,Davidson,TN,South,Lethal Injection,No,No,No,No
+12/03/2009,Bobby Woods,44,Male,White,Murder,1,Female,White,Llano,TX,South,Lethal Injection,No,No,No,No
+12/08/2009,Kenneth Biros,51,Male,White,Murder,1,Female,White,Trumbull,OH,Midwest,Lethal Injection,No,No,No,No
+12/11/2009,Matthew Wrinkles,49,Male,White,Murder,3,"2 Male, 1 Female",White,Vanderburgh,IN,Midwest,Lethal Injection,No,No,No,No
+01/07/2010,Gerald Bordelon,47,Male,White,Murder,1,Female,White,Livingston Parish,LA,South,Lethal Injection,No,Yes,No,No
+01/07/2010,Vernon Smith,37,Male,Black,Murder,1,Male,White,Lucas,OH,Midwest,Lethal Injection,No,No,No,No
+01/07/2010,Kenneth Mosley,51,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+01/12/2010,Gary Johnson,59,Male,White,Murder,2,Male,White,Walker,TX,South,Lethal Injection,No,No,No,No
+01/14/2010,Julius Young,60,Male,Black,Murder,2,"1 Male, 1 Female",Black,Tulsa,OK,South,Lethal Injection,No,No,No,No
+02/04/2010,Mark Brown,37,Male,Black,Murder,1,Male,White,Mahoning,OH,Midwest,Lethal Injection,No,No,No,No
+02/16/2010,Martin Grossman,45,Male,White,Murder,1,Female,White,Pinellas,FL,South,Lethal Injection,No,No,No,No
+03/02/2010,Michael Sigala,32,Male,Latino,Murder,2,"1 Male, 1 Female",Latino,Collin,TX,South,Lethal Injection,No,No,No,No
+03/11/2010,Joshua Maxwell,31,Male,White,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+03/16/2010,Lawrence Reynolds,43,Male,White,Murder,1,Female,White,Summit,OH,Midwest,Lethal Injection,No,No,No,No
+03/18/2010,Paul Powell,31,Male,White,Murder,1,Female,White,Prince William,VA,South,Electrocution,No,No,No,No
+03/30/2010,Franklin Alix,34,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+04/20/2010,Darryl Durr,46,Male,Black,Murder,1,Female,White,Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+04/22/2010,William Berkley,31,Male,White,Murder,1,Female,Latino,El Paso,TX,South,Lethal Injection,No,No,No,No
+04/27/2010,Samuel Bustamante,40,Male,Latino,Murder,1,Male,Latino,Fort Bend,TX,South,Lethal Injection,No,No,No,No
+05/12/2010,Kevin Varga,41,Male,White,Murder,1,Male,White,Hunt,TX,South,Lethal Injection,No,No,No,No
+05/13/2010,Michael Beuke,48,Male,White,Murder,1,Male,White,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+05/13/2010,Billy Galloway,41,Male,White,Murder,1,Male,White,Hunt,TX,South,Lethal Injection,No,No,No,No
+05/19/2010,Rogelio Cannady,37,Male,Latino,Murder,1,Female,Latino,Bee County,TX,South,Lethal Injection,No,No,No,No
+05/19/2010,Paul Woodward,62,Male,White,Murder,1,Female,White,Perry,MS,South,Lethal Injection,No,No,No,No
+05/20/2010,Gerald Holland,72,Male,White,Murder,1,Female,White,Chickasaw,MS,South,Lethal Injection,No,No,No,No
+05/20/2010,Darick Walker,37,Male,Black,Murder,2,Male,Black,Henrico,VA,South,Lethal Injection,No,No,No,No
+05/25/2010,John Alba,54,Male,Latino,Murder,1,Female,Latino,Collin,TX,South,Lethal Injection,No,No,No,No
+05/27/2010,Thomas Whisenhant,63,Male,White,Murder,1,Female,White,Mobile,AL,South,Lethal Injection,No,No,No,No
+06/02/2010,George Jones,36,Male,Black,Murder,1,Male,Black,Dallas,TX,South,Lethal Injection,No,No,No,No
+06/09/2010,Melbert Ford,49,Male,White,Murder,2,Female,White,Newton,GA,South,Lethal Injection,No,No,No,No
+06/10/2010,John Parker,42,Male,White,Murder,1,Female,White,Colbert,AL,South,Lethal Injection,No,No,No,No
+06/15/2010,David Powell,59,Male,White,Murder,1,Male,Latino,Travis,TX,South,Lethal Injection,No,No,No,No
+06/18/2010,Ronnie Gardner,49,Male,White,Murder,1,Male,White,Salt Lake,UT,West,Firing Squad,No,No,No,No
+07/01/2010,Michael Perry,28,Male,White,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+07/13/2010,William Garner,37,Male,Black,Murder,5,"1 Male, 4 Female",Black,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+07/20/2010,Derrick Jackson,42,Male,Black,Murder,2,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+07/21/2010,Joseph Burns,42,Male,White,Murder,1,Male,White,Lee,MS,South,Lethal Injection,No,No,No,No
+08/10/2010,Roderick Davie,38,Male,Black,Murder,2,"1 Male, 1 Female","1 White, 1 Black",Trumbull,OH,Midwest,Lethal Injection,No,No,No,No
+08/12/2010,Michael Land,41,Male,White,Murder,1,Female,White,Jefferson,AL,South,Lethal Injection,No,No,No,No
+08/17/2010,Peter Cantu,35,Male,Latino,Murder,2,Female,White,Harris,TX,South,Lethal Injection,No,No,No,No
+09/09/2010,Holly Wood,50,Male,Black,Murder,1,Female,Black,Pike,AL,South,Lethal Injection,No,No,No,No
+09/10/2010,Cal Brown,52,Male,White,Murder,1,Female,White,King,WA,West,Lethal Injection,No,No,No,No
+09/23/2010,Teresa Lewis,41,Female,White,Murder,2,Male,White,Pittsylvania,VA,South,Lethal Injection,No,No,No,No
+09/27/2010,Brandon Rhode,31,Male,White,Murder,3,"2 Male, 1 Female",White,Jones,GA,South,Lethal Injection,No,No,No,No
+10/06/2010,Michael Benge,49,Male,White,Murder,1,Female,White,Butler,OH,Midwest,Lethal Injection,No,No,No,No
+10/14/2010,Donald Wackerly,41,Male,White,Murder,1,Male,Asian,Sequoyah,OK,South,Lethal Injection,No,No,No,No
+10/21/2010,Larry Wooten,51,Male,Black,Murder,2,"1 Male, 1 Female",Black,Lamar,TX,South,Lethal Injection,No,No,No,No
+10/26/2010,Jeffrey Landrigan,50,Male,Native American,Murder,1,Male,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+11/04/2010,Phillip Hallford,63,Male,White,Murder,1,Male,White,Dale,AL,South,Lethal Injection,No,No,No,No
+12/16/2010,John Duty,58,Male,White,Murder,1,Male,White,Pittsburg,OK,South,Lethal Injection,No,No,No,No
+01/06/2011,Billy Alverson,39,Male,Black,Murder,1,Male,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+01/11/2011,Jeffrey Matthews,38,Male,White,Murder,1,Male,White,Cleveland,OK,South,Lethal Injection,No,No,No,No
+01/13/2011,Leroy White,52,Male,Black,Murder,1,Female,Black,Madison,AL,South,Lethal Injection,No,No,No,No
+01/25/2011,Emmanuel Hammond,45,Male,Black,Murder,1,Female,White,Fulton,GA,South,Lethal Injection,No,No,No,No
+02/09/2011,Martin Link,47,Male,White,Murder,1,Female,White,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+02/15/2011,Michael Hall,31,Male,White,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+02/17/2011,Frank Spisak,59,Male,White,Murder,3,Male,"1 White, 2 Black",Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+02/22/2011,Timothy Adams,42,Male,Black,Murder,1,Male,Black,Harris,TX,South,Lethal Injection,No,No,No,No
+03/10/2011,Johnnie Baston,37,Male,Black,Murder,1,Male,Asian,Lucas,OH,Midwest,Lethal Injection,No,No,No,No
+03/29/2011,Eric King,47,Male,Black,Murder,2,Male,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+03/31/2011,William Boyd,45,Male,White,Murder,2,"1 Male, 1 Female",White,Calhoun,AL,South,Lethal Injection,No,No,No,No
+04/12/2011,Clarence Carter,49,Male,Black,Murder,1,Male,Black,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+05/03/2011,Cary Kerr,46,Male,White,Murder,1,Female,White,Tarrant,TX,South,Lethal Injection,No,No,No,No
+05/06/2011,Jeffrey Motts,36,Male,White,Murder,1,Male,White,Greenville,SC,South,Lethal Injection,No,Yes,No,No
+05/10/2011,Benny Stevens,52,Male,White,Murder,4,"3 Male, 1 Female",White,Marion,MS,South,Lethal Injection,No,No,No,No
+05/17/2011,Rodney Gray,39,Male,Black,Murder,1,Female,White,Newton,MS,South,Lethal Injection,No,No,No,No
+05/17/2011,Daniel Bedford,63,Male,White,Murder,2,"1 Male, 1 Female",White,Hamilton,OH,Midwest,Lethal Injection,No,No,No,No
+05/19/2011,Jason Williams,42,Male,White,Murder,4,"3 Male, 1 Female",White,Mobile,AL,South,Lethal Injection,No,No,No,No
+05/25/2011,Donald Beaty,56,Male,White,Murder,1,Female,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+06/01/2011,Gayland Bradford,42,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+06/16/2011,Lee Taylor,32,Male,White,Murder,1,Male,Black,Bowie,TX,South,Lethal Injection,No,No,No,No
+06/16/2011,Eddie Powell,41,Male,Black,Murder,1,Female,White,Tuscaloosa,AL,South,Lethal Injection,No,No,No,No
+06/21/2011,Milton Mathis,32,Male,Black,Murder,2,Male,"1 White, 1 Black",Fort Bend,TX,South,Lethal Injection,No,No,No,No
+06/23/2011,Roy Blankenship,55,Male,White,Murder,1,Female,White,Chatham,GA,South,Lethal Injection,No,No,No,No
+06/30/2011,Richard Bible,49,Male,White,Murder,1,Female,White,Coconino,AZ,West,Lethal Injection,No,No,No,No
+07/07/2011,Humberto Leal,38,Male,Latino,Murder,1,Female,Latino,Bexar,TX,South,Lethal Injection,No,No,No,Yes
+07/19/2011,Thomas West,52,Male,White,Murder,1,Male,White,Pima,AZ,West,Lethal Injection,No,No,No,No
+07/20/2011,Mark Stroman,41,Male,White,Murder,1,Male,Asian,Dallas,TX,South,Lethal Injection,No,No,No,No
+07/21/2011,Andrew DeYoung,37,Male,White,Murder,3,"1 Male, 2 Female",White,Cobb,GA,South,Lethal Injection,No,No,No,No
+07/29/2011,Robert Jackson,38,Male,White,Murder,1,Female,White,New Castle,DE,South,Lethal Injection,No,No,No,No
+08/10/2011,Martin Robles,33,Male,Latino,Murder,2,Male,Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+08/18/2011,Jerry Jackson,30,Male,Black,Murder,1,Female,White,Williamsburg City,VA,South,Lethal Injection,No,No,No,No
+09/13/2011,Steven Woods,31,Male,White,Murder,2,"1 Male, 1 Female",White,Denton,TX,South,Lethal Injection,No,No,No,No
+09/21/2011,Lawrence Brewer,44,Male,White,Murder,1,Male,Black,Jasper,TX,South,Lethal Injection,No,No,No,No
+09/21/2011,Troy Davis,41,Male,Black,Murder,1,Male,White,Chatham,GA,South,Lethal Injection,No,No,No,No
+09/22/2011,Derrick Mason,37,Male,Black,Murder,1,Female,White,Madison,AL,South,Lethal Injection,No,No,No,No
+09/28/2011,Manuel Valle,61,Male,Latino,Murder,1,Male,Latino,Miami-Dade,FL,South,Lethal Injection,No,No,No,Yes
+10/20/2011,Christopher Johnson,38,Male,White,Murder,1,Male,White,Escambia,AL,South,Lethal Injection,No,Yes,No,No
+10/27/2011,Frank Garcia,39,Male,Latino,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+11/15/2011,Reginald Brooks,66,Male,Black,Murder,3,Male,Black,Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+11/15/2011,Oba Chandler,65,Male,White,Murder,3,Female,White,Hillsborough,FL,South,Lethal Injection,No,No,No,No
+11/16/2011,Guadalupe Esparza,46,Male,Latino,Murder,1,Female,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+11/18/2011,Paul Rhoades,54,Male,White,Murder,2,Female,White,Bingham,ID,West,Lethal Injection,No,No,No,No
+01/05/2012,Gary Welch,49,Male,White,Murder,1,Male,White,Ottawa,OK,South,Lethal Injection,No,No,No,No
+01/26/2012,Rodrigo Hernandez,39,Male,Latino,Murder,1,Female,White,Bexar,TX,South,Lethal Injection,No,No,No,No
+02/08/2012,Edwin Turner,38,Male,White,Murder,2,Male,Black,Forrest,MS,South,Lethal Injection,No,No,No,No
+02/15/2012,Robert Waterhouse,65,Male,White,Murder,1,Female,White,Pinellas,FL,South,Lethal Injection,No,No,No,No
+02/29/2012,Robert Moormann,63,Male,White,Murder,1,Female,White,Pinal,AZ,West,Lethal Injection,No,No,No,No
+02/29/2012,George Rivas,41,Male,Latino,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+03/07/2012,Keith Thurmond,52,Male,White,Murder,2,"1 Male, 1 Female",White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+03/08/2012,Robert Towery,47,Male,White,Murder,1,Male,White,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+03/15/2012,Timothy Stemple,46,Male,White,Murder,1,Female,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+03/20/2012,Larry Puckett,35,Male,White,Murder,1,Female,White,Forrest,MS,South,Lethal Injection,No,No,No,No
+03/22/2012,William Mitchell,61,Male,Black,Murder,1,Female,White,Harrison,MS,South,Lethal Injection,No,No,No,No
+03/28/2012,Jesse Hernandez,47,Male,Latino,Murder,1,Male,Latino,Dallas,TX,South,Lethal Injection,No,No,No,No
+04/12/2012,David Gore,58,Male,White,Murder,1,Female,White,Pinellas,FL,South,Lethal Injection,No,No,No,No
+04/18/2012,Mark Wiles,49,Male,White,Murder,1,Male,White,Portage,OH,Midwest,Lethal Injection,No,No,No,No
+04/20/2012,Shannon Johnson,28,Male,Black,Murder,1,Male,Black,New Castle,DE,South,Lethal Injection,No,Yes,No,No
+04/25/2012,Thomas Kemp,63,Male,White,Murder,1,Male,Latino,Pima,AZ,West,Lethal Injection,No,No,No,No
+04/26/2012,Beunka Adams,29,Male,Black,Murder,1,Male,White,Cherokee,TX,South,Lethal Injection,No,No,No,No
+05/01/2012,Michael Selsor,57,Male,White,Murder,1,Male,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+06/05/2012,Henry Jackson,47,Male,Black,Murder,4,"2 Male, 2 Female",Black,Copiah,MS,South,Lethal Injection,No,No,No,No
+06/12/2012,Richard Leavitt,53,Male,White,Murder,1,Female,White,Bingham,ID,West,Lethal Injection,No,No,No,No
+06/12/2012,Jan Brawner,34,Male,White,Murder,4,"1 Male, 3 Female",White,Tate,MS,South,Lethal Injection,No,No,No,No
+06/20/2012,Gary Simmons,49,Male,White,Murder,1,Male,White,Jackson,MS,South,Lethal Injection,No,No,No,No
+06/27/2012,Samuel Lopez,49,Male,Latino,Murder,1,Female,Latino,Maricopa,AZ,West,Lethal Injection,No,No,No,No
+07/18/2012,Yokamon Hearn,33,Male,Black,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+08/07/2012,Marvin Wilson,54,Male,Black,Murder,1,Male,Black,Jefferson,TX,South,Lethal Injection,No,No,No,No
+08/08/2012,Daniel Cook,51,Male,White,Murder,2,Male,"1 White, 1 Latino",Mohave,AZ,West,Lethal Injection,No,No,No,No
+08/14/2012,Michael Hooper,40,Male,White,Murder,3,"1 Male, 2 Female",White,Canadian,OK,South,Lethal Injection,No,No,No,No
+09/20/2012,Robert Harris,40,Male,Black,Murder,2,"1 Male, 1 Female","1 White, 1 Latino",Dallas,TX,South,Lethal Injection,No,No,No,No
+09/20/2012,Donald Palmer,47,Male,White,Murder,2,Male,White,Belmont,OH,Midwest,Lethal Injection,No,No,No,No
+09/25/2012,Cleve Foster,47,Male,White,Murder,1,Female,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+10/10/2012,Jonathan Green,44,Male,Black,Murder,1,Female,White,Montgomery,TX,South,Lethal Injection,No,No,No,No
+10/15/2012,Eric Robert,50,Male,White,Murder,1,Male,White,Minnehaha,SD,Midwest,Lethal Injection,No,Yes,No,No
+10/24/2012,Bobby Hines,24,Male,White,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+10/30/2012,Donald Moeller,60,Male,White,Murder,1,Female,White,Minnehaha,SD,Midwest,Lethal Injection,No,No,No,No
+10/31/2012,Donnie Roberts,41,Male,White,Murder,1,Female,White,Polk,TX,South,Lethal Injection,No,No,No,No
+11/06/2012,Garry Allen,56,Male,Black,Murder,1,Female,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+11/08/2012,Mario Swain,33,Male,Black,Murder,1,Female,White,Gregg,TX,South,Lethal Injection,No,No,No,No
+11/13/2012,Brett Hartman,38,Male,White,Murder,1,Female,White,Summit,OH,Midwest,Lethal Injection,No,No,No,No
+11/14/2012,Ramon Hernandez,41,Male,Latino,Murder,1,Female,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+11/15/2012,Preston Hughes,46,Male,Black,Murder,2,"1 Male, 1 Female",Black,Harris,TX,South,Lethal Injection,No,No,No,No
+12/04/2012,George Ochoa,38,Male,Latino,Murder,2,"1 Male, 1 Female",Latino,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+12/05/2012,Richard Stokley,60,Male,White,Murder,2,Female,White,Cochise,AZ,West,Lethal Injection,No,No,No,No
+12/11/2012,Manuel Pardo,56,Male,Latino,Murder,9,"6 Male, 3 Female","1 White, 8 Latino",Miami-Dade,FL,South,Lethal Injection,No,No,No,No
+01/16/2013,Robert Gleason,42,Male,White,Murder,2,Male,"1 White, 1 Black",Wise,VA,South,Electrocution,No,Yes,No,No
+02/21/2013,Carl Blue,48,Male,Black,Murder,1,Female,Black,Brazos,TX,South,Lethal Injection,No,No,No,No
+02/21/2013,Andrew Cook,38,Male,White,Murder,2,"1 Male, 1 Female",White,Monroe,GA,South,Lethal Injection,No,No,No,No
+03/06/2013,Frederick Treesh,48,Male,White,Murder,1,Male,Black,Lake,OH,Midwest,Lethal Injection,No,No,No,No
+03/12/2013,Ray Thacker,42,Male,White,Murder,1,Female,White,Mayes,OK,South,Lethal Injection,No,No,No,No
+04/09/2013,Rickey Lewis,50,Male,Black,Murder,1,Male,White,Smith,TX,South,Lethal Injection,No,No,No,No
+04/10/2013,Larry Mann,59,Male,White,Murder,1,Female,White,Pinellas,FL,South,Lethal Injection,No,No,No,No
+04/16/2013,Ronnie Threadgill,40,Male,Black,Murder,1,Male,Black,Navarro,TX,South,Lethal Injection,No,No,No,No
+04/25/2013,Richard Cobb,29,Male,White,Murder,1,Male,White,Cherokee,TX,South,Lethal Injection,No,No,No,No
+05/01/2013,Steve Smith,46,Male,White,Murder,1,Female,White,Richland,OH,Midwest,Lethal Injection,No,No,No,No
+05/07/2013,Carroll Parr,35,Male,Black,Murder,1,Male,Latino,McLennan,TX,South,Lethal Injection,No,No,No,No
+05/15/2013,Jeffery Williams,37,Male,Black,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+05/29/2013,Elmer Carroll,56,Male,White,Murder,1,Female,White,Orange,FL,South,Lethal Injection,No,No,No,No
+06/12/2013,Elroy Chester,44,Male,Black,Murder,1,Male,White,Jefferson,TX,South,Lethal Injection,No,No,No,No
+06/12/2013,William Van Poyck,58,Male,White,Murder,1,Male,White,Palm Beach,FL,South,Lethal Injection,No,No,No,No
+06/18/2013,James DeRosa,36,Male,White,Murder,2,"1 Male, 1 Female",White,Le Flore,OK,South,Lethal Injection,No,No,No,No
+06/25/2013,Brian Davis,39,Male,Black,Murder,1,Female,Black,Kay,OK,South,Lethal Injection,No,No,No,No
+06/26/2013,Kimberly McCarthy,52,Female,Black,Murder,1,Female,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+07/16/2013,John Quintanilla,36,Male,Latino,Murder,1,Male,White,Victoria,TX,South,Lethal Injection,No,No,No,No
+07/18/2013,Vaugn Ross,41,Male,Black,Murder,2,"1 Male, 1 Female","1 White, 1 Black",Lubbock,TX,South,Lethal Injection,No,No,No,No
+07/25/2013,Andrew Lackey,29,Male,White,Murder,1,Male,White,Limestone,AL,South,Lethal Injection,No,Yes,No,No
+07/31/2013,Douglas Feldman,55,Male,White,Murder,2,Male,"1 White, 1 Latino",Dallas,TX,South,Lethal Injection,No,No,No,No
+08/05/2013,John Ferguson,65,Male,Black,Murder,8,"7 Male, 2 Female","2 White, 6 Black",Miami-Dade,FL,South,Lethal Injection,No,No,No,No
+09/10/2013,Anthony Banks,60,Male,Black,Murder,1,Female,Asian,Tulsa,OK,South,Lethal Injection,No,No,No,No
+09/19/2013,Robert Garza,30,Male,Latino,Murder,4,Female,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+09/25/2013,Harry Mitts,61,Male,White,Murder,2,Male,"1 White, 1 Black",Cuyahoga,OH,Midwest,Lethal Injection,No,No,No,No
+09/26/2013,Arturo Diaz,37,Male,Latino,Murder,1,Male,White,Hidalgo,TX,South,Lethal Injection,No,No,No,No
+10/01/2013,Marshall Gore,50,Male,White,Murder,1,Female,White,Columbia,FL,South,Lethal Injection,No,No,No,No
+10/09/2013,Edward Schad,71,Male,White,Murder,1,Male,White,Yavapai,AZ,West,Lethal Injection,No,No,No,No
+10/09/2013,Michael Yowell,43,Male,White,Murder,2,"1 Male, 1 Female",White,Lubbock,TX,South,Lethal Injection,No,No,No,No
+10/15/2013,William Happ,51,Male,White,Murder,1,Female,White,Lake,FL,South,Lethal Injection,No,Yes,No,No
+10/23/2013,Robert Jones,43,Male,White,Murder,6,"3 Male, 3 Female",White,Pima,AZ,West,Lethal Injection,No,No,No,No
+11/12/2013,Darius Kimbrough,40,Male,Black,Murder,1,Female,White,Orange,FL,South,Lethal Injection,No,No,No,No
+11/12/2013,Jamie McCoskey,49,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+11/20/2013,Joseph Franklin,63,Male,White,Murder,1,Male,White,St. Louis City,MO,Midwest,Lethal Injection,No,No,No,No
+12/03/2013,Jerry Martin,43,Male,White,Murder,1,Female,White,Leon,TX,South,Lethal Injection,No,No,No,No
+12/10/2013,Ronald Lott,53,Male,Black,Murder,2,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+12/11/2013,Allen Nicklasson,41,Male,White,Murder,1,Male,White,Lafayette,MO,Midwest,Lethal Injection,No,No,No,No
+12/17/2013,Johnny Black,48,Male,White,Murder,1,Male,White,Stephens,OK,South,Lethal Injection,No,No,No,No
+01/07/2014,Askari Muhammad,62,Male,Black,Murder,1,Male,White,Bradford,FL,South,Lethal Injection,No,No,No,No
+01/09/2014,Michael Wilson,38,Male,Black,Murder,1,Male,White,Tulsa,OK,South,Lethal Injection,No,No,No,No
+01/16/2014,Dennis McGuire,53,Male,White,Murder,1,Female,White,Preble,OH,Midwest,Lethal Injection,No,No,No,No
+01/22/2014,Edgar Tamayo,46,Male,Latino,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,Yes
+01/23/2014,Kenneth Hogan,52,Male,White,Murder,1,Female,White,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/29/2014,Herbert Smulls,56,Male,Black,Murder,1,Male,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+02/05/2014,Suzanne Basso,59,Female,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+02/12/2014,Juan Chavez,46,Male,Latino,Murder,1,Male,White,Miami-Dade,FL,South,Lethal Injection,No,No,No,Yes
+02/26/2014,Michael Taylor,47,Male,Black,Murder,1,Female,White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+02/26/2014,Paul Howell,48,Male,Black,Murder,1,Male,White,Jefferson,FL,South,Lethal Injection,No,No,No,No
+03/19/2014,Ray Jasper,33,Male,Black,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+03/20/2014,Robert Henry,55,Male,Black,Murder,2,Female,"1 White, 1 Black",Broward,FL,South,Lethal Injection,No,No,No,No
+03/26/2014,Jeffrey Ferguson,59,Male,White,Murder,1,Female,White,St. Charles,MO,Midwest,Lethal Injection,No,No,No,No
+03/27/2014,Anthony Doyle,29,Male,Black,Murder,1,Female,Asian,Dallas,TX,South,Lethal Injection,No,No,No,No
+04/03/2014,Tommy Sells,49,Male,White,Murder,1,Female,White,Val Verde,TX,South,Lethal Injection,No,No,No,No
+04/09/2014,Ramiro Hernandez,44,Male,Latino,Murder,1,Male,White,Bandera,TX,South,Lethal Injection,No,No,No,Yes
+04/16/2014,Jose Villegas,39,Male,Latino,Murder,3,"1 Male, 2 Female",Latino,Nueces,TX,South,Lethal Injection,No,No,No,No
+04/23/2014,William Rousan,57,Male,White,Murder,1,Female,White,Washington,MO,Midwest,Lethal Injection,No,No,No,No
+04/23/2014,Robert Hendrix,47,Male,White,Murder,2,"1 Male, 1 Female",White,Lake,FL,South,Lethal Injection,No,No,No,No
+04/29/2014,Clayton Lockett,38,Male,Black,Murder,1,Female,White,Kay,OK,South,Lethal Injection,No,No,No,No
+06/17/2014,Marcus Wellons,58,Male,Black,Murder,1,Female,Black,Cobb,GA,South,Lethal Injection,No,No,No,No
+06/18/2014,John Henry,63,Male,Black,Murder,1,Female,White,Pasco,FL,South,Lethal Injection,No,No,No,No
+06/18/2014,John Winfield,46,Male,Black,Murder,2,Female,Black,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+07/10/2014,Eddie Davis,45,Male,White,Murder,1,Female,White,Polk,FL,South,Lethal Injection,No,No,No,No
+07/16/2014,John Middleton,54,Male,White,Murder,3,"2 Male, 1 Female",White,Harrison,MO,Midwest,Lethal Injection,No,No,No,No
+07/23/2014,Joseph Wood,55,Male,White,Murder,2,"1 Male, 1 Female",White,Pima,AZ,West,Lethal Injection,No,No,No,No
+08/06/2014,Michael Worthington,43,Male,White,Murder,1,Female,White,St. Charles,MO,Midwest,Lethal Injection,No,No,No,No
+09/10/2014,Willie Trottie,45,Male,Black,Murder,2,"1 Male, 1 Female",Black,Harris,TX,South,Lethal Injection,No,No,No,No
+09/10/2014,Earl Ringo,40,Male,Black,Murder,2,"1 Male, 1 Female",White,Boone,MO,Midwest,Lethal Injection,No,No,No,No
+09/17/2014,Lisa Coleman,38,Female,Black,Murder,1,Male,Black,Tarrant,TX,South,Lethal Injection,No,No,No,No
+10/28/2014,Miguel Paredes,32,Male,Latino,Murder,3,"2 Male, 1 Female","1 White, 2 Latino",Bexar,TX,South,Lethal Injection,No,No,No,Yes
+11/13/2014,Chadwick Banks,43,Male,Black,Murder,1,Female,Black,Leon,FL,South,Lethal Injection,No,No,No,No
+11/19/2014,Leon Taylor,56,Male,Black,Murder,1,Male,White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+12/09/2014,Robert Holsey,49,Male,Black,Murder,1,Male,White,Baldwin,GA,South,Lethal Injection,No,No,No,No
+12/10/2014,Paul Goodwin,48,Male,White,Murder,1,Female,White,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+01/13/2015,Andrew Brannan,66,Male,White,Murder,1,Male,White,Laurens,GA,South,Lethal Injection,No,No,No,No
+01/15/2015,Charles Warner,47,Male,Black,Murder,1,Female,Black,Oklahoma,OK,South,Lethal Injection,No,No,No,No
+01/15/2015,Johnny Kormondy,42,Male,White,Murder,1,Male,White,Escambia,FL,South,Lethal Injection,No,No,No,No
+01/21/2015,Arnold Prieto,41,Male,Latino,Murder,3,"1 Male, 2 Female","1 White, 2 Latino",Bexar,TX,South,Lethal Injection,No,No,No,No
+01/27/2015,Warren Hill,54,Male,Black,Murder,1,Male,White,Lee,GA,South,Lethal Injection,No,No,No,No
+01/29/2015,Robert Ladd,57,Male,Black,Murder,1,Female,White,Smith,TX,South,Lethal Injection,No,No,No,No
+02/04/2015,Donald Newbury,52,Male,White,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+02/11/2015,Walter Storey,47,Male,White,Murder,1,Female,White,St. Charles,MO,Midwest,Lethal Injection,No,No,No,No
+03/11/2015,Manuel Vasquez,46,Male,Latino,Murder,1,Female,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+03/17/2015,Cecil Clayton,74,Male,White,Murder,1,Male,White,Barry,MO,Midwest,Lethal Injection,No,No,No,No
+04/09/2015,Kent Sprouse,42,Male,White,Murder,2,Male,"1 White, 1 Latino",Ellis,TX,South,Lethal Injection,No,No,No,No
+04/14/2015,Andre Cole,52,Male,Black,Murder,1,Male,Black,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+04/15/2015,Manuel Garza,34,Male,Latino,Murder,1,Male,Latino,Bexar,TX,South,Lethal Injection,No,No,No,No
+05/12/2015,Derrick Charles,32,Male,Black,Murder,3,"1 Male, 2 Female",Black,Harris,TX,South,Lethal Injection,No,No,No,No
+06/03/2015,Lester Bower,67,Male,White,Murder,4,Male,White,Grayson,TX,South,Lethal Injection,No,No,No,No
+06/09/2015,Richard Strong,47,Male,Black,Murder,2,Female,Black,St. Louis,MO,Midwest,Lethal Injection,No,No,No,No
+06/18/2015,Gregory Russeau,45,Male,Black,Murder,1,Male,White,Smith,TX,South,Lethal Injection,No,No,No,No
+07/14/2015,David Zink,55,Male,White,Murder,1,Female,White,St. Clair,MO,Midwest,Lethal Injection,No,No,No,No
+08/12/2015,Daniel Lopez,27,Male,Latino,Murder,1,Male,White,Nueces,TX,South,Lethal Injection,No,Yes,No,No
+09/01/2015,Roderick Nunley,50,Male,Black,Murder,1,Female,White,Jackson,MO,Midwest,Lethal Injection,No,No,No,No
+09/30/2015,Kelly Gissendaner,47,Female,White,Murder,1,Male,White,Gwinnett,GA,South,Lethal Injection,No,No,No,No
+10/01/2015,Alfredo Prieto,49,Male,Latino,Murder,2,"1 Male, 1 Female",White,Fairfax,VA,South,Lethal Injection,No,No,No,Yes
+10/06/2015,Juan Garcia,35,Male,Latino,Murder,1,Male,Latino,Harris,TX,South,Lethal Injection,No,No,No,No
+10/14/2015,Licho Escamilla,33,Male,Latino,Murder,1,Male,White,Dallas,TX,South,Lethal Injection,No,No,No,No
+10/29/2015,Jerry Correll,59,Male,White,Murder,4,Female,White,Orange,FL,South,Lethal Injection,No,No,No,No
+11/18/2015,Raphael Holiday,36,Male,Black,Murder,3,Female,Black,Madison,TX,South,Lethal Injection,No,No,No,No
+11/19/2015,Marcus Johnson,50,Male,White,Murder,1,Female,White,Dougherty,GA,South,Lethal Injection,No,No,No,No
+12/09/2015,Brian Keith Terrell,47,Male,Black,Murder,1,Male,Black,Newton,GA,South,Lethal Injection,No,No,No,No
+01/07/2016,Oscar Bolin,53,Male,White,Murder,1,Female,White,Pasco,FL,South,Lethal Injection,No,No,No,No
+01/20/2016,Richard Masterson,43,Male,White,Murder,1,Male,White,Harris,TX,South,Lethal Injection,No,No,No,No
+01/21/2016,Christopher Brooks,43,Male,White,Murder,1,Female,White,Jefferson,AL,South,Lethal Injection,No,No,No,No
+01/27/2016,James Freeman,35,Male,White,Murder,1,Male,White,Wharton,TX,South,Lethal Injection,No,No,No,No
+02/03/2016,Brandon Jones,72,Male,Black,Murder,1,Male,White,Cobb,GA,South,Lethal Injection,No,No,No,No
+02/16/2016,Gustavo Garcia,43,Male,Latino,Murder,1,Male,White,Collin,TX,South,Lethal Injection,No,No,No,No
+02/17/2016,Travis Hittson,45,Male,White,Murder,1,Male,White,Houston,GA,South,Lethal Injection,No,No,No,No
+03/09/2016,Coy Wesbrook,58,Male,White,Murder,2,"1 Male, 1 Female","1 White, 1 Latino",Harris,TX,South,Lethal Injection,No,No,No,No
+03/22/2016,Adam Ward,33,Male,White,Murder,1,Male,White,Hunt,TX,South,Lethal Injection,No,No,No,No
+03/31/2016,Joshua Bishop,41,Male,White,Murder,1,Male,White,Baldwin,GA,South,Lethal Injection,No,No,No,No
+04/06/2016,Pablo Vasquez,38,Male,Latino,Murder,1,Male,Latino,Hidalgo,TX,South,Lethal Injection,No,No,No,No
+04/12/2016,Kenneth Fults,47,Male,Black,Murder,1,Female,White,Spalding,GA,South,Lethal Injection,No,No,No,No
+04/27/2016,Daniel Lucas,37,Male,White,Murder,3,"2 Male, 1 Female",White,Jones,GA,South,Lethal Injection,No,No,No,No
+05/11/2016,Earl Forrest,66,Male,White,Murder,3,"1 Male, 2 Female",White,Platte,MO,Midwest,Lethal Injection,No,No,No,No
+07/15/2016,John Conner,60,Male,White,Murder,1,Male,White,Telfair,GA,South,Lethal Injection,No,No,No,No
+10/05/2016,Barney Fuller,53,Male,White,Murder,2,"1 Male, 1 Female",White,Houston County,TX,South,Lethal Injection,No,Yes,No,No
+10/19/2016,Gregory Lawler,63,Male,White,Murder,1,Male,White,Fulton,GA,South,Lethal Injection,No,No,No,No
+11/16/2016,Steven Spears,54,Male,White,Murder,1,Female,White,Lumpkin,GA,South,Lethal Injection,No,Yes,No,No
+12/06/2016,William Sallie,50,Male,White,Murder,1,Male,White,Bacon,GA,South,Lethal Injection,No,No,No,No
+12/08/2016,Ronald Smith,45,Male,White,Murder,1,Male,White,Madison,AL,South,Lethal Injection,No,No,No,No
