@@ -1,5 +1,6 @@
 ---
 title: "Homework 3 Project"
+author: ""
 output: pdf_document
 ---
 
@@ -7,3 +8,12 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Data Cleaning
+
+## Initial investigation: ignoring nonlinearity
+
+## Accounting for nonlinearity
+
+## Summarize investigations
+
+## Societal impact
