@@ -8,6 +8,27 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Load Packages and Code
+```{r}
+library(dplyr)
+library(readr)
+library(broom)
+library(ggplot2)
+library(tidymodels) 
+tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
+```
+
+```{r}
+executions <- read_csv("executiondata.csv")
+
+executions_clean <- executions %>%
+  select(-Name, -Crime) %>%
+  separate(Date, c("Month", "Day", "Year"), sep = "/") 
+
+head(executions_clean)
+```
+
+
 ## Data Cleaning
 
 ## Initial investigation: ignoring nonlinearity
