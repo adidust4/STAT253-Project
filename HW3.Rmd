@@ -19,13 +19,23 @@ tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
 ```{r}
-executions <- read_csv("executiondata.csv")
+executions <- read_csv("executiondata_clean.csv")
 
 executions_clean <- executions %>%
   select(-Name, -Crime) %>%
-  separate(Date, c("Month", "Day", "Year"), sep = "/") 
-
-head(executions_clean)
+  separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
+  mutate(VictimMale = case_when(
+    Victim_Sex %in% c("Male") ~ 1, # only identifies just male victims
+    TRUE ~ 0)) %>%
+  mutate(VictimFemale = case_when(
+    Victim_Sex %in% c("Female") ~ 1, # only identifies just female victims
+    TRUE ~ 0)) %>%
+  mutate(VictimMixed = case_when(
+    (VictimMale==1) & (VictimFemale==1) ~ 1, # once VictimMale and VictimFemale are correct this should work fine
+    TRUE ~ 0))
+  
+head(executions)
+head(executions_clean) 
 ```
 
 
