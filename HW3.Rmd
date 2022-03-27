@@ -14,6 +14,7 @@ library(dplyr)
 library(readr)
 library(broom)
 library(ggplot2)
+library(stringr)
 library(tidymodels) 
 tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
@@ -25,10 +26,10 @@ executions_clean <- executions %>%
   select(-Name, -Crime) %>%
   separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
   mutate(VictimMale = case_when(
-    Victim_Sex %in% c("Male") ~ 1, # only identifies just male victims
+    str_detect(Victim_Sex, "Male") ~ 1, 
     TRUE ~ 0)) %>%
   mutate(VictimFemale = case_when(
-    Victim_Sex %in% c("Female") ~ 1, # only identifies just female victims
+    str_detect(Victim_Sex, "Female") ~ 1, # only identifies just female victims
     TRUE ~ 0)) %>%
   mutate(VictimMixed = case_when(
     (VictimMale==1) & (VictimFemale==1) ~ 1, # once VictimMale and VictimFemale are correct this should work fine
