@@ -38,7 +38,7 @@ executions_clean$Month <-
 executions_clean$Year <-
 ```
 
-
+ 
 ## Research Question
 
 ## Logistic Regression
