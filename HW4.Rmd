@@ -35,7 +35,11 @@ executions_clean <- executions %>%
 executions_clean <- executions_clean %>% select(-Victim_Sex, -Day)
 executions_clean$Month <-
   as.numeric(as.character(executions_clean$Month))
-# executions_clean$Year <- can get the years into decades instead of the specific year
+executions_clean$Year <-
+  as.numeric(as.character(executions_clean$Year))
+  
+head(executions)
+head(executions_clean) 
 ```
 
 
