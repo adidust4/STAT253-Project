@@ -35,11 +35,14 @@ executions_clean <- executions %>%
 executions_clean <- executions_clean %>% select(-Victim_Sex, -Day)
 executions_clean$Month <-
   as.numeric(as.character(executions_clean$Month))
-executions_clean$Year <-
+# executions_clean$Year <- can get the years into decades instead of the specific year
 ```
 
- 
+
 ## Research Question
+
+We are looking to build a classification model that will predict the method of execution from our data set. To do this, we will use a logistic regression model and a random forests model. Our main aim is to determine if there is a specific method of execution that is more common in certain regions. 
+
 
 ## Logistic Regression
 
