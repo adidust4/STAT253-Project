@@ -167,7 +167,7 @@ mod_output %>%
 
 
 
-## LASSO MODEL
+## LASSO MODEL 
 # create data frame with predicted values and residuals
 mod_output_2 <- fit_model_lasso %>%
     predict(new_data = executions_clean) %>%
