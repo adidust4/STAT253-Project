@@ -30,16 +30,26 @@ executions_clean <- executions %>%
   mutate(VictimFemale = case_when(
     str_detect(Victim_Sex, "Female") ~ 1, TRUE ~ 0)) %>% # 1 if there was female victim(s)
   mutate(VictimMixed = case_when(
-    (VictimMale==1) & (VictimFemale==1) ~ 1, TRUE ~ 0)) # 1 if the victim(s) were male and female
+    (VictimMale==1) & (VictimFemale==1) ~ 1, TRUE ~ 0)) %>% # 1 if the victim(s) were male and female
+  mutate(VictimWhite = case_when(
+    str_detect(Victim_Race, 'White') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimLatino = case_when(
+    str_detect(Victim_Race, 'Latino') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimBlack = case_when(
+    str_detect(Victim_Race, 'Black') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimAsian = case_when(
+    str_detect(Victim_Race, 'Asian') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimMixedRace = case_when(
+    str_detect(Victim_Race, ',') ~ 1, TRUE ~ 0))
 
-executions_clean <- executions_clean %>% select(-Victim_Sex, -Day)
+executions_clean <- executions_clean %>% select(-Victim_Sex, -Day, -Victim_Race)
 executions_clean$Month <-
-  as.numeric(as.character(executions_clean$Month))
+  as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
 executions_clean$Year <-
-  as.numeric(as.character(executions_clean$Year))
+  as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
   
 head(executions)
-head(executions_clean) 
+head(executions_clean)
 ```
 
 
@@ -49,6 +59,45 @@ We are looking to build a classification model that will predict the method of e
 
 
 ## Logistic Regression
+
+Visualizations of Predictive Ability
+
+Determined the variables with the most predictive ability are year, region, and race. 
+
+```{r}
+ggplot(executions_clean, aes(x = Region, fill = Method)) +
+    geom_bar()
+
+ggplot(executions_clean, aes(x = Method, y = Year)) + 
+  geom_boxplot() + 
+  theme_classic()
+
+ggplot(executions_clean, aes(x = Race, fill = Method)) + 
+  geom_bar()
+```
+
+
+```{r}
+executions_clean <- executions_clean %>%
+  mutate(Method = relevel(Method, ref='Electrocution')) #set reference level
+
+# Logistic Regression Model Spec
+logistic_spec <- logistic_reg() %>%
+    set_engine('glm') %>%
+    set_mode('classification')
+
+# Recipe
+logistic_rec <- recipe(Method ~ Year + Region + Race, data = executions_clean)
+
+# Workflow (Recipe + Model)
+log_wf <- workflow() %>% 
+    add_recipe(logistic_rec) %>%
+    add_model(logistic_spec) 
+
+# Fit Model
+log_fit <- fit(log_wf, data = executions_clean)
+```
+
 
 ## Random Forest
 
