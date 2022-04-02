@@ -62,11 +62,11 @@ We are looking to build a classification model that will predict the method of e
 
 Visualizations of Predictive Ability
 
-Determined the variables with the most predictive ability are year, region, and race. 
+Determined the variables with the most predictive ability are year, region, and race. For the histogram of method by year, please remember that there are 3 instance of execution by firing squad and 3 instances of execution by hanging in the dataset. 
 
 ```{r}
 ggplot(executions_clean, aes(x = Region, fill = Method)) +
-    geom_bar()
+    geom_bar(position = 'dodge')
 
 ggplot(executions_clean, aes(x = Method, y = Year)) + 
   geom_boxplot() + 
@@ -74,6 +74,9 @@ ggplot(executions_clean, aes(x = Method, y = Year)) +
 
 ggplot(executions_clean, aes(x = Race, fill = Method)) + 
   geom_bar()
+
+ggplot(executions_clean, aes(x = Region, fill = Race)) + 
+  geom_bar(position = 'dodge')
 ```
 
 
