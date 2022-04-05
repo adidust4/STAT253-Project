@@ -66,11 +66,11 @@ We are looking to build a classification model that will predict the method of e
 
 # Visualizations of Predictive Ability
 
-Determined the variables with the most predictive ability are year, region, and race. 
+Determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Grpah 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
 
 ```{r}
 ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
-    geom_bar()
+    geom_bar(position = 'fill')
 
 ggplot(executions_clean, aes(x = Electrocution, y = Year)) + 
   geom_boxplot() + 
@@ -90,35 +90,51 @@ ggplot(executions_clean, aes(x = Region, fill = Race)) +
 executions_clean <- executions_clean %>%
   mutate(Method = relevel(Electrocution, ref='no')) #set reference level
 
-# Logistic Regression Model Spec
 logistic_spec <- logistic_reg() %>%
     set_engine('glm') %>%
     set_mode('classification')
 
-# Recipe
 logistic_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
 
-# Workflow (Recipe + Model)
 log_wf <- workflow() %>% 
     add_recipe(logistic_rec) %>%
     add_model(logistic_spec) 
 
-# Fit Model
 log_fit <- fit(log_wf, data = executions_clean)
 ```
 
 # Evaluating the Model
 
+The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 55% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at almost 97%. This is due to the high number of true negatives in the data set.
+
+```{r}
+logistic_output %>%
+  conf_mat(truth = Electrocution, estimate = .pred_class)
+```
+
+This graph of the ROC curve shows that the model is accurate, but not perfect. 
+
+```{r}
+logistic_output <-  executions_clean %>%
+  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
+
+logistic_roc <- logistic_output %>% 
+    roc_curve(Electrocution, .pred_yes, event_level = "second") 
+
+autoplot(logistic_roc) + theme_classic()
+```
+
+Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is .898, which is greater than expected for such a low sensitivity rate. 
+
 ```{r}
 set.seed(123)
 data_cv10 <- vfold_cv(executions_clean, v = 10)
 
-# CV Fit Model
 log_cv_fit <- fit_resamples(
     log_wf, 
     resamples = data_cv10,
     metrics = metric_set(sens, yardstick::spec, accuracy, roc_auc),
-    control = control_resamples(save_pred = TRUE, event_level = 'second'))  # you need predictions for ROC calculations
+    control = control_resamples(save_pred = TRUE, event_level = 'second'))
 
 collect_metrics(log_cv_fit)
 ```
