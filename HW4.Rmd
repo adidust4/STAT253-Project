@@ -15,6 +15,7 @@ library(broom)
 library(ggplot2)
 library(stringr)
 library(tidymodels) 
+library(probably)
 tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
@@ -105,13 +106,6 @@ log_fit <- fit(log_wf, data = executions_clean)
 
 # Evaluating the Model
 
-The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 55% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at almost 97%. This is due to the high number of true negatives in the data set.
-
-```{r}
-logistic_output %>%
-  conf_mat(truth = Electrocution, estimate = .pred_class)
-```
-
 This graph of the ROC curve shows that the model is accurate, but not perfect. 
 
 ```{r}
@@ -122,6 +116,20 @@ logistic_roc <- logistic_output %>%
     roc_curve(Electrocution, .pred_yes, event_level = "second") 
 
 autoplot(logistic_roc) + theme_classic()
+```
+
+The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 57% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at 96.5%. This is due to the high number of true negatives in the data set.
+
+```{r}
+logistic_output <-  executions_clean %>%
+  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
+
+logistic_output <- logistic_output %>%
+  mutate(.pred_class = make_two_class_pred(`.pred_no`, levels(Electrocution), threshold = 0.63)) 
+
+logistic_output %>%
+  conf_mat(truth = Electrocution, estimate = .pred_class)
+
 ```
 
 Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is .898, which is greater than expected for such a low sensitivity rate. 
