@@ -62,6 +62,27 @@ head(executions_clean)
 We are looking to build a classification model that will predict the method of execution from our data set. To do this, we will use a logistic regression model and a random forests model. Our main aim is to determine if there is a specific method of execution that is more common in certain regions. 
 
 
+### Random Forest
+
+We believe that using random forest as a classification to answer our research question: Can we predict the method of execution? Would be one effective method. We reached this conclusion by evaluating the outcome variable and the nature of the research question.
+
+
+Outcome variable: Method of execution → Categorical outcome → Classification → Classification tree → Random forest → Bagging (bootstrap to improve statistical learning methods such as decision trees)
+
+Our outcome variable is the method of execution, since it is a categorical outcome we will use a classification tree to answer our research question. To limit bias we will specifically use Random forest and the bootstrap method, to improve the statistical learning method. 
+
+Since we are dealing with several predictor variables such as region, year, and race, a classification tree will be able to produce a sequence of rules that can be used to classify the data and predict the method of execution. Classification trees are easy to interpret, imitate the human decision-making process, and handle qualitative predictions without the need to create dummy variables.
+
+When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
+
+
+To evaluate our model we will use statistical measures such as the classification error rate and the Gini index. The classification error rate is the fraction of the training observations in that region that do not belong to the most common class. The Gini index measures the node purity. Although the classification error rate is preferable for the prediction accuracy of the final pruned tree, we measure the Gini index as well since it is more sensitive to node purity than is the classification error rate. 
+
+To evaluate the model further we will implement a confusion matrix to quantify the accuracy rate and F1 score.
+
+
+
+
 ### Logistic Regression
 
 # Visualizations of Predictive Ability
