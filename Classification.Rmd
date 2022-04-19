@@ -1,5 +1,5 @@
 ---
-title: "HW4"
+title: "Classification"
 output: html_document
 ---
 
@@ -142,7 +142,7 @@ logistic_output %>%
 
 ```
 
-Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is .898, which is greater than expected for such a low sensitivity rate. 
+Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is 0.900, which is greater than expected for such a low sensitivity rate. 
 
 ```{r logistic-cv}
 set.seed(123)
@@ -201,7 +201,7 @@ data_wf_mtry8 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 8)) %>% ad
 
 data_wf_mtry12 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 12)) %>% add_recipe(data_rec)
 
-data_wf_mtry21 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 21)) %>% add_recipe(data_rec)
+data_wf_mtry19 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 19)) %>% add_recipe(data_rec)
 ```
 
 When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
@@ -218,7 +218,7 @@ set.seed(123)
 data_fit_mtry12 <- fit(data_wf_mtry12, data=executions_clean)
 
 set.seed(123) 
-data_fit_mtry21 <- fit(data_wf_mtry21, data=executions_clean)
+data_fit_mtry19 <- fit(data_wf_mtry19, data=executions_clean)
 ```
 
 ```{r oob-output}
@@ -243,7 +243,7 @@ data_rf_OOB_output <- bind_rows(
     rf_OOB_output(data_fit_mtry2,2, executions_clean %>% pull(Method)),
     rf_OOB_output(data_fit_mtry8,8, executions_clean %>% pull(Method)),
     rf_OOB_output(data_fit_mtry12,12, executions_clean %>% pull(Method)),
-    rf_OOB_output(data_fit_mtry21,21, executions_clean %>% pull(Method))
+    rf_OOB_output(data_fit_mtry19,19, executions_clean %>% pull(Method))
 )
 
 
@@ -254,15 +254,15 @@ output <- data_rf_OOB_output %>%
 output
 ```
 
-Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 98.4%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Crime and Federal are the least important which is unexpected. 
+Overall, the out of bag error shows that the model that uses 19 variables has the greatest accuracy at 98.3%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Federal and Crime type are the least important which is unexpected since we would think that punishment has to do with severity of crime. 
 
 ```{r vip}
 #measure variable importance
-model_output <-data_fit_mtry12 %>% 
+model_output <-data_fit_mtry19 %>% 
     extract_fit_engine() 
 
 model_output %>% 
-    vip(num_features = 12) + theme_classic() #based on impurity
+    vip(num_features = 19) + theme_classic() #based on impurity
 
 model_output %>% vip::vi() %>% head()
 model_output %>% vip::vi() %>% tail()
