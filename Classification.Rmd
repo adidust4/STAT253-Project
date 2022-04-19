@@ -72,8 +72,131 @@ We are looking to build a classification model that will predict the method of e
 
 We determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Graph 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
 
+<<<<<<< HEAD
 ```{r visualize-predictability}
 # bar chart of region versus electrocution
+=======
+# Implementing Random Forest
+
+```{r}
+library(ranger)
+
+rf_spec <- rand_forest() %>% 
+  set_engine("ranger", importance = "impurity") %>% 
+  set_args(mtry = NULL, 
+           trees = 1000, # Number of trees
+           min_n = 2,
+           probability = FALSE, # FALSE: hard predictions
+           importance = 'impurity') %>% 
+  set_mode("classification")
+
+```
+
+
+```{r}
+# Model Specification
+executions_clean<- rand_forest() %>%
+  set_engine(engine = 'ranger') %>% 
+  set_args(mtry = NULL, 
+           trees = 1000, # Number of trees
+           min_n = 2,
+           probability = FALSE, # FALSE: hard predictions
+           importance = 'impurity') %>% 
+  set_mode('classification') # change this for regression tree
+
+# Recipe
+tree_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
+
+```
+
+```{r}
+# Workflows
+data_wf_mtry2 <- workflow() %>%
+  add_model(executions_clean %>% set_args(mtry = 2)) %>%
+  add_recipe(tree_rec)
+
+# Create workflows for mtry = 12 , 74, and 147
+data_wf_mtry12 <- workflow() %>%
+  add_model(executions_clean %>% set_args(mtry = 12)) %>%
+  add_recipe(tree_rec)
+
+data_wf_mtry74 <- workflow() %>%
+  add_model(executions_clean %>% set_args(mtry = 74)) %>%
+  add_recipe(tree_rec)
+
+data_wf_mtry147 <- workflow() %>%
+  add_model(executions_clean %>% set_args(mtry = 147)) %>%
+  add_recipe(tree_rec)
+```
+
+```{r}
+# Fit Models
+
+set.seed(123) # make sure to run this before each fit so that you have the same 1000 trees
+data_fit_mtry2 <- fit(data_wf_mtry2, data = executions_clean)
+
+set.seed(123)
+data_fit_mtry12 <- fit(data_wf_mtry12, data = executions_clean)
+
+set.seed(123) 
+data_fit_mtry74 <- fit(data_wf_mtry74, data = executions_clean)
+
+set.seed(123)
+data_fit_mtry147 <- fit(data_wf_mtry147, data = executions_clean)
+```
+
+```{r}
+ rf_OOB_output <- function(fit_model, model_label, truth){
+    tibble(
+          .pred_class = fit_model %>% extract_fit_engine() %>% pluck('predictions'), #OOB predictions
+          class = truth,
+          model = model_label
+      )
+}
+
+#check out the function output
+rf_OOB_output(data_fit_mtry2,'mtry2', executions_clean %>% pull(class))
+```
+
+```{r}
+ata_rf_OOB_output <- bind_rows(
+    rf_OOB_output(data_fit_mtry2,'mtry2', executions_clean %>% pull(class)),
+    rf_OOB_output(data_fit_mtry12,'mtry12', executions_clean %>% pull(class)),
+    rf_OOB_output(data_fit_mtry74,'mtry74', executions_clean %>% pull(class)),
+    rf_OOB_output(data_fit_mtry147,'mtry147', executions_clean %>% pull(class))
+)
+
+
+data_rf_OOB_output %>% 
+    group_by(model) %>%
+    accuracy(truth = class, estimate = .pred_class)
+```
+
+```{r}
+data_rf_OOB_output %>% 
+    group_by(model) %>%
+    accuracy(truth = class, estimate = .pred_class) %>%
+  mutate(mtry = as.numeric(stringr::str_replace(model,'mtry',''))) %>%
+  ggplot(aes(x = mtry, y = .estimate )) + 
+  geom_point() +
+  geom_line() +
+  theme_classic()
+```
+
+```{r}
+rf_OOB_output(data_fit_mtry12,'mtry12', executions_clean %>% pull(class)) %>%
+    conf_mat(truth = class, estimate= .pred_class)
+```
+
+
+### Logistic Regression
+
+# Visualizations of Predictive Ability
+
+Determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Grpah 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
+
+```{r}
+>>>>>>> parent of 3107a98 (Revert "HW4")
 ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
     geom_bar(position = 'fill')
 
