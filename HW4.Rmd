@@ -95,8 +95,6 @@ rf_spec <- rand_forest() %>%
            importance = 'impurity') %>% 
   set_mode("classification")
 
-data_rec<- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
-
 ```
 
 
@@ -114,6 +112,9 @@ executions_clean<- rand_forest() %>%
 # Recipe
 tree_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
 
+```
+
+```{r}
 # Workflows
 data_wf_mtry2 <- workflow() %>%
   add_model(executions_clean %>% set_args(mtry = 2)) %>%
@@ -131,6 +132,65 @@ data_wf_mtry74 <- workflow() %>%
 data_wf_mtry147 <- workflow() %>%
   add_model(executions_clean %>% set_args(mtry = 147)) %>%
   add_recipe(tree_rec)
+```
+
+```{r}
+# Fit Models
+
+set.seed(123) # make sure to run this before each fit so that you have the same 1000 trees
+data_fit_mtry2 <- fit(data_wf_mtry2, data = executions_clean)
+
+set.seed(123)
+data_fit_mtry12 <- fit(data_wf_mtry12, data = executions_clean)
+
+set.seed(123) 
+data_fit_mtry74 <- fit(data_wf_mtry74, data = executions_clean)
+
+set.seed(123)
+data_fit_mtry147 <- fit(data_wf_mtry147, data = executions_clean)
+```
+
+```{r}
+ rf_OOB_output <- function(fit_model, model_label, truth){
+    tibble(
+          .pred_class = fit_model %>% extract_fit_engine() %>% pluck('predictions'), #OOB predictions
+          class = truth,
+          model = model_label
+      )
+}
+
+#check out the function output
+rf_OOB_output(data_fit_mtry2,'mtry2', executions_clean %>% pull(class))
+```
+
+```{r}
+ata_rf_OOB_output <- bind_rows(
+    rf_OOB_output(data_fit_mtry2,'mtry2', executions_clean %>% pull(class)),
+    rf_OOB_output(data_fit_mtry12,'mtry12', executions_clean %>% pull(class)),
+    rf_OOB_output(data_fit_mtry74,'mtry74', executions_clean %>% pull(class)),
+    rf_OOB_output(data_fit_mtry147,'mtry147', executions_clean %>% pull(class))
+)
+
+
+data_rf_OOB_output %>% 
+    group_by(model) %>%
+    accuracy(truth = class, estimate = .pred_class)
+```
+
+```{r}
+data_rf_OOB_output %>% 
+    group_by(model) %>%
+    accuracy(truth = class, estimate = .pred_class) %>%
+  mutate(mtry = as.numeric(stringr::str_replace(model,'mtry',''))) %>%
+  ggplot(aes(x = mtry, y = .estimate )) + 
+  geom_point() +
+  geom_line() +
+  theme_classic()
+```
+
+```{r}
+rf_OOB_output(data_fit_mtry12,'mtry12', executions_clean %>% pull(class)) %>%
+    conf_mat(truth = class, estimate= .pred_class)
 ```
 
 
