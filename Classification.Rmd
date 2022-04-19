@@ -32,8 +32,6 @@ executions_clean <- executions %>%
     str_detect(Victim_Sex, "Male") ~ 1, TRUE ~ 0)) %>% # 1 if there was male victim(s)
   mutate(VictimFemale = case_when(
     str_detect(Victim_Sex, "Female") ~ 1, TRUE ~ 0)) %>% # 1 if there was female victim(s)
-  mutate(VictimMixed = case_when(
-    (VictimMale==1) & (VictimFemale==1) ~ 1, TRUE ~ 0)) %>% # 1 if the victim(s) were male and female
   mutate(VictimWhite = case_when(
     str_detect(Victim_Race, 'White') ~ 1, TRUE ~ 0)) %>%
   mutate(VictimLatino = case_when(
@@ -42,8 +40,6 @@ executions_clean <- executions %>%
     str_detect(Victim_Race, 'Black') ~ 1, TRUE ~ 0)) %>%
   mutate(VictimAsian = case_when(
     str_detect(Victim_Race, 'Asian') ~ 1, TRUE ~ 0)) %>%
-  mutate(VictimMixedRace = case_when(
-    str_detect(Victim_Race, ',') ~ 1, TRUE ~ 0)) %>%
   mutate(Electrocution = case_when(str_detect(Method, 'Electrocution') ~ 'yes', TRUE ~ 'no')) # make a variable that shows if the person was electrocuted
  
 
