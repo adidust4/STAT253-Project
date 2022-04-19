@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Load Packages
+# Load Packages
 ```{r load-packages}
 library(dplyr)
 library(readr)
@@ -15,16 +15,17 @@ library(broom)
 library(ggplot2)
 library(stringr)
 library(tidymodels) 
-library(ranger)
+library(probably)
+library(vip)
 tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
-### Data Cleaning
-```{r}
+# Data Cleaning
+```{r data-cleaning}
 executions <- read_csv("executiondata_clean.csv")
 
 executions_clean <- executions %>%
-  select(-Name) %>%
+  select(-Name, -County) %>%
   separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
   mutate(VictimMale = case_when(
     str_detect(Victim_Sex, "Male") ~ 1, TRUE ~ 0)) %>% # 1 if there was male victim(s)
@@ -43,7 +44,7 @@ executions_clean <- executions %>%
   mutate(VictimMixedRace = case_when(
     str_detect(Victim_Race, ',') ~ 1, TRUE ~ 0)) %>%
   mutate(Electrocution = case_when(
-    str_detect(Method, 'Electrocution') ~ 'yes', TRUE ~ 'no'))
+    str_detect(Method, 'Electrocution') ~ 'yes', TRUE ~ 'no')) # make a variable that shows if the person was electrocuted
 
 
 executions_clean <- executions_clean %>% select(-Victim_Sex, -Day, -Victim_Race)
@@ -52,18 +53,129 @@ executions_clean$Month <-
 executions_clean$Year <-
   as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
 executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
+
+executions_clean <- executions_clean %>%
+  mutate(Method = relevel(Electrocution, ref='no')) #set reference level
   
 head(executions)
 head(executions_clean)
 ```
 
 
-### Research Question
+# Research Question
 
 We are looking to build a classification model that will predict the method of execution from our data set. To do this, we will use a logistic regression model and a random forests model. Our main aim is to determine if there is a specific method of execution that is more common in certain regions. 
 
+# Logistic Regression
 
-### Random Forest
+## Visualizations of Predictive Ability
+
+We determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Graph 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
+
+```{r visualize-predictability}
+# bar chart of region versus electrocution
+ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
+    geom_bar(position = 'fill')
+
+# box plot of year versus electrocution
+ggplot(executions_clean, aes(x = Electrocution, y = Year)) + 
+  geom_boxplot() + 
+  theme_classic()
+
+# bar chart of race versus electrocution
+ggplot(executions_clean, aes(x = Race, fill = Electrocution)) + 
+  geom_bar(position = 'fill')
+
+# bar chart of race versus region
+ggplot(executions_clean, aes(x = Region, fill = Race)) + 
+  geom_bar(position = 'dodge')
+```
+
+
+## Implementing Logistic Regression
+
+```{r logistic-regression}
+# create specification for logistic model
+logistic_spec <- logistic_reg() %>%
+    set_engine('glm') %>%
+    set_mode('classification')
+
+#recipe using important variables
+logistic_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
+
+# create a workflow
+log_wf <- workflow() %>% 
+    add_recipe(logistic_rec) %>%
+    add_model(logistic_spec) 
+
+<<<<<<< HEAD
+data_rec<- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
+
+=======
+#fit the model to all data
+log_fit <- fit(log_wf, data = executions_clean)
+>>>>>>> parent of 2ecfe66 (Merge branch 'main' of https://github.com/adidust4/STAT253-Project into main)
+```
+
+## Evaluating the Model
+
+This graph of the ROC curve shows that the model is accurate, but not perfect. 
+
+```{r evaluate-model}
+# create prediction table
+logistic_output <-  executions_clean %>%
+  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
+
+<<<<<<< HEAD
+# Workflows
+data_wf_mtry2 <- workflow() %>%
+  add_model(executions_clean %>% set_args(mtry = 2)) %>%
+  add_recipe(tree_rec)
+=======
+logistic_roc <- logistic_output %>% 
+    roc_curve(Electrocution, .pred_yes, event_level = "second") 
+
+# plot ROC AUC
+autoplot(logistic_roc) + theme_classic()
+```
+
+The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 57% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at 96.5%. This is due to the high number of true negatives in the data set.
+>>>>>>> parent of 2ecfe66 (Merge branch 'main' of https://github.com/adidust4/STAT253-Project into main)
+
+```{r logistic-output}
+logistic_output <-  executions_clean %>%
+  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
+
+# using threshold of 0.63 make hard predictions
+logistic_output <- logistic_output %>%
+  mutate(.pred_class = make_two_class_pred(`.pred_no`, levels(Electrocution), threshold = 0.63)) 
+
+# output truth v prediction table
+logistic_output %>%
+  conf_mat(truth = Electrocution, estimate = .pred_class)
+
+<<<<<<< HEAD
+=======
+```
+
+Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is .898, which is greater than expected for such a low sensitivity rate. 
+
+```{r logistic-cv}
+set.seed(123)
+data_cv10 <- vfold_cv(executions_clean, v = 10)
+
+# fit to 10 fold cv samples
+log_cv_fit <- fit_resamples(
+    log_wf, 
+    resamples = data_cv10,
+    metrics = metric_set(sens, yardstick::spec, accuracy, roc_auc),
+    control = control_resamples(save_pred = TRUE, event_level = 'second'))
+
+# find accuracy measures with cv
+collect_metrics(log_cv_fit)
+```
+
+# Random Forest
 
 We believe that using random forest as a classification to answer our research question: Can we predict the method of execution? Would be one effective method. We reached this conclusion by evaluating the outcome variable and the nature of the research question.
 
@@ -74,147 +186,105 @@ Our outcome variable is the method of execution, since it is a categorical outco
 
 Since we are dealing with several predictor variables such as region, year, and race, a classification tree will be able to produce a sequence of rules that can be used to classify the data and predict the method of execution. Classification trees are easy to interpret, imitate the human decision-making process, and handle qualitative predictions without the need to create dummy variables.
 
-When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
-
-
-To evaluate our model we will use statistical measures such as the classification error rate and the Gini index. The classification error rate is the fraction of the training observations in that region that do not belong to the most common class. The Gini index measures the node purity. Although the classification error rate is preferable for the prediction accuracy of the final pruned tree, we measure the Gini index as well since it is more sensitive to node purity than is the classification error rate. 
-
-To evaluate the model further we will implement a confusion matrix to quantify the accuracy rate and F1 score.
-
 # Implementing Random Forest
 
-```{r}
-library(ranger)
+```{r model-specification}
+set.seed(123)
+>>>>>>> parent of 2ecfe66 (Merge branch 'main' of https://github.com/adidust4/STAT253-Project into main)
 
-rf_spec <- rand_forest() %>% 
-  set_engine("ranger", importance = "impurity") %>% 
-  set_args(mtry = NULL, 
-           trees = 1000, # Number of trees
-           min_n = 2,
-           probability = FALSE, # FALSE: hard predictions
-           importance = 'impurity') %>% 
-  set_mode("classification")
+executions_clean <- executions_clean %>% select(-Electrocution)
 
-data_rec<- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
-
-```
-
-
-```{r}
 # Model Specification
-executions_clean<- rand_forest() %>%
+rf_spec <- rand_forest() %>%
   set_engine(engine = 'ranger') %>% 
   set_args(mtry = NULL, 
-           trees = 1000, # Number of trees
+           trees = 1000,
            min_n = 2,
-           probability = FALSE, # FALSE: hard predictions
+           probability = FALSE, 
            importance = 'impurity') %>% 
-  set_mode('classification') # change this for regression tree
+  set_mode('classification') 
 
 # Recipe
-tree_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
+data_rec <- recipe(Method ~ ., data = executions_clean)
 
 # Workflows
 data_wf_mtry2 <- workflow() %>%
-  add_model(executions_clean %>% set_args(mtry = 2)) %>%
-  add_recipe(tree_rec)
+  add_model(rf_spec %>% set_args(mtry = 2)) %>%
+  add_recipe(data_rec)
 
-# Create workflows for mtry = 12 , 74, and 147
-data_wf_mtry12 <- workflow() %>%
-  add_model(executions_clean %>% set_args(mtry = 12)) %>%
-  add_recipe(tree_rec)
+## Create workflows for different variable numbers
+data_wf_mtry8 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 8)) %>% add_recipe(data_rec)
 
-data_wf_mtry74 <- workflow() %>%
-  add_model(executions_clean %>% set_args(mtry = 74)) %>%
-  add_recipe(tree_rec)
+data_wf_mtry12 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 12)) %>% add_recipe(data_rec)
 
-data_wf_mtry147 <- workflow() %>%
-  add_model(executions_clean %>% set_args(mtry = 147)) %>%
-  add_recipe(tree_rec)
+data_wf_mtry21 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 21)) %>% add_recipe(data_rec)
 ```
 
+When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
 
-### Logistic Regression
+```{r fit-models}
+# Fit Models
+set.seed(123) 
+data_fit_mtry2 <- fit(data_wf_mtry2, data = executions_clean)
 
-# Visualizations of Predictive Ability
+set.seed(123) 
+data_fit_mtry8 <- fit(data_wf_mtry8, data=executions_clean)
 
-Determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Grpah 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
-
-```{r}
-ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
-    geom_bar(position = 'fill')
-
-ggplot(executions_clean, aes(x = Electrocution, y = Year)) + 
-  geom_boxplot() + 
-  theme_classic()
-
-ggplot(executions_clean, aes(x = Race, fill = Electrocution)) + 
-  geom_bar(position = 'fill')
-
-ggplot(executions_clean, aes(x = Region, fill = Race)) + 
-  geom_bar(position = 'dodge')
-```
-
-
-# Implementing Logistic Regression
-
-```{r}
-executions_clean <- executions_clean %>%
-  mutate(Method = relevel(Electrocution, ref='no')) #set reference level
-
-logistic_spec <- logistic_reg() %>%
-    set_engine('glm') %>%
-    set_mode('classification')
-
-logistic_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
-
-log_wf <- workflow() %>% 
-    add_recipe(logistic_rec) %>%
-    add_model(logistic_spec) 
-
-log_fit <- fit(log_wf, data = executions_clean)
-```
-
-# Evaluating the Model
-
-The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 55% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at almost 97%. This is due to the high number of true negatives in the data set.
-
-```{r}
-logistic_output %>%
-  conf_mat(truth = Electrocution, estimate = .pred_class)
-```
-
-This graph of the ROC curve shows that the model is accurate, but not perfect. 
-
-```{r}
-logistic_output <-  executions_clean %>%
-  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
-
-logistic_roc <- logistic_output %>% 
-    roc_curve(Electrocution, .pred_yes, event_level = "second") 
-
-autoplot(logistic_roc) + theme_classic()
-```
-
-Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is .898, which is greater than expected for such a low sensitivity rate. 
-
-```{r}
 set.seed(123)
-data_cv10 <- vfold_cv(executions_clean, v = 10)
+data_fit_mtry12 <- fit(data_wf_mtry12, data=executions_clean)
 
-log_cv_fit <- fit_resamples(
-    log_wf, 
-    resamples = data_cv10,
-    metrics = metric_set(sens, yardstick::spec, accuracy, roc_auc),
-    control = control_resamples(save_pred = TRUE, event_level = 'second'))
-
-collect_metrics(log_cv_fit)
+set.seed(123) 
+data_fit_mtry21 <- fit(data_wf_mtry21, data=executions_clean)
 ```
 
+```{r oob-output}
+# Custom Function to get OOB predictions, true observed outcomes and add a user-provided model label
+rf_OOB_output <- function(fit_model, model_label, truth){
+    tibble(
+          .pred_class = fit_model %>% extract_fit_engine() %>% pluck('predictions'), #OOB predictions
+          class = truth,
+          label = model_label
+      )
+}
+```
 
-### Random Forest
+# Results
 
-### Results
+To evaluate our model we will use statistical measures such as the classification error rate and the Gini index. The classification error rate is the fraction of the training observations in that region that do not belong to the most common class. The Gini index measures the node purity. Although the classification error rate is preferable for the prediction accuracy of the final pruned tree, we measure the Gini index as well since it is more sensitive to node purity than is the classification error rate. 
 
-### Conclusion
+```{r evaluate-oob}
+
+# Evaluate OOB Metrics
+data_rf_OOB_output <- bind_rows(
+    rf_OOB_output(data_fit_mtry2,2, executions_clean %>% pull(Method)),
+    rf_OOB_output(data_fit_mtry8,8, executions_clean %>% pull(Method)),
+    rf_OOB_output(data_fit_mtry12,12, executions_clean %>% pull(Method)),
+    rf_OOB_output(data_fit_mtry21,21, executions_clean %>% pull(Method))
+)
+
+
+output <- data_rf_OOB_output %>% 
+    group_by(label) %>%
+    accuracy(truth = class, estimate = .pred_class)
+
+output
+```
+
+Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 98.4%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Crime and Federal are the least important which is unexpected. 
+
+```{r vip}
+#measure variable importance
+model_output <-data_fit_mtry12 %>% 
+    extract_fit_engine() 
+
+model_output %>% 
+    vip(num_features = 12) + theme_classic() #based on impurity
+
+model_output %>% vip::vi() %>% head()
+model_output %>% vip::vi() %>% tail()
+```
+
+Overall, our random forest model with 8 variables was the best classification model we could come up with to predict the type of execution being performed. Out of bag error was left with over 98% accuracy and allowed the model to not overfit while still being complex. 
+
+# Conclusion
 
