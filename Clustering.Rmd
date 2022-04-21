@@ -7,22 +7,152 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+# Load Packages
+```{r load-packages}
+library(dplyr)
+library(readr)
+library(broom)
+library(ggplot2)
+library(stringr)
+library(tidymodels) 
+library(probably)
+library(vip)
+tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
-## Including Plots
+# Data Cleaning
+```{r data-cleaning}
+executions <- read_csv("executiondata_clean.csv")
 
-You can also embed plots, for example:
+executions_clean <- executions %>%
+  select(-Name, -County) %>%
+  filter(Victim_Count < 50) %>%
+  separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
+  mutate(VictimMale = case_when(
+    str_detect(Victim_Sex, "Male") ~ 1, TRUE ~ 0)) %>% # 1 if there was male victim(s)
+  mutate(VictimFemale = case_when(
+    str_detect(Victim_Sex, "Female") ~ 1, TRUE ~ 0)) %>% # 1 if there was female victim(s)
+  mutate(VictimWhite = case_when(
+    str_detect(Victim_Race, 'White') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimLatino = case_when(
+    str_detect(Victim_Race, 'Latino') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimBlack = case_when(
+    str_detect(Victim_Race, 'Black') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimAsian = case_when(
+    str_detect(Victim_Race, 'Asian') ~ 1, TRUE ~ 0)) %>%
+  mutate(Electrocution = case_when(
+    str_detect(Method, 'Electrocution') ~ 'yes', TRUE ~ 'no')) # make a variable that shows if the person was electrocuted
+ 
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+executions_clean <- executions_clean %>% select(-Victim_Sex, -Day, -Victim_Race)
+executions_clean$Month <-
+  as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
+executions_clean$Year <-
+  as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
+executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
+executions_clean <- executions_clean %>%
+  mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
+  
+head(executions)
+head(executions_clean)
+
+
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+#K-Means Clustering
+```{r}
+# bar chart of region versus electrocution
+ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
+    geom_bar(position = 'fill')
+  
+# box plot of year versus electrocution
+ggplot(executions_clean, aes(x = Method, y = Year)) + 
+  geom_boxplot() + 
+  theme_classic()
+```
+```{r}
+ executions_sub <- executions_clean %>%
+    select(Age, Victim_Count, Year)
+
+```
+
+
+
+
+```{r}
+set.seed(253)
+kclust_k3 <- kmeans(executions_sub, centers = 3)
+
+# Display the cluster assignments
+kclust_k3$cluster
+```
+
+```{r}
+executions_clean <- executions_clean %>%
+    mutate(kclust_3 = factor(kclust_k3$cluster))
+```
+
+```{r}
+ggplot(executions_clean , aes(x =Victim_Count, y = Age, color = kclust_3)) +
+    geom_point() + 
+    theme_classic()
+```
+
+```{r}
+# Run k-means on the *scaled* data (all variables have SD = 1)
+set.seed(253)
+kclust_k3_scale <- kmeans(scale(executions_sub), centers = 3)
+executions_clean <- executions_clean %>%
+    mutate(kclust_3_scale = factor(kclust_k3_scale$cluster))
+
+# Visualize the new cluster assignments
+ggplot(executions_clean, aes(x = Victim_Count, y = Age, color = kclust_3_scale)) +
+    geom_point() + 
+    theme_classic()
+
+```
+```{r}
+# Select the variables to be used in clustering
+executions_sub <- executions_clean %>%
+    select(Age, Victim_Count, Year, Month)
+
+# Look at summary statistics of the 3 variables
+summary(executions_sub)
+```
+
+```{r}
+# Perform clustering: should you use scale()?
+set.seed(253)
+kclust_k3_3vars <- kmeans(scale(executions_sub), centers = 3)
+
+executions_clean <- executions_clean %>%
+    mutate(kclust_3_3vars = factor(kclust_k3_3vars$cluster))
+
+
+executions_clean %>%
+  count(Method,kclust_3_3vars)
+```
+```{r}
+executions_clean %>%
+    group_by(kclust_3_3vars) %>%
+    summarize(across(c(Age, Victim_Count, Year, Month), mean))
+```
+```{r}
+executions_cluster_ss <- function(k){
+    # Perform clustering
+    kclust <- kmeans(scale(executions_sub), centers = k)
+
+    # Return the total within-cluster sum of squares
+    return(kclust$tot.withinss)
+}
+
+tibble(
+    k = 1:15,
+    tot_wc_ss = purrr::map_dbl(1:15, executions_cluster_ss)
+) %>% 
+    ggplot(aes(x = k, y = tot_wc_ss)) +
+    geom_point() + 
+    labs(x = "Number of clusters",y = 'Total within-cluster sum of squares') + 
+    theme_classic()
+```
+
