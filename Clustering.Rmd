@@ -156,3 +156,50 @@ tibble(
     theme_classic()
 ```
 
+
+
+### Hierarchical Clustering
+
+# Initial Visualizations
+```{r}
+ggplot(executions_clean, aes(x = Region, fill = Race)) + 
+  geom_bar(position = 'fill')
+
+ggplot(executions_clean, aes(x = Method, fill = Race)) + 
+  geom_bar(position = 'fill')
+
+ggplot(executions_clean, aes(y = Year, x = Method)) + 
+  geom_boxplot()
+
+ggplot(executions_clean, aes(x = Method, y = Victim_Count)) + 
+  geom_boxplot() + 
+  theme_classic()
+```
+
+# Clustering
+```{r}
+set.seed(555)
+executions_subset <- executions_clean %>%
+  slice_sample(n = 70)
+
+# Select the variables to be used in clustering
+executions_sub <- executions_subset %>%
+    select(Year, Victim_Count)
+
+# Summary statistics for the variables
+summary(executions_sub)
+
+# Compute a distance matrix on the scaled data
+dist_mat_scaled <- dist(scale(executions_sub))
+
+# The (scaled) distance matrix is the input to hclust()
+# The method argument indicates the linkage type
+hc_complete <- hclust(dist_mat_scaled, method = "complete")
+
+# Plot dendrograms
+ggplot(executions_subset, aes(x = Year, y = Victim_Count, color = Method)) + 
+  geom_point() + 
+  theme_classic()
+plot(hc_complete, labels = executions_subset$Method)
+```
+
