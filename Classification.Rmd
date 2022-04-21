@@ -275,17 +275,3 @@ Overall, our random forest model with 8 variables was the best classification mo
 # Conclusion
 
 
-
-# Hierarchical Clustering 
-
-```{r}
-ggplot(executions_clean, aes(x = Region, fill = Race)) + 
-  geom_bar(position = 'fill')
-
-ggplot(executions_clean, aes(x = Method, fill = Race)) + 
-  geom_bar(position = 'fill')
-
-ggplot(executions_clean, aes(y = Year, x = Method)) + 
-  geom_boxplot()
-```
-
