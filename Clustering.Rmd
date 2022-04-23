@@ -180,7 +180,7 @@ ggplot(executions_clean, aes(x = Method, y = Victim_Count)) +
 ```{r}
 set.seed(555)
 executions_subset <- executions_clean %>%
-  slice_sample(n = 70)
+  slice_sample(n = 50)
 
 # Select the variables to be used in clustering
 executions_sub <- executions_subset %>%
