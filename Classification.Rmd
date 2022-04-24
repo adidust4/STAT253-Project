@@ -248,6 +248,8 @@ data_rf_OOB_output <- bind_rows(
     rf_OOB_output(data_fit_mtry19,19, executions_clean %>% pull(Method))
 )
 
+data_rf_OOB_output$class <-
+  factor(data_rf_OOB_output$class)
 
 output <- data_rf_OOB_output %>% 
     group_by(label) %>%
@@ -256,21 +258,21 @@ output <- data_rf_OOB_output %>%
 output
 ```
 
-Overall, the out of bag error shows that the model that uses 19 variables has the greatest accuracy at 98.3%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Federal and Crime type are the least important which is unexpected since we would think that punishment has to do with severity of crime. 
+Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 97%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Federal and Crime type are the least important which is unexpected since we would think that punishment has to do with severity of crime. 
 
 ```{r vip}
 #measure variable importance
-model_output <-data_fit_mtry19 %>% 
+model_output <-data_fit_mtry12 %>% 
     extract_fit_engine() 
 
 model_output %>% 
-    vip(num_features = 19) + theme_classic() #based on impurity
+    vip(num_features = 12) + theme_classic() #based on impurity
 
 model_output %>% vip::vi() %>% head()
 model_output %>% vip::vi() %>% tail()
 ```
 
-Overall, our random forest model with 8 variables was the best classification model we could come up with to predict the type of execution being performed. Out of bag error was left with over 98% accuracy and allowed the model to not overfit while still being complex. 
+Overall, our random forest model with 8 variables was the best classification model we could come up with to predict the type of execution being performed. Out of bag error was left with over 97% accuracy and allowed the model to not overfit while still being complex. 
 
 # Conclusion
 
