@@ -171,7 +171,8 @@ Justify the choice of k and summarize resulting clusters
   
   If appropriate, show visuals to justify your choices.
   
-Summarize what information you gain from the clustering in context (tell a story)
+Summarize what information you gain from the clustering in context (tell a story) 
+
 
 
 
