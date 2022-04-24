@@ -7,22 +7,171 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+# Load Packages
+```{r}
+library(dplyr)
+library(readr)
+library(broom)
+library(ggplot2)
+library(stringr)
+library(tidymodels) 
+library(probably)
+library(vip)
+tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
+# Data Cleaning
+```{r}
+executions <- read_csv("executiondata_clean.csv")
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+executions_clean <- executions %>%
+  select(-Name, -County) %>%
+  filter(Victim_Count < 50) %>%
+  separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
+  mutate(VictimMale = case_when(
+    str_detect(Victim_Sex, "Male") ~ 1, TRUE ~ 0)) %>% # 1 if there was male victim(s)
+  mutate(VictimFemale = case_when(
+    str_detect(Victim_Sex, "Female") ~ 1, TRUE ~ 0)) %>% # 1 if there was female victim(s)
+  mutate(VictimWhite = case_when(
+    str_detect(Victim_Race, 'White') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimLatino = case_when(
+    str_detect(Victim_Race, 'Latino') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimBlack = case_when(
+    str_detect(Victim_Race, 'Black') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimAsian = case_when(
+    str_detect(Victim_Race, 'Asian') ~ 1, TRUE ~ 0)) %>%
+  mutate(Electrocution = case_when(
+    str_detect(Method, 'Electrocution') ~ 'yes', TRUE ~ 'no')) # make a variable that shows if the person was electrocuted
+ 
+
+executions_clean <- executions_clean %>% select(-Victim_Sex, -Day, -Victim_Race)
+executions_clean$Month <-
+  as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
+executions_clean$Year <-
+  as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
+executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
+executions_clean <- executions_clean %>%
+  mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+### Data Context
+
+Clearly describe what the cases in the final clean dataset represent.
+
+Broadly describe the variables used in your analyses.
+
+Who collected the data? When, why, and how? Answer as much of this as the available information allows.
+
+
+
+### Regression
+
+# Research Question
+
+Research question(s)/motivation for the regression task; make clear the outcome variable and its units.
+
+
+# Method
+
+Describe the models used.
+
+Describe what you did to evaluate models.
+
+Indicate how you estimated quantitative evaluation metrics.
+
+Indicate what plots you used to evaluate models.
+
+Describe the goals / purpose of the methods used in the overall context of your research investigations.
+
+
+# Results
+
+Summarize your final model and justify your model choice (see below for ways to justify your choice).
+
+  Compare the different models in light of evaluation metrics, plots, variable importance, and data context.
+  
+  Display evaluation metrics for different models in a clean, organized way. This display should include both the     estimated CV metric as well as its standard deviation.
+  
+  Broadly summarize conclusions from looking at these CV evaluation metrics and their measures of uncertainty.
+  
+  Summarize conclusions from residual plots from initial models (don’t have to display them though).
+  
+Show and interpret some representative examples of residual plots for your final model. Does the model show acceptable results in terms of any systematic biases?
+
+
+# Conclusion
+
+Interpret you final model (show plots of estimated non-linear functions, or slope coefficients) for important predictors, and provide some general interpretations of what you learn from these
+
+Interpret evaluation metric(s) for the final model in context with units. Does the model show an acceptable amount of error?
+
+Summarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.
+
+
+
+### Classification
+
+# Research Question
+
+Research question(s)/motivation for the classification task; make clear the outcome variable and its possible categories.
+
+
+# Methods
+
+Indicate at least 2 different methods used to answer your classification research question.
+
+Describe what you did to evaluate the models explored.
+
+  Indicate how you estimated quantitative evaluation metrics.
+
+Describe the goals / purpose of the methods used in the overall context of your research investigations.
+
+
+# Results 
+
+Summarize your final model and justify your model choice (see below for ways to justify your choice).
+
+  Compare the different classification models tried in light of evaluation metrics, variable importance, and data     context.
+
+  Display evaluation metrics for different models in a clean, organized way. This display should include both the     estimated metric as well as its standard deviation. (This won’t be available from OOB error estimation. If using    OOB, don’t worry about reporting the SD.)
+
+  Broadly summarize conclusions from looking at these evaluation metrics and their measures of uncertainty.
+
+
+# Conclusions
+
+Interpret evaluation metric(s) for the final model in context. Does the model show an acceptable amount of error?
+
+  If using OOB error estimation, display the test (OOB) confusion matrix, and use it to interpret the strengths and   weaknesses of the final model.
+
+Summarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.
+
+
+
+### Unsupervised Learning
+
+# Research Question
+
+Research question(s)/motivation for the unsupervised learning task.
+
+
+# Clustering
+
+Choose one method for clustering
+
+Justify the choice of features included in a distance measure based on the research goals
+
+Justify the choice of k and summarize resulting clusters
+
+  Interpret the clusters qualitatively
+  
+  Evaluate clusters quantitatively (kmeans: within cluster sum of squares, pam: silhouette, hclust: height of cut on    dendrogram)
+  
+  If appropriate, show visuals to justify your choices.
+  
+Summarize what information you gain from the clustering in context (tell a story)
+
+
+
