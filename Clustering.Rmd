@@ -17,6 +17,7 @@ library(stringr)
 library(tidymodels) 
 library(probably)
 library(vip)
+library(plotly)
 tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
@@ -49,9 +50,7 @@ executions_clean$Month <-
   as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
 executions_clean$Year <-
   as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
-executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
-executions_clean <- executions_clean %>%
-  mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
+
   
 head(executions)
 head(executions_clean)
@@ -59,85 +58,42 @@ head(executions_clean)
 
 ```
 
-#K-Means Clustering
+# K-Means Clustering
+
+## Variable Exploration
+
 ```{r}
-# bar chart of region versus electrocution
-ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
+# bar chart of region versus method
+ggplot(executions_clean, aes(x = Region, fill = Method)) +
     geom_bar(position = 'fill')
   
-# box plot of year versus electrocution
+# box plot of year versus method
 ggplot(executions_clean, aes(x = Method, y = Year)) + 
   geom_boxplot() + 
   theme_classic()
-```
-```{r}
- executions_sub <- executions_clean %>%
-    select(Age, Victim_Count, Year)
 
-```
-
-
-
-
-```{r}
-set.seed(253)
-kclust_k3 <- kmeans(executions_sub, centers = 3)
-
-# Display the cluster assignments
-kclust_k3$cluster
+# box plot of age versus method
+ggplot(executions_clean, aes(x = Method, y = Age)) + 
+  geom_boxplot() + 
+  theme_classic()
 ```
 
-```{r}
-executions_clean <- executions_clean %>%
-    mutate(kclust_3 = factor(kclust_k3$cluster))
-```
+Age does not seem to correlate much with method, and does not improve sum of squared error in kclusts from 1-15 when I tried to use it ~ Note from A'di. 
 
-```{r}
-ggplot(executions_clean , aes(x =Victim_Count, y = Age, color = kclust_3)) +
-    geom_point() + 
-    theme_classic()
-```
 
-```{r}
-# Run k-means on the *scaled* data (all variables have SD = 1)
-set.seed(253)
-kclust_k3_scale <- kmeans(scale(executions_sub), centers = 3)
-executions_clean <- executions_clean %>%
-    mutate(kclust_3_scale = factor(kclust_k3_scale$cluster))
-
-# Visualize the new cluster assignments
-ggplot(executions_clean, aes(x = Victim_Count, y = Age, color = kclust_3_scale)) +
-    geom_point() + 
-    theme_classic()
-
-```
 ```{r}
 # Select the variables to be used in clustering
 executions_sub <- executions_clean %>%
-    select(Age, Victim_Count, Year, Month)
+    select(Victim_Count, Year)
 
-# Look at summary statistics of the 3 variables
+# Look at summary statistics of the 2 variables
 summary(executions_sub)
 ```
+## Picking *K*
 
 ```{r}
-# Perform clustering: should you use scale()?
 set.seed(253)
-kclust_k3_3vars <- kmeans(scale(executions_sub), centers = 3)
 
-executions_clean <- executions_clean %>%
-    mutate(kclust_3_3vars = factor(kclust_k3_3vars$cluster))
-
-
-executions_clean %>%
-  count(Method,kclust_3_3vars)
-```
-```{r}
-executions_clean %>%
-    group_by(kclust_3_3vars) %>%
-    summarize(across(c(Age, Victim_Count, Year, Month), mean))
-```
-```{r}
 executions_cluster_ss <- function(k){
     # Perform clustering
     kclust <- kmeans(scale(executions_sub), centers = k)
@@ -146,6 +102,8 @@ executions_cluster_ss <- function(k){
     return(kclust$tot.withinss)
 }
 
+# create table and graph number of clusters versus sum of squares 
+# to pick k using elbow method
 tibble(
     k = 1:15,
     tot_wc_ss = purrr::map_dbl(1:15, executions_cluster_ss)
@@ -156,11 +114,111 @@ tibble(
     theme_classic()
 ```
 
+According to the elbow method we would pick k = 4 or 5 (I chose 5)
+
+```{r}
+set.seed(100)
+
+# Data-specific function to cluster and calculate total within-cluster SS
+execution_cluster_silhouette <- function(k){
+    # Perform clustering
+    kclust <- kmeans(scale(executions_sub), centers = k)
+
+     ss <- cluster::silhouette(kclust$cluster, dist(scale(executions_sub)))
+  
+    # Return the silhouette measures
+    return(mean(ss[, 3]))
+}
+
+# Choose value that MAXIMIZES average silhouette
+# table with silhouette values
+sil <- tibble(
+    k = 2:15,
+    avg_sil = purrr::map_dbl(2:15, execution_cluster_silhouette)
+) 
+
+# graph cluster versus silhouette
+sil %>% 
+    ggplot(aes(x = k, y = avg_sil)) +
+    geom_point() + 
+    labs(x = "Number of clusters",y = 'Average Silhouette') + 
+    theme_classic()
+
+# view silhouette table
+sil
+```
+
+The value that maximized the silhouette was k = 12
+
+## Graph K Clusters and Evaluate
+
+### Elbow Method, K = 5
+
+```{r kclust5}
+set.seed(253)
+
+# make the 5 clusters
+kclust5 <- kmeans(scale(executions_sub), centers = 5)
+
+# add to dataset
+executions_clean <- executions_clean %>%
+    mutate(kclust_5 = factor(kclust5$cluster))
+
+# graph it
+executions_clean %>%
+  ggplot(aes(x = Year, y = Victim_Count, color = kclust_5)) +
+  geom_point()
+
+# print the total within-cluster sum of squares
+kclust5$tot.withinss
+
+# view where execution methods were in the clusters
+executions_clean %>%
+  count(Method,kclust_5)
+
+# view how different variables average across clusters
+executions_clean %>%
+    group_by(kclust_5) %>%
+    summarize(across(c(Year, Victim_Count), mean))
+```
+
+### Silhouette Method, K = 12
+
+```{r kclust12}
+set.seed(100)
+
+# make the 12 clusters
+kclust12 <- kmeans(scale(executions_sub), centers = 12)
+
+# add to dataset
+executions_clean <- executions_clean %>%
+    mutate(kclust_12 = factor(kclust12$cluster))
+
+# graph it
+executions_clean %>%
+  ggplot(aes(x = Year, y = Victim_Count, color = kclust_12)) +
+  geom_point()
+
+# get total within cluster sum of squares
+kclust12$tot.withinss
+
+# view where methods of executions were in clusters
+executions_clean %>%
+  count(Method,kclust_12)
+
+# view how different variables average across clusters
+executions_clean %>%
+    group_by(kclust_12) %>%
+    summarize(across(c(Year, Victim_Count), mean))
+```
+
+### Conclusions
 
 
-### Hierarchical Clustering
 
-# Initial Visualizations
+# Hierarchical Clustering
+
+## Initial Visualizations
 ```{r}
 ggplot(executions_clean, aes(x = Region, fill = Race)) + 
   geom_bar(position = 'fill')
@@ -176,30 +234,93 @@ ggplot(executions_clean, aes(x = Method, y = Victim_Count)) +
   theme_classic()
 ```
 
-# Clustering
+## Create Data Subset
 ```{r}
 set.seed(555)
-executions_subset <- executions_clean %>%
-  slice_sample(n = 50)
+
+executions_subset <- executions_clean
+  # slice_sample(n=50)
 
 # Select the variables to be used in clustering
-executions_sub <- executions_subset %>%
+executions_subs <- executions_subset %>%
     select(Year, Victim_Count)
 
 # Summary statistics for the variables
-summary(executions_sub)
+summary(executions_subs)
 
+# See what variables exist in our subset
+ggplot(executions_subset, aes(x = Year, y = Victim_Count, color = Method)) + 
+  geom_point() + 
+  theme_classic()
+```
+
+## Clusterings
+
+```{r}
 # Compute a distance matrix on the scaled data
-dist_mat_scaled <- dist(scale(executions_sub))
+dist_mat_scaled <- dist(scale(executions_subs))
 
 # The (scaled) distance matrix is the input to hclust()
 # The method argument indicates the linkage type
 hc_complete <- hclust(dist_mat_scaled, method = "complete")
+hc_single <- hclust(dist_mat_scaled, method = "single")
+hc_average <- hclust(dist_mat_scaled, method = "average")
+hc_centroid <- hclust(dist_mat_scaled, method = "centroid")
 
 # Plot dendrograms
-ggplot(executions_subset, aes(x = Year, y = Victim_Count, color = Method)) + 
-  geom_point() + 
-  theme_classic()
-plot(hc_complete, labels = executions_subset$Method)
+plot(hc_complete)
+plot(hc_single)
+plot(hc_average)
+plot(hc_centroid)
 ```
 
+Complete or centroid looks the best, i used complete
+
+## Interpretations & Evaluation
+
+```{r}
+# cut tree into groups
+executions_subset <- executions_subset %>%
+    mutate(
+        hclust_h3 = factor(cutree(hc_complete, h = 3)), # Cut at height (h) 3
+        hclust_h5 = factor(cutree(hc_complete, h = 5)) # Cut at height (h) 5
+    )
+```
+
+
+
+```{r}
+# height is 3
+
+# See what variables exist in our subset
+ggplot(executions_subset, aes(x = Year, y = Victim_Count, color = hclust_h3)) + 
+  geom_point() + 
+  theme_classic()
+
+# view where methods of executions were in clusters
+executions_subset %>%
+  count(Method,hclust_h3)
+
+# view how different variables average across clusters
+executions_subset %>%
+    group_by(hclust_h3) %>%
+    summarize(across(c(Year, Victim_Count), mean))
+
+
+# height is 5
+
+ggplot(executions_subset, aes(x = Year, y = Victim_Count, color = hclust_h5)) + 
+  geom_point() + 
+  theme_classic()
+
+# view where methods of executions were in clusters
+executions_subset %>%
+  count(Method,hclust_h5)
+
+# view how different variables average across clusters
+executions_subset %>%
+    group_by(hclust_h5) %>%
+    summarize(across(c(Year, Victim_Count), mean))
+```
+
+I used height because k-means already took care of clusters...
