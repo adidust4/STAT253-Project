@@ -56,7 +56,7 @@ executions_clean <- executions_clean %>%
 ```
 
 
-### Data Context
+# Data Context
 
 Clearly describe what the cases in the final clean dataset represent.
 
@@ -66,14 +66,14 @@ Who collected the data? When, why, and how? Answer as much of this as the availa
 
 
 
-### Regression
+# Regression
 
-# Research Question
+## Research Question
 
 Research question(s)/motivation for the regression task; make clear the outcome variable and its units.
 
 
-# Method
+## Method
 
 Describe the models used.
 
@@ -86,7 +86,7 @@ Indicate what plots you used to evaluate models.
 Describe the goals / purpose of the methods used in the overall context of your research investigations.
 
 
-# Results
+## Results
 
 Summarize your final model and justify your model choice (see below for ways to justify your choice).
 
@@ -101,7 +101,7 @@ Summarize your final model and justify your model choice (see below for ways to 
 Show and interpret some representative examples of residual plots for your final model. Does the model show acceptable results in terms of any systematic biases?
 
 
-# Conclusion
+## Conclusion
 
 Interpret you final model (show plots of estimated non-linear functions, or slope coefficients) for important predictors, and provide some general interpretations of what you learn from these
 
@@ -111,14 +111,14 @@ Summarization should show evidence of acknowledging the data context in thinking
 
 
 
-### Classification
+# Classification
 
-# Research Question
+## Research Question
 
 Research question(s)/motivation for the classification task; make clear the outcome variable and its possible categories.
 
 
-# Methods
+## Methods
 
 Indicate at least 2 different methods used to answer your classification research question.
 
@@ -129,7 +129,7 @@ Describe what you did to evaluate the models explored.
 Describe the goals / purpose of the methods used in the overall context of your research investigations.
 
 
-# Results 
+## Results 
 
 Summarize your final model and justify your model choice (see below for ways to justify your choice).
 
@@ -140,7 +140,7 @@ Summarize your final model and justify your model choice (see below for ways to 
   Broadly summarize conclusions from looking at these evaluation metrics and their measures of uncertainty.
 
 
-# Conclusions
+## Conclusions
 
 Interpret evaluation metric(s) for the final model in context. Does the model show an acceptable amount of error?
 
@@ -150,14 +150,14 @@ Summarization should show evidence of acknowledging the data context in thinking
 
 
 
-### Unsupervised Learning
+# Unsupervised Learning
 
-# Research Question
+## Research Question
 
 Research question(s)/motivation for the unsupervised learning task.
 
 
-# Clustering
+## Clustering
 
 Choose one method for clustering
 
