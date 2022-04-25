@@ -65,9 +65,7 @@ Broadly describe the variables used in your analyses.
 Who collected the data? When, why, and how? Answer as much of this as the available information allows.
 
 The cases represent executed individuals in the United between 1976-2016.
-The variables use include the
-
-Who collected the data? When, why, and how? Answer as much of this as the available information allows.
+The variables used include the
 
 The execution database was compiled and published by the Death Penalty Information Center. Victim details, including quantity, sex, and race, were acquired from the Criminal Justice Project's Death Row USA report.The information in this database was obtained from news reports, the Department of Corrections in each state, and the NAACP Legal Defense Fund.
 
