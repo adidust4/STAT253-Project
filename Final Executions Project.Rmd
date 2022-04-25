@@ -58,14 +58,19 @@ executions_clean <- executions_clean %>%
 
 # Data Context
 
-Clearly describe what the cases in the final clean dataset represent.
-
-Broadly describe the variables used in your analyses.
-
-Who collected the data? When, why, and how? Answer as much of this as the available information allows.
-
 The cases represent executed individuals in the United between 1976-2016.
-The variables used include the
+The variables used include the 
+Numerical variables:
+Year of the execution.
+Age of the executed individual.
+Victim count of the executed individual.
+
+Categorical variables:
+Race of executed individual.
+Sex of the executed individual. 
+Type of crime the executed individual committed
+The region the execution took place in.
+The execution method of the executed individual. 
 
 The execution database was compiled and published by the Death Penalty Information Center. Victim details, including quantity, sex, and race, were acquired from the Criminal Justice Project's Death Row USA report.The information in this database was obtained from news reports, the Department of Corrections in each state, and the NAACP Legal Defense Fund.
 
