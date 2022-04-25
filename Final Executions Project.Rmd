@@ -1,13 +1,16 @@
 ---
 title: "Final Execution Project"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning = FALSE, message = FALSE, tidy = TRUE)
 ```
 
 # Load Packages
+
 ```{r}
 library(dplyr)
 library(readr)
@@ -22,9 +25,316 @@ tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 
 
 # Data Cleaning
-```{r}
+
+```{r clean data}
 executions <- read_csv("executiondata_clean.csv")
 
+executions_clean <- executions %>%
+  filter(Victim_Count < 50) %>%
+  select(-Name, -County) %>%
+  separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
+  mutate(VictimMale = case_when(
+    str_detect(Victim_Sex, "Male") ~ 1, TRUE ~ 0)) %>% # 1 if there was male victim(s)
+  mutate(VictimFemale = case_when(
+    str_detect(Victim_Sex, "Female") ~ 1, TRUE ~ 0)) %>% # 1 if there was female victim(s)
+  mutate(VictimWhite = case_when(
+    str_detect(Victim_Race, 'White') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimLatino = case_when(
+    str_detect(Victim_Race, 'Latino') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimBlack = case_when(
+    str_detect(Victim_Race, 'Black') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimAsian = case_when(
+    str_detect(Victim_Race, 'Asian') ~ 1, TRUE ~ 0)) 
+
+executions_clean <- executions_clean %>% select(-Victim_Sex, -Day, -Victim_Race)
+executions_clean$Month <-
+  as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
+executions_clean$Year <-
+  as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
+  
+head(executions)
+head(executions_clean) 
+```
+
+
+# Data Context
+
+The cases represent executed individuals in the United between 1976-2016.
+The variables used include the 
+Numerical variables:
+Year of the execution.
+Age of the executed individual.
+Victim count of the executed individual.
+
+Categorical variables:
+Race of executed individual.
+Sex of the executed individual. 
+Type of crime the executed individual committed
+The region the execution took place in.
+The execution method of the executed individual. 
+
+The execution database was compiled and published by the Death Penalty Information Center. Victim details, including quantity, sex, and race, were acquired from the Criminal Justice Project's Death Row USA report. The information in this database was obtained from news reports, the Department of Corrections in each state, and the NAACP Legal Defense Fund. We are not able to find context as for why this data was collected or when. 
+
+
+# Research Questions
+
+## Regression
+
+Can we accurately predict the number of victims that an executed individual had based on their execution data? 
+
+Our motivation is seeing how execution and demographic information might correlate with the severity of the crime (in terms of people murdered).
+
+## Classification
+
+We are looking to build a classification model that will predict the method of execution from our data set. To do this, we will use a logistic regression model and a random forests model. Our main aim is to determine if there is a specific method of execution that is more common for certain variables. 
+
+In our logistic regression model we focus on if an individual was electrocuted or not since it is arguably one of the most painful and long-lasting methods of execution. 
+
+In our random forest model, we attempt to predict between lethal injection, hanging, firing squad, and electrocution.
+
+## Unsupervised Learning
+
+What do different executions have in common based on Victim Count and Year executed?
+
+# Regression
+
+## Methods
+
+### Models Used
+
+In order to approach the question of how execution methods and demographics is related to the number of victims an executed person has, we decided to use ordinary least squares regression and LASSO regression. The ordinary least squares model allows us to use every variable in the model and directly comprehend which variables have positive or negative correlations with number of victims and by how much. LASSO was used as a secondary method in order to create a model that was less likely to overfit to data by eliminating variables and decreasing variance. This also allows us to find the factors most important to the variation in victim counts based on those variables which still exist after LASSO tuning. 
+
+### Model Evaluation
+
+In order to evaluate the OLS model, cross validation was used to train and test the model and create summary statistics on error such as root mean squared error, mean average error, etc. We also created residual plots of numerical variables versus residuals to find out if non-linear transformations were necessary and residual versus predicted plots to see trends in over or under predicting. 
+
+For the LASSO model, we used the same evaluation metrics as above but also used a tuning plot on root mean squared error in order to calculate the best penalty value by taking the value with the least RMSE. 
+
+## Results
+
+### Model Creation
+
+```{r cv-setup}
+set.seed(123)
+execute_cv <- vfold_cv(executions_clean, v=10)
+```
+
+```{r linear-specifications}
+# OLS spec
+lm_spec <- linear_reg() %>%
+  set_engine(engine = 'lm') %>%
+    set_mode('regression')
+
+# LASSO spec
+lm_lasso_spec <- 
+  linear_reg() %>%
+  set_args(mixture = 1, penalty = tune()) %>%
+  set_engine(engine = 'glmnet') %>%
+  set_mode('regression')
+```
+
+```{r recipes-and-wf}
+# create recipe
+execute_rec <- recipe(Victim_Count~., data = executions_clean) %>%
+  step_cut(Month, breaks=c(1, 3, 8, 12)) %>% # break months into winter, spring, summer, fall
+  step_nzv(all_numeric_predictors()) %>% # remove near zero variance values
+  step_corr(all_numeric_predictors()) %>% # remove correlated numeric variables
+  step_normalize(all_numeric_predictors()) %>% # normalize numeric variables
+  step_unknown(all_nominal_predictors()) %>% # mark NA for unknown nominal variables
+  step_dummy(all_nominal_predictors()) # create indicator variables for all nominal variables
+
+# create workflows
+execute_wf <- workflow() %>%
+  add_recipe(execute_rec) %>%
+  add_model(lm_spec)
+
+lasso_wf <- workflow() %>%
+  add_recipe(execute_rec) %>%
+  add_model(lm_lasso_spec)
+```
+
+```{r tune}
+# tune LASSO penalty term
+penalty_grid <- grid_regular(
+  penalty(range = c(-4, 0)), # range picked based on autoplot trial and error
+  levels = 50
+)
+
+tune_res <- tune_grid(
+  lasso_wf, 
+  resamples = execute_cv,
+  metrics = metric_set(rmse),
+  grid = penalty_grid
+)
+
+autoplot(tune_res) # to find a good range of values to tune from, can be commented out
+
+collect_metrics(tune_res) %>%
+  filter(.metric == 'rmse') %>% # using root mean squared error
+  select(penalty, rmse = mean)
+
+best_penalty <- select_best(tune_res, metric = 'rmse')
+
+lasso_tuned_wf <- finalize_workflow(lasso_wf, best_penalty)
+```
+
+
+```{r fit-models-lm}
+# fit models
+fit_model <- fit(execute_wf, data = executions_clean)
+tidy(fit_model)
+
+fit_model_lasso <- fit(lasso_tuned_wf, data = executions_clean)
+tidy(fit_model_lasso)
+```
+
+### Evaluation
+
+```{r fit-cv}
+# fit models using cross validation
+fit_resamples(execute_wf, 
+      resamples = execute_cv, 
+      metrics = metric_set(rmse, rsq, mae))  %>%
+      collect_metrics(summarize = TRUE)
+
+fit_resamples(lasso_tuned_wf, 
+      resamples = execute_cv, 
+      metrics = metric_set(rmse, rsq, mae))  %>%
+      collect_metrics(summarize = TRUE)
+```
+
+```{r residuals}
+# OLS MODEL
+# create data frame with predicted values and residuals
+mod_output <- fit_model %>%
+    predict(new_data = executions_clean) %>%
+    bind_cols(executions_clean) %>%
+    mutate(resid = Victim_Count - .pred)
+
+# residual versus predicted scatter plot
+mod_output %>%
+  ggplot(aes(x = .pred, y = resid)) +
+    geom_point() + 
+    geom_smooth()+
+    ggtitle("OLS Model") +
+    theme_classic()
+
+# residual versus age scatter plot
+mod_output %>%
+  ggplot(aes(x = Age, y = resid)) +
+    geom_point() + 
+    geom_smooth() +
+    ggtitle("OLS Model") +
+    theme_classic()
+
+# residual versus year scatter plot
+mod_output %>%
+  ggplot(aes(x = Year, y = resid)) +
+    geom_point() + 
+    geom_smooth() +
+    ggtitle("OLS Model") +
+    theme_classic()
+
+
+## LASSO MODEL 
+# create data frame with predicted values and residuals
+mod_output_2 <- fit_model_lasso %>%
+    predict(new_data = executions_clean) %>%
+    bind_cols(executions_clean) %>%
+    mutate(resid = Victim_Count - .pred)
+
+# residual versus predicted scatter plot
+mod_output_2 %>%
+  ggplot(aes(x = .pred, y = resid)) +
+    geom_point() + 
+    geom_smooth() +
+    ggtitle("LASSO Model") +
+    theme_classic()
+
+# residual versus age scatter plot
+mod_output_2 %>%
+  ggplot(aes(x = Age, y = resid)) +
+    geom_point() + 
+    geom_smooth() +
+    ggtitle("LASSO Model") +
+    theme_classic()
+
+# residual versus year scatter plot
+mod_output_2 %>%
+  ggplot(aes(x = Year, y = resid)) +
+    geom_point() + 
+    geom_smooth() +
+    ggtitle("LASSO Model") +
+    theme_classic()
+```
+
+
+## Conclusion
+
+*Final Model: * LASSO Model
+
+```{r}
+fit_resamples(lasso_tuned_wf, 
+      resamples = execute_cv, 
+      metrics = metric_set(rmse, rsq, mae))  %>%
+      collect_metrics(summarize = TRUE)
+```
+
+Since the cross validated error metrics above were almost the same in the LASSO model as the OLS model, we chose to use LASSO since it uses less variables and is less prone to excessive variance and overfitting. 
+
+The mean absolute error for the tuned LASSO model has a mean of 0.42, meaning that on average, the LASSO model predicts incorrectly by about 0.42 victims. The standard error for this value is low at 0.02, meaning it is likely that the LASSO model is predicting somewhere between 0.40 and 0.44 victims of the actual amount that an executed individual has. We have determined that this is an acceptable amount of error, since we measure victims in whole units, and it is unlikely to be off by more than 1 victim.
+
+```{r}
+# Obtain the predictors and coefficients of the "best" model
+# Filter out the coefficient are 0
+final_fit <- fit_model_lasso %>% tidy() %>% filter(estimate != 0)
+
+final_fit
+```
+
+The variables for executions in Illinois and Conneticut were correlated to the largest increase in predicted victim count, holding other variables constant. On the other hand, the execution being in the South or being done by firing squad had the most negative correlation with number of victims. One of the more interesting results was in comparing coefficients of executed individual race and victim race. An executed individual who was black was correlated to a small decrease in victim count holding other variables constant, whereas having a black victim correlated to having more victims holding other variables constant. On the other hand, an executed individual being white correlated to a slight predicted increase in victim count holding other variables constant, along with if the victim(s) were white. Other demographic coefficients also paint stories of how execution is handled in the US. 
+
+```{r variable-importance}
+
+glmnet_output <- fit_model_lasso %>% extract_fit_engine()
+    
+# Create a boolean matrix (predictors x lambdas) of variable exclusion
+bool_predictor_exclude <- glmnet_output$beta==0
+
+# Loop over each variable
+var_imp <- sapply(seq_len(nrow(bool_predictor_exclude)), function(row) {
+    this_coeff_path <- bool_predictor_exclude[row,]
+    if(sum(this_coeff_path) == ncol(bool_predictor_exclude)){ return(0)}else{
+    return(ncol(bool_predictor_exclude) - which.min(this_coeff_path) + 1)}
+})
+
+# Create a dataset of this information and sort
+var_imp_data <- tibble(
+    var_name = rownames(bool_predictor_exclude),
+    var_imp = var_imp
+)
+var_imp_data %>% arrange(desc(var_imp)) # most important variable first
+```
+
+Having a male victim or female victim are the two most persistent variables in the LASSO model, showing that sex of victims are one of the most important indicators of victim counts. After that come Arkansas and Illinois execution which is slightly less of interest to us in our research as it likely points to where criminal activity and/or executions often take place. The variable tied for 3rd most important variable, if the executed individual had a black victim, is much more interesting. The correlation between having a black victim and having more victims is important to this model.
+
+
+# Classification
+
+## Methods
+
+In our logistic regression model we focus on if an individual was electrocuted or not since it is arguably one of the most painful and long-lasting methods of execution. 
+
+In our random forest model, we attempt to predict between lethal injection, hanging, firing squad, and electrocution.
+
+In order to evaluate the logistic model we calculated accuracy, specificity, and sensitivity along with ROC Area Under the Curve. For the random forest model we looked at accuracy and out of bag error in order to evaluate the model. 
+
+These two models give us insight on how to predict execution types based on execution demographics. What leads to execution by electrocution? Who is likely to be executed by lethal injection? These models aim to show the most important variables in these decisions. 
+
+
+## Results 
+
+```{r}
 executions_clean <- executions %>%
   select(-Name, -County) %>%
   filter(Victim_Count < 50) %>%
@@ -53,136 +363,412 @@ executions_clean$Year <-
 executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
 executions_clean <- executions_clean %>%
   mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
+  
+head(executions)
+head(executions_clean)
 ```
 
 
-# Data Context
+### Logistic Regression
 
-The cases represent executed individuals in the United between 1976-2016.
-The variables used include the 
-Numerical variables:
-Year of the execution.
-Age of the executed individual.
-Victim count of the executed individual.
+#### Visualizations of Predictive Ability
 
-Categorical variables:
-Race of executed individual.
-Sex of the executed individual. 
-Type of crime the executed individual committed
-The region the execution took place in.
-The execution method of the executed individual. 
+We determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Graph 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
 
-The execution database was compiled and published by the Death Penalty Information Center. Victim details, including quantity, sex, and race, were acquired from the Criminal Justice Project's Death Row USA report.The information in this database was obtained from news reports, the Department of Corrections in each state, and the NAACP Legal Defense Fund.
-
-
-
-# Regression
-
-## Research Question
-
-Research question(s)/motivation for the regression task; make clear the outcome variable and its units.
-
-
-## Method
-
-Describe the models used.
-
-Describe what you did to evaluate models.
-
-Indicate how you estimated quantitative evaluation metrics.
-
-Indicate what plots you used to evaluate models.
-
-Describe the goals / purpose of the methods used in the overall context of your research investigations.
-
-
-## Results
-
-Summarize your final model and justify your model choice (see below for ways to justify your choice).
-
-  Compare the different models in light of evaluation metrics, plots, variable importance, and data context.
+```{r visualize-predictability}
+# bar chart of region versus electrocution
+ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
+    geom_bar(position = 'fill')
   
-  Display evaluation metrics for different models in a clean, organized way. This display should include both the     estimated CV metric as well as its standard deviation.
+# box plot of year versus electrocution
+ggplot(executions_clean, aes(x = Electrocution, y = Year)) + 
+  geom_boxplot() + 
+  theme_classic()
   
-  Broadly summarize conclusions from looking at these CV evaluation metrics and their measures of uncertainty.
+# bar chart of race versus electrocution
+ggplot(executions_clean, aes(x = Race, fill = Electrocution)) + 
+  geom_bar(position = 'fill')
   
-  Summarize conclusions from residual plots from initial models (don’t have to display them though).
+# bar chart of race versus region
+ggplot(executions_clean, aes(x = Region, fill = Race)) + 
+  geom_bar(position = 'dodge')
+```
+
+#### Implementing Logistic Regression
+
+```{r logistic-regression}
+
+# create specification for logistic model
+
+logistic_spec <- logistic_reg() %>%
+    set_engine('glm') %>%
+    set_mode('classification')
   
-Show and interpret some representative examples of residual plots for your final model. Does the model show acceptable results in terms of any systematic biases?
+#recipe using important variables
+logistic_rec <- recipe(Electrocution ~ Year + Region + Race, data = executions_clean)
+
+#create a workflow
+log_wf <- workflow() %>% 
+    add_recipe(logistic_rec) %>%
+    add_model(logistic_spec) 
+#fit the model to all data
+log_fit <- fit(log_wf, data = executions_clean)
+```
+
+#### Evaluating the Model
+
+This graph of the ROC curve shows that the model is accurate, but not perfect. 
+
+```{r evaluate-model}
+# create prediction table
+logistic_output <-  executions_clean %>%
+  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
+
+logistic_roc <- logistic_output %>% 
+    roc_curve(Electrocution, .pred_yes, event_level = "second") 
+# plot ROC AUC
+autoplot(logistic_roc) + theme_classic()
+```
+
+The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 57% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at 96.5%. This is due to the high number of true negatives in the data set.
+
+```{r logistic-output}
+logistic_output <-  executions_clean %>%
+  bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
+
+# using threshold of 0.63 make hard predictions
+logistic_output <- logistic_output %>%
+  mutate(.pred_class = make_two_class_pred(`.pred_no`, levels(Electrocution), threshold = 0.63)) 
+
+# output truth v prediction table
+logistic_output %>%
+  conf_mat(truth = Electrocution, estimate = .pred_class)
+
+```
+
+Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is 0.900, which is greater than expected for such a low sensitivity rate. 
+
+```{r logistic-cv}
+set.seed(123)
+data_cv10 <- vfold_cv(executions_clean, v = 10)
+
+# fit to 10 fold cv samples
+log_cv_fit <- fit_resamples(
+    log_wf, 
+    resamples = data_cv10,
+    metrics = metric_set(sens, yardstick::spec, accuracy, roc_auc),
+    control = control_resamples(save_pred = TRUE, event_level = 'second'))
+
+# find accuracy measures with cv
+collect_metrics(log_cv_fit)
+```
+
+### Random Forest
+
+We believe that using random forest as a classification to answer our research question: Can we predict the method of execution? Would be one effective method. We reached this conclusion by evaluating the outcome variable and the nature of the research question.
 
 
-## Conclusion
+Outcome variable: Method of execution → Categorical outcome → Classification → Classification tree → Random forest → Bagging (bootstrap to improve statistical learning methods such as decision trees)
 
-Interpret you final model (show plots of estimated non-linear functions, or slope coefficients) for important predictors, and provide some general interpretations of what you learn from these
+Our outcome variable is the method of execution, since it is a categorical outcome we will use a classification tree to answer our research question. To limit bias we will specifically use Random forest and the bootstrap method, to improve the statistical learning method. 
 
-Interpret evaluation metric(s) for the final model in context with units. Does the model show an acceptable amount of error?
+Since we are dealing with several predictor variables such as region, year, and race, a classification tree will be able to produce a sequence of rules that can be used to classify the data and predict the method of execution. Classification trees are easy to interpret, imitate the human decision-making process, and handle qualitative predictions without the need to create dummy variables.
 
-Summarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.
+#### Implementing Random Forest
 
+```{r model-specification}
+set.seed(123)
 
+executions_clean <- executions_clean %>% select(-Electrocution)
 
-# Classification
+# Model Specification
+rf_spec <- rand_forest() %>%
+  set_engine(engine = 'ranger') %>% 
+  set_args(mtry = NULL, 
+           trees = 1000,
+           min_n = 2,
+           probability = FALSE, 
+           importance = 'impurity') %>% 
+  set_mode('classification') 
 
-## Research Question
+# Recipe
+data_rec <- recipe(Method ~ ., data = executions_clean)
 
-Research question(s)/motivation for the classification task; make clear the outcome variable and its possible categories.
+# Workflows
+data_wf_mtry2 <- workflow() %>%
+  add_model(rf_spec %>% set_args(mtry = 2)) %>%
+  add_recipe(data_rec)
 
+## Create workflows for different variable numbers
+data_wf_mtry8 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 8)) %>% add_recipe(data_rec)
 
-## Methods
+data_wf_mtry12 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 12)) %>% add_recipe(data_rec)
 
-Indicate at least 2 different methods used to answer your classification research question.
+data_wf_mtry19 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 19)) %>% add_recipe(data_rec)
+```
 
-Describe what you did to evaluate the models explored.
+When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
 
-  Indicate how you estimated quantitative evaluation metrics.
+```{r fit-models}
+# Fit Models
+set.seed(123) 
+data_fit_mtry2 <- fit(data_wf_mtry2, data = executions_clean)
 
-Describe the goals / purpose of the methods used in the overall context of your research investigations.
+set.seed(123) 
+data_fit_mtry8 <- fit(data_wf_mtry8, data=executions_clean)
 
+set.seed(123)
+data_fit_mtry12 <- fit(data_wf_mtry12, data=executions_clean)
 
-## Results 
+set.seed(123) 
+data_fit_mtry19 <- fit(data_wf_mtry19, data=executions_clean)
+```
 
-Summarize your final model and justify your model choice (see below for ways to justify your choice).
-
-  Compare the different classification models tried in light of evaluation metrics, variable importance, and data     context.
-
-  Display evaluation metrics for different models in a clean, organized way. This display should include both the     estimated metric as well as its standard deviation. (This won’t be available from OOB error estimation. If using    OOB, don’t worry about reporting the SD.)
-
-  Broadly summarize conclusions from looking at these evaluation metrics and their measures of uncertainty.
-
+```{r oob-output}
+# Custom Function to get OOB predictions, true observed outcomes and add a user-provided model label
+rf_OOB_output <- function(fit_model, model_label, truth){
+    tibble(
+          .pred_class = fit_model %>% extract_fit_engine() %>% pluck('predictions'), #OOB predictions
+          class = truth,
+          label = model_label
+      )
+}
+```
 
 ## Conclusions
 
-Interpret evaluation metric(s) for the final model in context. Does the model show an acceptable amount of error?
+To evaluate our model we will use statistical measures such as the classification error rate and the Gini index. The classification error rate is the fraction of the training observations in that region that do not belong to the most common class. The Gini index measures the node purity. Although the classification error rate is preferable for the prediction accuracy of the final pruned tree, we measure the Gini index as well since it is more sensitive to node purity than is the classification error rate. 
 
-  If using OOB error estimation, display the test (OOB) confusion matrix, and use it to interpret the strengths and   weaknesses of the final model.
+```{r evaluate-oob}
 
-Summarization should show evidence of acknowledging the data context in thinking about the sensibility of these results.
+# Evaluate OOB Metrics
+data_rf_OOB_output <- bind_rows(
+    rf_OOB_output(data_fit_mtry2,2, executions_clean %>% pull(Method)),
+    rf_OOB_output(data_fit_mtry8,8, executions_clean %>% pull(Method)),
+    rf_OOB_output(data_fit_mtry12,12, executions_clean %>% pull(Method)),
+    rf_OOB_output(data_fit_mtry19,19, executions_clean %>% pull(Method))
+)
 
+data_rf_OOB_output$class <-
+  factor(data_rf_OOB_output$class)
+
+output <- data_rf_OOB_output %>% 
+    group_by(label) %>%
+    accuracy(truth = class, estimate = .pred_class)
+
+output
+```
+
+Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 97%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Federal and Crime type are the least important which is unexpected since we would think that punishment has to do with severity of crime. 
+
+```{r vip}
+#measure variable importance
+model_output <-data_fit_mtry12 %>% 
+    extract_fit_engine() 
+
+model_output %>% 
+    vip(num_features = 12) + theme_classic() #based on impurity
+
+model_output %>% vip::vi() %>% head()
+model_output %>% vip::vi() %>% tail()
+```
+
+Overall, our random forest model with 8 variables was the best classification model we could come up with to predict the type of execution being performed. Out of bag error was left with over 97% accuracy and allowed the model to not overfit while still being complex.
 
 
 # Unsupervised Learning
 
-## Research Question
-
-Research question(s)/motivation for the unsupervised learning task.
-
-
 ## Clustering
 
-Choose one method for clustering
+```{r}
+executions_clean <- executions %>%
+  select(-Name, -County) %>%
+  filter(Victim_Count < 50) %>%
+  separate(Date, c("Month", "Day", "Year"), sep = "/") %>%
+  mutate(VictimMale = case_when(
+    str_detect(Victim_Sex, "Male") ~ 1, TRUE ~ 0)) %>% # 1 if there was male victim(s)
+  mutate(VictimFemale = case_when(
+    str_detect(Victim_Sex, "Female") ~ 1, TRUE ~ 0)) %>% # 1 if there was female victim(s)
+  mutate(VictimWhite = case_when(
+    str_detect(Victim_Race, 'White') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimLatino = case_when(
+    str_detect(Victim_Race, 'Latino') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimBlack = case_when(
+    str_detect(Victim_Race, 'Black') ~ 1, TRUE ~ 0)) %>%
+  mutate(VictimAsian = case_when(
+    str_detect(Victim_Race, 'Asian') ~ 1, TRUE ~ 0)) %>%
+  mutate(Electrocution = case_when(
+    str_detect(Method, 'Electrocution') ~ 'yes', TRUE ~ 'no')) # make a variable that shows if the person was electrocuted
+ 
 
-Justify the choice of features included in a distance measure based on the research goals
+executions_clean <- executions_clean %>% select(-Victim_Sex, -Day, -Victim_Race)
+executions_clean$Month <-
+  as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
+executions_clean$Year <-
+  as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
 
-Justify the choice of k and summarize resulting clusters
-
-  Interpret the clusters qualitatively
   
-  Evaluate clusters quantitatively (kmeans: within cluster sum of squares, pam: silhouette, hclust: height of cut on    dendrogram)
+head(executions)
+head(executions_clean)
+```
+
+
+### K-Means Clustering
+
+#### Variable Exploration
+
+```{r}
+# bar chart of region versus method
+ggplot(executions_clean, aes(x = Region, fill = Method)) +
+    geom_bar(position = 'fill')
   
-  If appropriate, show visuals to justify your choices.
+# box plot of year versus method
+ggplot(executions_clean, aes(x = Method, y = Year)) + 
+  geom_boxplot() + 
+  theme_classic()
+
+# box plot of age versus method
+ggplot(executions_clean, aes(x = Method, y = Age)) + 
+  geom_boxplot() + 
+  theme_classic()
+```
+
+Age does not seem to correlate much with method, and does not improve sum of squared error in k clusters from 1-15. We created a plot of sum of squared error for k clusters with the variable age and the differences were not substantial enough to warrant further evaluation.
+
+
+```{r}
+# Select the variables to be used in clustering
+executions_sub <- executions_clean %>%
+    select(Victim_Count, Year)
+
+# Look at summary statistics of the 2 variables
+summary(executions_sub)
+```
+The number of victims is not very variable, whereas the year of execution fluctuates more throughout the dataset. 
+
+#### Picking *K*
+
+```{r}
+set.seed(253)
+
+executions_cluster_ss <- function(k){
+    # Perform clustering
+    kclust <- kmeans(scale(executions_sub), centers = k)
+
+    # Return the total within-cluster sum of squares
+    return(kclust$tot.withinss)
+}
+
+# create table and graph number of clusters versus sum of squares 
+# to pick k using elbow method
+tibble(
+    k = 1:15,
+    tot_wc_ss = purrr::map_dbl(1:15, executions_cluster_ss)
+) %>% 
+    ggplot(aes(x = k, y = tot_wc_ss)) +
+    geom_point() + 
+    labs(x = "Number of clusters",y = 'Total within-cluster sum of squares') + 
+    theme_classic()
+```
+
+According to the elbow method we would pick k = 4 or 5 (I chose 5 due to nice visual qualities it brought out when graphing later).
+
+```{r}
+set.seed(100)
+
+# Data-specific function to cluster and calculate total within-cluster SS
+execution_cluster_silhouette <- function(k){
+    # Perform clustering
+    kclust <- kmeans(scale(executions_sub), centers = k)
+
+     ss <- cluster::silhouette(kclust$cluster, dist(scale(executions_sub)))
   
-Summarize what information you gain from the clustering in context (tell a story) 
+    # Return the silhouette measures
+    return(mean(ss[, 3]))
+}
 
+# Choose value that MAXIMIZES average silhouette
+# table with silhouette values
+sil <- tibble(
+    k = 2:15,
+    avg_sil = purrr::map_dbl(2:15, execution_cluster_silhouette)
+) 
 
+# graph cluster versus silhouette
+sil %>% 
+    ggplot(aes(x = k, y = avg_sil)) +
+    geom_point() + 
+    labs(x = "Number of clusters",y = 'Average Silhouette') + 
+    theme_classic()
 
+# view silhouette table
+sil
+```
 
+The value that maximized the silhouette was k = 12.
+
+#### Graph K Clusters and Evaluate
+
+##### Elbow Method, K = 5
+
+```{r kclust5}
+set.seed(253)
+
+# make the 5 clusters
+kclust5 <- kmeans(scale(executions_sub), centers = 5)
+
+# add to dataset
+executions_clean <- executions_clean %>%
+    mutate(kclust_5 = factor(kclust5$cluster))
+
+# graph it
+executions_clean %>%
+  ggplot(aes(x = Year, y = Victim_Count, color = kclust_5)) +
+  geom_point()
+
+# print the total within-cluster sum of squares
+kclust5$tot.withinss
+
+# view where execution methods were in the clusters
+executions_clean %>%
+  count(Method,kclust_5)
+
+# view how different variables average across clusters
+executions_clean %>%
+    group_by(kclust_5) %>%
+    summarize(across(c(Year, Victim_Count), mean))
+```
+
+The k = 5 cluster model has a total sum of squared error of 785 within clusters, which is fairly low. With 5 clusters, clusters 1, 2, and 5 all represent the 2000s, with cluster 2 representing the least victim counts, and 5 representing the most. Clusters 3 and 4 represent earlier executions, but cluster 3 also represents the greatest of victim counts. These clusters map roughly to different execution types, showing us that execution method might have a lot to do with year and victim count. The biggest difference is that the clusters rely more on victim count than method of execution does. 
+
+##### Silhouette Method, K = 12
+
+```{r kclust12}
+set.seed(100)
+
+# make the 12 clusters
+kclust12 <- kmeans(scale(executions_sub), centers = 12)
+
+# add to dataset
+executions_clean <- executions_clean %>%
+    mutate(kclust_12 = factor(kclust12$cluster))
+
+# graph it
+executions_clean %>%
+  ggplot(aes(x = Year, y = Victim_Count, color = kclust_12)) +
+  geom_point()
+
+# get total within cluster sum of squares
+kclust12$tot.withinss
+
+# view where methods of executions were in clusters
+executions_clean %>%
+  count(Method,kclust_12)
+
+# view how different variables average across clusters
+executions_clean %>%
+    group_by(kclust_12) %>%
+    summarize(across(c(Year, Victim_Count), mean))
+```
+
+Although sum of squared error is quite a bit lower in the model with k = 12 clusters, these clusters are overfit and very hard to interpret quantatatively. 
