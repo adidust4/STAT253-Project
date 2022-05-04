@@ -179,6 +179,7 @@ best_penalty <- select_best(tune_res, metric = 'rmse')
 
 lasso_tuned_wf <- finalize_workflow(lasso_wf, best_penalty)
 ```
+As the amount of regularization increases by penalizing the coefficients, the RMSE value first decreases. This indicates that regularization first helps with fitting the data. However, this trends changes at circa 1e-01.
 
 
 ```{r fit-models-lm}
@@ -270,6 +271,9 @@ mod_output_2 %>%
     theme_classic()
 ```
 
+From the residual plots,  we note there is some non-linearity in the relationship between the predicted values and the residuals. This suggests that at least one of the quantitative variables might have a nonlinear relationship with our outcome variable, executions. In this model, the quantitative variables are month, year and victim count. So we should consider tools to account for this in future models.
+
+We did not end up using spline regression due to many categorical variables in our data.
 
 ## Conclusion
 
