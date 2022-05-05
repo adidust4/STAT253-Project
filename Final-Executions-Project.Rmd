@@ -174,6 +174,7 @@ best_penalty <- select_best(tune_res, metric = 'rmse')
 
 lasso_tuned_wf <- finalize_workflow(lasso_wf, best_penalty)
 ```
+As the amount of regularization increases by penalizing the coefficients, the RMSE value first decreases. This indicates that regularization first helps with fitting the data. However, this trends changes at circa 1e-01.
 
 
 ```{r fit-models-lm, include=FALSE, echo=FALSE}
@@ -219,6 +220,7 @@ mod_output %>%
     theme_classic()
 ```
 
+<<<<<<< HEAD
 ```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # residual versus age scatter plot
 mod_output %>%
@@ -237,6 +239,9 @@ mod_output %>%
     geom_smooth() +
     ggtitle("OLS Model") +
     theme_classic()
+=======
+
+>>>>>>> f2c61c60bce9f005b6a1cab195aed4c36af29c61
 
 
 ## LASSO MODEL 
@@ -254,23 +259,12 @@ mod_output_2 %>%
     ggtitle("LASSO Model") +
     theme_classic()
 
-# residual versus age scatter plot
-mod_output_2 %>%
-  ggplot(aes(x = Age, y = resid)) +
-    geom_point() + 
-    geom_smooth() +
-    ggtitle("LASSO Model") +
-    theme_classic()
 
-# residual versus year scatter plot
-mod_output_2 %>%
-  ggplot(aes(x = Year, y = resid)) +
-    geom_point() + 
-    geom_smooth() +
-    ggtitle("LASSO Model") +
-    theme_classic()
 ```
 
+From the residual plots,  we note there is some non-linearity in the relationship between the predicted values and the residuals. This suggests that at least one of the quantitative variables might have a nonlinear relationship with our outcome variable, executions. In this model, the quantitative variables are month, year and victim count. So we should consider tools to account for this in future models.
+
+We did not end up using spline regression due to many categorical variables in our data.
 
 ## Conclusion
 
