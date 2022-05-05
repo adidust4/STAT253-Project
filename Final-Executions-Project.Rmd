@@ -53,9 +53,6 @@ executions_clean$Month <-
   as.numeric(as.character(executions_clean$Month)) # turn month into numeric variable
 executions_clean$Year <-
   as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
-  
-head(executions)
-head(executions_clean) 
 ```
 
 
@@ -92,11 +89,12 @@ We are looking to build a classification model that will predict the method of e
 
 In our logistic regression model we focus on if an individual was electrocuted or not since it is arguably one of the most painful and long-lasting methods of execution. 
 
-In our random forest model, we attempt to predict between lethal injection, hanging, firing squad, and electrocution.
+In our random forest model, we attempt to predict between lethal injection, hanging, firing squad, gas chamber, and electrocution.
 
 ## Unsupervised Learning
 
-What do different executions have in common based on Victim Count and Year executed?
+What do different executions have in common based on victim count and year executed?
+
 
 # Regression
 
@@ -179,7 +177,6 @@ best_penalty <- select_best(tune_res, metric = 'rmse')
 
 lasso_tuned_wf <- finalize_workflow(lasso_wf, best_penalty)
 ```
-
 
 ```{r fit-models-lm}
 # fit models
@@ -275,13 +272,6 @@ mod_output_2 %>%
 
 *Final Model: * LASSO Model
 
-```{r}
-fit_resamples(lasso_tuned_wf, 
-      resamples = execute_cv, 
-      metrics = metric_set(rmse, rsq, mae))  %>%
-      collect_metrics(summarize = TRUE)
-```
-
 Since the cross validated error metrics above were almost the same in the LASSO model as the OLS model, we chose to use LASSO since it uses less variables and is less prone to excessive variance and overfitting. 
 
 The mean absolute error for the tuned LASSO model has a mean of 0.42, meaning that on average, the LASSO model predicts incorrectly by about 0.42 victims. The standard error for this value is low at 0.02, meaning it is likely that the LASSO model is predicting somewhere between 0.40 and 0.44 victims of the actual amount that an executed individual has. We have determined that this is an acceptable amount of error, since we measure victims in whole units, and it is unlikely to be off by more than 1 victim.
@@ -365,9 +355,6 @@ executions_clean$Year <-
 executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
 executions_clean <- executions_clean %>%
   mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
-  
-head(executions)
-head(executions_clean)
 ```
 
 
@@ -469,10 +456,7 @@ collect_metrics(log_cv_fit)
 
 We believe that using random forest as a classification to answer our research question: Can we predict the method of execution? Would be one effective method. We reached this conclusion by evaluating the outcome variable and the nature of the research question.
 
-
-Outcome variable: Method of execution → Categorical outcome → Classification → Classification tree → Random forest → Bagging (bootstrap to improve statistical learning methods such as decision trees)
-
-Our outcome variable is the method of execution, since it is a categorical outcome we will use a classification tree to answer our research question. To limit bias we will specifically use Random forest and the bootstrap method, to improve the statistical learning method. 
+Our outcome variable is the method of execution, since it is a categorical variable we will use a classification tree to answer our research question. To limit bias we will specifically use a random forest and the bootstrap method, to improve the statistical learning method. 
 
 Since we are dealing with several predictor variables such as region, year, and race, a classification tree will be able to produce a sequence of rules that can be used to classify the data and predict the method of execution. Classification trees are easy to interpret, imitate the human decision-making process, and handle qualitative predictions without the need to create dummy variables.
 
@@ -509,7 +493,7 @@ data_wf_mtry12 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 12)) %>% 
 data_wf_mtry19 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 19)) %>% add_recipe(data_rec)
 ```
 
-When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
+When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, indicating high node purity.   
 
 ```{r fit-models}
 # Fit Models
@@ -561,7 +545,7 @@ output <- data_rf_OOB_output %>%
 output
 ```
 
-Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 97%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Federal and Crime type are the least important which is unexpected since we would think that punishment has to do with severity of crime. 
+Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 97%. Year is the most important variable for classification, which makes sense because different methods of execution were used at different times. State is the second most important variable, as method of execution varies depending on the state the execution takes place in. Federal and Crime type are the least important, which also makes sense because there are only two federal executions in the dataset and all crimes are murder. 
 
 ```{r vip}
 #measure variable importance
@@ -794,3 +778,6 @@ executions_clean %>%
 ## Conclusion
 
 As stated previously, unsupervised learning was difficult for our dataset because there are not very many quantitative variables and many quantitative variables are functionally categorical. Through the unsupervised exploration, we were attempting to answer if there were any trends in the data based on victim count and year. Our research showed that k-means clustering with k=4 does not show any strong correlation and with k=12 is overfit and difficult to interpret. Overall, since there are not many quantitative, and especially functionally quantitative, variables, unsupervised learning is not the best method for this dataset. 
+
+
+# Code Appendix 
