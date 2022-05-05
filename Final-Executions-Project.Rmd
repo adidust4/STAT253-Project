@@ -222,21 +222,7 @@ mod_output %>%
     ggtitle("OLS Model") +
     theme_classic()
 
-# residual versus age scatter plot
-mod_output %>%
-  ggplot(aes(x = Age, y = resid)) +
-    geom_point() + 
-    geom_smooth() +
-    ggtitle("OLS Model") +
-    theme_classic()
 
-# residual versus year scatter plot
-mod_output %>%
-  ggplot(aes(x = Year, y = resid)) +
-    geom_point() + 
-    geom_smooth() +
-    ggtitle("OLS Model") +
-    theme_classic()
 
 
 ## LASSO MODEL 
@@ -254,21 +240,7 @@ mod_output_2 %>%
     ggtitle("LASSO Model") +
     theme_classic()
 
-# residual versus age scatter plot
-mod_output_2 %>%
-  ggplot(aes(x = Age, y = resid)) +
-    geom_point() + 
-    geom_smooth() +
-    ggtitle("LASSO Model") +
-    theme_classic()
 
-# residual versus year scatter plot
-mod_output_2 %>%
-  ggplot(aes(x = Year, y = resid)) +
-    geom_point() + 
-    geom_smooth() +
-    ggtitle("LASSO Model") +
-    theme_classic()
 ```
 
 From the residual plots,  we note there is some non-linearity in the relationship between the predicted values and the residuals. This suggests that at least one of the quantitative variables might have a nonlinear relationship with our outcome variable, executions. In this model, the quantitative variables are month, year and victim count. So we should consider tools to account for this in future models.
