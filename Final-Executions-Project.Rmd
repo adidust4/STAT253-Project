@@ -4,16 +4,10 @@ output:
   pdf_document: default
   html_document:
     df_print: paged
-  word_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning = FALSE, message = FALSE, tidy = TRUE)
-```
 
-# Load Packages
-
-```{r}
+```{r read-libraries, include=FALSE, echo=FALSE}
 library(dplyr)
 library(readr)
 library(broom)
@@ -26,9 +20,7 @@ tidymodels_prefer() # Resolves conflicts, prefers tidymodel functions
 ```
 
 
-# Data Cleaning
-
-```{r clean data}
+```{r clean-data, include=FALSE, echo=FALSE}
 executions <- read_csv("executiondata_clean.csv")
 
 executions_clean <- executions %>%
@@ -57,7 +49,6 @@ executions_clean$Year <-
 head(executions)
 head(executions_clean) 
 ```
-
 
 # Data Context
 
@@ -116,12 +107,12 @@ For the LASSO model, we used the same evaluation metrics as above but also used 
 
 ### Model Creation
 
-```{r cv-setup}
+```{r cv-setup, include=FALSE, echo=FALSE, echo=FALSE}
 set.seed(123)
 execute_cv <- vfold_cv(executions_clean, v=10)
 ```
 
-```{r linear-specifications}
+```{r linear-specifications, include=FALSE, echo=FALSE}
 # OLS spec
 lm_spec <- linear_reg() %>%
   set_engine(engine = 'lm') %>%
@@ -135,7 +126,7 @@ lm_lasso_spec <-
   set_mode('regression')
 ```
 
-```{r recipes-and-wf}
+```{r recipes-and-wf, include=FALSE, echo=FALSE}
 # create recipe
 execute_rec <- recipe(Victim_Count~., data = executions_clean) %>%
   step_cut(Month, breaks=c(1, 3, 8, 12)) %>% # break months into winter, spring, summer, fall
@@ -155,7 +146,7 @@ lasso_wf <- workflow() %>%
   add_model(lm_lasso_spec)
 ```
 
-```{r tune}
+```{r tune, include=FALSE, echo=FALSE}
 # tune LASSO penalty term
 penalty_grid <- grid_regular(
   penalty(range = c(-4, 0)), # range picked based on autoplot trial and error
@@ -168,9 +159,13 @@ tune_res <- tune_grid(
   metrics = metric_set(rmse),
   grid = penalty_grid
 )
+```
 
+```{r LASSO-tune, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 autoplot(tune_res) # to find a good range of values to tune from, can be commented out
+```
 
+``` {r, include=FALSE, echo=FALSE}
 collect_metrics(tune_res) %>%
   filter(.metric == 'rmse') %>% # using root mean squared error
   select(penalty, rmse = mean)
@@ -181,7 +176,7 @@ lasso_tuned_wf <- finalize_workflow(lasso_wf, best_penalty)
 ```
 
 
-```{r fit-models-lm}
+```{r fit-models-lm, include=FALSE, echo=FALSE}
 # fit models
 fit_model <- fit(execute_wf, data = executions_clean)
 tidy(fit_model)
@@ -192,7 +187,7 @@ tidy(fit_model_lasso)
 
 ### Evaluation
 
-```{r fit-cv}
+```{r fit-cv, include=FALSE, echo=FALSE}
 # fit models using cross validation
 fit_resamples(execute_wf, 
       resamples = execute_cv, 
@@ -205,14 +200,16 @@ fit_resamples(lasso_tuned_wf,
       collect_metrics(summarize = TRUE)
 ```
 
-```{r residuals}
+```{r residuals, include=FALSE, echo=FALSE}
 # OLS MODEL
 # create data frame with predicted values and residuals
 mod_output <- fit_model %>%
     predict(new_data = executions_clean) %>%
     bind_cols(executions_clean) %>%
     mutate(resid = Victim_Count - .pred)
+```
 
+```{r, include=FALSE, echo=FALSE}
 # residual versus predicted scatter plot
 mod_output %>%
   ggplot(aes(x = .pred, y = resid)) +
@@ -220,7 +217,9 @@ mod_output %>%
     geom_smooth()+
     ggtitle("OLS Model") +
     theme_classic()
+```
 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # residual versus age scatter plot
 mod_output %>%
   ggplot(aes(x = Age, y = resid)) +
@@ -228,7 +227,9 @@ mod_output %>%
     geom_smooth() +
     ggtitle("OLS Model") +
     theme_classic()
+```
 
+```{r, include=FALSE, echo=FALSE}
 # residual versus year scatter plot
 mod_output %>%
   ggplot(aes(x = Year, y = resid)) +
@@ -275,7 +276,7 @@ mod_output_2 %>%
 
 *Final Model: * LASSO Model
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 fit_resamples(lasso_tuned_wf, 
       resamples = execute_cv, 
       metrics = metric_set(rmse, rsq, mae))  %>%
@@ -286,7 +287,7 @@ Since the cross validated error metrics above were almost the same in the LASSO 
 
 The mean absolute error for the tuned LASSO model has a mean of 0.42, meaning that on average, the LASSO model predicts incorrectly by about 0.42 victims. The standard error for this value is low at 0.02, meaning it is likely that the LASSO model is predicting somewhere between 0.40 and 0.44 victims of the actual amount that an executed individual has. We have determined that this is an acceptable amount of error, since we measure victims in whole units, and it is unlikely to be off by more than 1 victim.
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 # Obtain the predictors and coefficients of the "best" model
 # Filter out the coefficient are 0
 final_fit <- fit_model_lasso %>% tidy() %>% filter(estimate != 0)
@@ -296,7 +297,7 @@ final_fit
 
 The variables for executions in Illinois and Conneticut were correlated to the largest increase in predicted victim count, holding other variables constant. On the other hand, the execution being in the South or being done by firing squad had the most negative correlation with number of victims. One of the more interesting results was in comparing coefficients of executed individual race and victim race. An executed individual who was black was correlated to a small decrease in victim count holding other variables constant, whereas having a black victim correlated to having more victims holding other variables constant. On the other hand, an executed individual being white correlated to a slight predicted increase in victim count holding other variables constant, along with if the victim(s) were white. Other demographic coefficients also paint stories of how execution is handled in the US. 
 
-```{r variable-importance}
+```{r variable-importance, include=FALSE, echo=FALSE}
 
 glmnet_output <- fit_model_lasso %>% extract_fit_engine()
     
@@ -336,7 +337,7 @@ These two models give us insight on how to predict execution types based on exec
 
 ## Results 
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 executions_clean <- executions %>%
   select(-Name, -County) %>%
   filter(Victim_Count < 50) %>%
@@ -377,7 +378,7 @@ head(executions_clean)
 
 We determined the variables with the most predictive ability are region, year, and race. The first graph shows that electrocution has only been used in the Midwest and South, with the South having a much higher use. The second graph shows that electrocution has mainly been used as a method of execution prior to 2000. Graph 3 shows that electrocution has been used as a method of execution primarily for Black, Native American, and White individuals and for a small percentage of Latino individuals. Black individuals are the most common racial group to be executed with electrocution. The fourth and final graph shows the correlation between region and race. The Midwest and the South are the only two regions to have used electrocution as a method of execution, and have executed the vast majority of individuals in the data set. Most importantly, these two regions have executed the majority of Black individuals. 
 
-```{r visualize-predictability}
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # bar chart of region versus electrocution
 ggplot(executions_clean, aes(x = Region, fill = Electrocution)) +
     geom_bar(position = 'fill')
@@ -398,7 +399,7 @@ ggplot(executions_clean, aes(x = Region, fill = Race)) +
 
 #### Implementing Logistic Regression
 
-```{r logistic-regression}
+```{r logistic-regression, include=FALSE, echo=FALSE}
 
 # create specification for logistic model
 
@@ -421,20 +422,23 @@ log_fit <- fit(log_wf, data = executions_clean)
 
 This graph of the ROC curve shows that the model is accurate, but not perfect. 
 
-```{r evaluate-model}
+```{r evaluate-model, include=FALSE, echo=FALSE}
 # create prediction table
 logistic_output <-  executions_clean %>%
   bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
 
 logistic_roc <- logistic_output %>% 
     roc_curve(Electrocution, .pred_yes, event_level = "second") 
+```
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # plot ROC AUC
 autoplot(logistic_roc) + theme_classic()
 ```
 
 The model is overall 92% accurate. However, it is important to note that just under 11% of the executions in the data set used electrocution, creating a NIR of 89%. Furthermore, the model has a sensitivity of 57% which shows that there are nearly the same number of true positives as false negatives. The model is under-predicting electrocution as a method of execution. The model has a much higher specificity at 96.5%. This is due to the high number of true negatives in the data set.
 
-```{r logistic-output}
+```{r logistic-output, include=FALSE, echo=FALSE}
 logistic_output <-  executions_clean %>%
   bind_cols(predict(log_fit, new_data = executions_clean, type = 'prob')) 
 
@@ -450,7 +454,7 @@ logistic_output %>%
 
 Looking at cross validated test metrics, the model's accuracy and specificity remain almost the same. Interestingly the sensitivity drops to 46%, meaning the cross validated data shows an even higher rate of predicting false negatives. It is also important to note that the AUC value is 0.900, which is greater than expected for such a low sensitivity rate. 
 
-```{r logistic-cv}
+```{r logistic-cv, include=FALSE, echo=FALSE}
 set.seed(123)
 data_cv10 <- vfold_cv(executions_clean, v = 10)
 
@@ -478,7 +482,7 @@ Since we are dealing with several predictor variables such as region, year, and 
 
 #### Implementing Random Forest
 
-```{r model-specification}
+```{r model-specification, include=FALSE, echo=FALSE}
 set.seed(123)
 
 executions_clean <- executions_clean %>% select(-Electrocution)
@@ -511,7 +515,7 @@ data_wf_mtry19 <- workflow() %>% add_model(rf_spec %>% set_args(mtry = 19)) %>% 
 
 When developing the model, we selected thresholds for the predictor variables to determine the method of execution. We used bagging to generate a tree that does not overfit, thereafter implemented OOB to test on and make the model is not overfitting. Bagging is resampling with replacement and random forest allowed us to create many samples which means less overfitting. By splitting on the threshold that we have set for all the predictors, we were able to predict the method of execution by the different predictor variables. The trees will split until the Gini purity index is low, or in other words, there is just one category in each leaf  
 
-```{r fit-models}
+```{r fit-models, include=FALSE, echo=FALSE}
 # Fit Models
 set.seed(123) 
 data_fit_mtry2 <- fit(data_wf_mtry2, data = executions_clean)
@@ -526,7 +530,7 @@ set.seed(123)
 data_fit_mtry19 <- fit(data_wf_mtry19, data=executions_clean)
 ```
 
-```{r oob-output}
+```{r oob-output, include=FALSE, echo=FALSE}
 # Custom Function to get OOB predictions, true observed outcomes and add a user-provided model label
 rf_OOB_output <- function(fit_model, model_label, truth){
     tibble(
@@ -541,7 +545,7 @@ rf_OOB_output <- function(fit_model, model_label, truth){
 
 To evaluate our model we will use statistical measures such as the classification error rate and the Gini index. The classification error rate is the fraction of the training observations in that region that do not belong to the most common class. The Gini index measures the node purity. Although the classification error rate is preferable for the prediction accuracy of the final pruned tree, we measure the Gini index as well since it is more sensitive to node purity than is the classification error rate. 
 
-```{r evaluate-oob}
+```{r evaluate-oob, include=FALSE, echo=FALSE}
 
 # Evaluate OOB Metrics
 data_rf_OOB_output <- bind_rows(
@@ -563,7 +567,7 @@ output
 
 Overall, the out of bag error shows that the model that uses 12 variables has the greatest accuracy at 97%. Year is the most important variable for classification, which makes sense because it dictates customs and rules, and Federal and Crime type are the least important which is unexpected since we would think that punishment has to do with severity of crime. 
 
-```{r vip}
+```{r vip, include=FALSE, echo=FALSE}
 #measure variable importance
 model_output <-data_fit_mtry12 %>% 
     extract_fit_engine() 
@@ -582,7 +586,7 @@ Overall, our random forest model with 8 variables was the best classification mo
 
 ## Clustering
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 executions_clean <- executions %>%
   select(-Name, -County) %>%
   filter(Victim_Count < 50) %>%
@@ -621,7 +625,7 @@ head(executions_clean)
 
 In our dataset, there are not very many quantitative variables, and the quantitative variables that are present are in some cases, such as victim count, functionally categorical. This makes unsupervised learning difficult, as traditional scatter plots will create lines in the data. Below are explorations of the few quantitative variables with our outcome variable, method. The first graph shows the year distribution of each method. For this plot it is important to note that execution by firing squad and exectuion by hanging were each used 3 times in the dataset. With this in mind, there is a strong trend were executions after ~1995 primarily used lethal injection. The second plot shows victim count distribution by method and shows that hanging was used when there were 2-4 victims, firing squad was only used with 1 victim, and the remaining three methods have varying distributions with lethal injection being used for all cases with more than 7 victims. This is important to include because year clearly showed lethal injection was used after 1995, but did not show clear trends for hanging or firing squad. Finally, the last graph shows age distribution by method, but does not show any clear trends in the data; therefore, age will not be included in our k-means algorithm.
 
-```{r}
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # box plot of year versus method
 ggplot(executions_clean, aes(x = Method, y = Year)) + 
   geom_boxplot() + 
@@ -640,7 +644,7 @@ ggplot(executions_clean, aes(x = Method, y = Age)) +
 
 
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 # Select the variables to be used in clustering
 executions_sub <- executions_clean %>%
     select(Victim_Count, Year)
@@ -653,7 +657,7 @@ summary(executions_sub)
 
 Using the elbow method, the ideal value of k would be k=4, as adding more clusters does not substantially reduce the within-cluster variation for any k > 4. This is interesting to note as the outcome variable, method, has 5 different categories.
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 set.seed(253)
 
 executions_cluster_ss <- function(k){
@@ -663,7 +667,9 @@ executions_cluster_ss <- function(k){
     # Return the total within-cluster sum of squares
     return(kclust$tot.withinss)
 }
+```
 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # create table and graph number of clusters versus sum of squares 
 # to pick k using elbow method
 tibble(
@@ -680,7 +686,7 @@ tibble(
 Using the silhouette method, which determines a numerical representation of how similar an object in the cluster is to its own cluster, the ideal value of k would be k=12, as it has the highest calculated silhouette value. This method of choosing k created three times as many clusters as the elbow method and several more clusters than we anticipated to be made. 
 
 
-```{r}
+```{r, include=FALSE, echo=FALSE}
 set.seed(100)
 
 # Data-specific function to cluster and calculate total within-cluster SS
@@ -700,7 +706,9 @@ sil <- tibble(
     k = 2:15,
     avg_sil = purrr::map_dbl(2:15, execution_cluster_silhouette)
 ) 
+```
 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # graph cluster versus silhouette
 sil %>% 
     ggplot(aes(x = k, y = avg_sil)) +
@@ -718,7 +726,7 @@ sil
 
 This first graph shows year vs. victim count with the color representing the clusters. These four clusters loosly translate to 1-2 victims before 2000, 1-2 victims after 2000, 2-4 victims in any year, and 4 or more victims in any year (as shown in the first graph and second table). The second graph shows year vs. victim count with the color representing method of execution. Comparing these two graphs shows that there are not strong correlations between each cluster and the method of execution. This can also be seen in the total within cluster sum of squares, which is quite high at 785.7. The first table shows how many of each method of execution are in each cluster. Again, there is not a strong correlation between cluster and method: the most common method of execution, lethal injection, is distributed across all four clusters with the vast majority split between cluster 2 and cluster 4; electrocuion and gas chamber are concentrated in cluster 4; firing squad and hanging do not show strong correlations with any cluster. 
 
-```{r kclust5}
+```{r clusters, include=FALSE, echo=FALSE}
 set.seed(253)
 
 # make the 5 clusters
@@ -727,7 +735,9 @@ kclust4 <- kmeans(scale(executions_sub), centers = 4)
 # add to dataset
 executions_clean <- executions_clean %>%
     mutate(kclust_4 = factor(kclust4$cluster))
+```
 
+```{r, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # graph it
 executions_clean %>%
   ggplot(aes(x = Year, y = Victim_Count, color = kclust_4)) +
@@ -740,8 +750,10 @@ executions_clean %>%
   theme_classic()
 
 # print the total within-cluster sum of squares
-kclust5$tot.withinss
+kclust4$tot.withinss
+```
 
+```{r, include=FALSE, echo=FALSE}
 # view where execution methods were in the clusters
 executions_clean %>%
   count(Method,kclust_4)
@@ -757,7 +769,7 @@ executions_clean %>%
 
 With 12 clusters, the data is overfit and very hard to interpret, as seen in the first graph and second table. There are not strong trends between the assigned and method of execution, which can be deternined from comparing the first graph and second graph, each showing year vs. victim count with color representing cluster and method respectively. Using the silhouette method and k=12, the within cluster sum of squares is 238.4 which is significantly lower than that from the elbow method. However, again this smaller within cluster sum of squares also comes from overfit data that is nearly impossible to interpret. The first table also shows how difficult this data is to interpret with 12 different clusters. It is important to note that cluster 1 only contains instances where lethal injection was the method of execution, the only entirely homogenous cluster; clusters 6, 7, 8, 11, and 12 all primarily have cases where lethal injection was the method of execution; instances of hanging as a method of execution are only found in clusters 9 and 10; and cases where electrocution was the method of execution are largely concentrated in clusters 2, 3, and 4. 
 
-```{r kclust12}
+```{r kclust12, include=FALSE, echo=FALSE}
 set.seed(100)
 
 # make the 12 clusters
@@ -766,7 +778,9 @@ kclust12 <- kmeans(scale(executions_sub), centers = 12)
 # add to dataset
 executions_clean <- executions_clean %>%
     mutate(kclust_12 = factor(kclust12$cluster))
+```
 
+```{r clust-graphs, eval=TRUE, echo=FALSE, message=FALSE, error=FALSE}
 # graph it
 executions_clean %>%
   ggplot(aes(x = Year, y = Victim_Count, color = kclust_12)) +
@@ -777,7 +791,9 @@ executions_clean %>%
   ggplot(aes(x = Year, y = Victim_Count, color = Method)) +
   geom_point() + 
   theme_classic()
+```
 
+```{r, include=FALSE, echo=FALSE}
 # get total within cluster sum of squares
 kclust12$tot.withinss
 
@@ -794,3 +810,8 @@ executions_clean %>%
 ## Conclusion
 
 As stated previously, unsupervised learning was difficult for our dataset because there are not very many quantitative variables and many quantitative variables are functionally categorical. Through the unsupervised exploration, we were attempting to answer if there were any trends in the data based on victim count and year. Our research showed that k-means clustering with k=4 does not show any strong correlation and with k=12 is overfit and difficult to interpret. Overall, since there are not many quantitative, and especially functionally quantitative, variables, unsupervised learning is not the best method for this dataset. 
+
+# Code Appendix
+
+```{r ref.label=knitr::all_labels(), echo = T, eval = T, warning=F, message=F}
+```
