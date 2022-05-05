@@ -334,7 +334,7 @@ In order to evaluate the logistic model we calculated accuracy, specificity, and
 These two models give us insight on how to predict execution types based on execution demographics. What leads to execution by electrocution? Who is likely to be executed by lethal injection? These models aim to show the most important variables in these decisions. 
 
 
-## Results 
+## Data cleaning
 
 ```{r}
 executions_clean <- executions %>%
@@ -537,7 +537,7 @@ rf_OOB_output <- function(fit_model, model_label, truth){
 }
 ```
 
-## Conclusions
+## Random forest results and interpretations
 
 To evaluate our model we will use statistical measures such as the classification error rate and the Gini index. The classification error rate is the fraction of the training observations in that region that do not belong to the most common class. The Gini index measures the node purity. Although the classification error rate is preferable for the prediction accuracy of the final pruned tree, we measure the Gini index as well since it is more sensitive to node purity than is the classification error rate. 
 
@@ -575,8 +575,22 @@ model_output %>% vip::vi() %>% head()
 model_output %>% vip::vi() %>% tail()
 ```
 
-Overall, our random forest model with 8 variables was the best classification model we could come up with to predict the type of execution being performed. Out of bag error was left with over 97% accuracy and allowed the model to not overfit while still being complex.
+Overall, our random forest model with 12 variables was the best classification model we could come up with to predict the type of execution being performed. Out of bag error was left with over 97% accuracy and allowed the model to not overfit while still being complex.
 
+# Conclusions and Comparasions
+
+Our logistic regression model has an overall accuracy of 92%, which seems good enough, but
+1. It has an NIR of 89%, and that means the accuracy of the model comes mostly from the classifier that just predicts the majority class in the training set, which is the non-electrocuted, but what we actually want to look at is the executions by electrocution.
+2. The sensitivity is too low. The sensitivity of this model is 57%, and for the test, it even dropped to 47%. This means if this model is to predict that a criminal would be executed by electrocution, it has a roughly 50% chance to be wrong. This is unacceptable.
+
+The random forest model with 12 variables, on the other hand, has an overal accuracy of 97% according to the out of bag error, which is higher than the logistic regression model. Now let's look at the confusion matrix.
+```{r confusion matrix}
+rf_OOB_output(data_fit_mtry12,12, executions_clean %>% pull(Method)) %>%
+    conf_mat(truth = class, estimate= .pred_class)
+```
+It's obvious that among 140 predictions of electrocution, 137 of them are successful. This result is quite good, considering that the vast majority of executions are non-electrocution. 
+
+To summarize, The logistic regression model we built did not quite answer our question. The downside of it was that we got much less electrocuted cases compared to non-electrocuted cases. So predictions for the electrocuted was less accurate. The best model we found would be the random forest model with 12 variables. It has not only the highest overall accuracy, but can also predict our desired classifier accurately. The weakness of it, though, is that the most important variable is 'year'. We could see from our visualization part that electrocution is used mainly before year 2000. So this model maybe weak in predicting future executions.
 
 # Unsupervised Learning
 
