@@ -239,10 +239,6 @@ mod_output %>%
     geom_smooth() +
     ggtitle("OLS Model") +
     theme_classic()
-=======
-
->>>>>>> f2c61c60bce9f005b6a1cab195aed4c36af29c61
-
 
 ## LASSO MODEL 
 # create data frame with predicted values and residuals
@@ -358,8 +354,8 @@ executions_clean$Month <-
 executions_clean$Year <-
   as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
 executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
-executions_clean <- executions_clean %>%
-  mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
+# executions_clean <- executions_clean %>%
+#   mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
   
 head(executions)
 head(executions_clean)
