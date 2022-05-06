@@ -174,12 +174,8 @@ lasso_tuned_wf <- finalize_workflow(lasso_wf, best_penalty)
 ```
 As the amount of regularization increases by penalizing the coefficients, the RMSE value first decreases. This indicates that regularization first helps with fitting the data. However, this trends changes at circa 1e-01.
 
-<<<<<<< HEAD
-```{r fit-models-lm}
-=======
 
 ```{r fit-models-lm, include=FALSE, echo=FALSE}
->>>>>>> 37c6e98ce8c5084f0210d50052be7964d5afdb42
 # fit models
 fit_model <- fit(execute_wf, data = executions_clean)
 tidy(fit_model)
@@ -359,16 +355,13 @@ executions_clean$Month <-
 executions_clean$Year <-
   as.numeric(as.character(executions_clean$Year)) # turn year into numeric variable
 executions_clean$Electrocution <- factor(executions_clean$Electrocution, ordered = FALSE )
-<<<<<<< HEAD
 executions_clean <- executions_clean %>%
   mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
-=======
 # executions_clean <- executions_clean %>%
 #   mutate(Electrocution = relevel(Electrocution, ref='no')) #set reference level
   
 head(executions)
 head(executions_clean)
->>>>>>> 37c6e98ce8c5084f0210d50052be7964d5afdb42
 ```
 
 
@@ -807,13 +800,3 @@ executions_clean %>%
 ## Conclusion
 
 As stated previously, unsupervised learning was difficult for our dataset because there are not very many quantitative variables and many quantitative variables are functionally categorical. Through the unsupervised exploration, we were attempting to answer if there were any trends in the data based on victim count and year. Our research showed that k-means clustering with k=4 does not show any strong correlation and with k=12 is overfit and difficult to interpret. Overall, since there are not many quantitative, and especially functionally quantitative, variables, unsupervised learning is not the best method for this dataset. 
-
-<<<<<<< HEAD
-
-# Code Appendix 
-=======
-# Code Appendix
-
-```{r ref.label=knitr::all_labels(), echo = T, eval = T, warning=F, message=F}
-```
->>>>>>> 37c6e98ce8c5084f0210d50052be7964d5afdb42
